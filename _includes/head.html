@@ -1,0 +1,51 @@
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name=viewport content="width=device-width, minimum-scale=1.0, maximum-scale=1.0">
+
+  <link rel="shortcut icon" href="{{site.baseurl}}/favicon.ico">
+
+  <title>{% if page.title %}{{ page.title | escape }}{% else %}{{ site.title | escape }}{% endif %}</title>
+  {%comment%}<!-- for google -->{%endcomment%}
+  {% include meta_seo.html %}
+  {%comment%}<!-- for Facebook -->{%endcomment%}
+  {%comment%}<!--
+  <meta property="og:title" content="A Pocket Guide to Master Every Day’s Typographic Adventures" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="http://www.typogui.de/images/oh.png" />
+  <meta property="og:url" content="http://www.typogui.de" />
+  <meta property="og:description" content="This little guide is for writers, designer, engineers, students or anyone who just wants to do things right. Mastering the daily typography adventures will help you get your message across more successfully." />
+ -->{%endcomment%}
+
+   {%comment%}<!-- font, blocage pour pagespeed , report directly in critical.css.scss-->{%endcomment%}
+  {%comment%}<!--  <link href='https://fonts.googleapis.com/css?family=PT+Sans+Narrow|PT+Serif:400,700,400italic&subset=latin' rel='stylesheet' type='text/css'>
+ -->{%endcomment%}
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" async defer>
+
+
+
+  {%comment%}<!-- crticical css loading  -->{%endcomment%}
+  <style>
+    {% asset_source critical.css.scss %}
+  </style>
+
+
+
+  <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+  <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}">
+
+  <script>
+    {% asset_source plugins/loadCSS.min.js %}
+    loadCSS("{% asset_path non-critical.css %}");
+    loadCSS("{% asset_path pict_slider.css %}");
+    loadCSS("{% asset_path coll_ext_slider.css %}");
+  </script>
+  <noscript>
+    <link href="{% asset_path non-critical.css %}" rel="stylesheet">
+    <link href="{% asset_path pict_slider.css %}" rel="stylesheet">
+    <link href="{% asset_path coll_ext_slider.css %}" rel="stylesheet">
+  </noscript>
+
+

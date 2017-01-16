@@ -1,0 +1,22 @@
+---
+layout: default
+---
+<div class="default-page-content">
+
+  {% assign home_title = site.title | prepend: "Acceuil&nbsp;" %}
+  {% include coll_ext_utils/path-navig-title.html title=home_title class_logo="logo-back"%}
+
+  {% assign size = page.excerpt.size | plus: 0 %}
+  {% if size > 1 %}
+    <h4>{{page.excerpt}}</h4>
+  {% else %}
+    {% if  page.description %}
+      <h4>{{ page.description }}</h4>
+    {% endif %}
+  {%  endif %}
+
+  <div class="content">
+    {{ page.content }}
+  </div>
+
+</div>

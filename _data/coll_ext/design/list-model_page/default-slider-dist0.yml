@@ -1,0 +1,33 @@
+model: 'default-slider-dist0'
+list-model-dist:
+  - dist: 0
+    list-model-type:
+      - type: ["detail_items", "subsection_items", "mix_items"]
+        design_model:
+          type: 'list_flex'
+          custom: 'items-default'
+
+      - type: ["subsections"]
+        design_model:
+          # type: 'list_flex'
+          # custom: 'subsections-default'
+          type: 'slider'
+          custom: 'default-black'
+
+
+  - dist: 1
+    list-model-type:
+      - type: ["detail_items", "subsection_items", "mix_items"]
+        design_model:
+          type: 'list_flex'
+          # custom: 'items-default-dist1'
+          custom: 'subsections-default-dist1'
+
+
+
+      - type: ["subsections"]
+        design_model:
+          # type: 'list_flex'
+          # custom: 'subsections-default-dist1'
+          type: 'list_flex'
+          custom: 'default'

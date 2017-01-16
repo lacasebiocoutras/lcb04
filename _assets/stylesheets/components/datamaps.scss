@@ -1,0 +1,11 @@
+#container-datamaps {
+  position: relative;
+  box-shadow: 0 0 $border-shadow rgba($shadow-color, 0.5);
+  // width: 100%;
+  // height:auto;
+  // width: 500px; height: 300px;
+  // @include breakpoint($break-sm){}
+  // width: 35em; height: 35em;
+    width: 15em; height: 15em;
+
+}

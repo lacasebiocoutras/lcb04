@@ -1,0 +1,122 @@
+
+a .min_container {
+  /* hover state */
+  &:hover {
+    .miniature__item-title,
+    .miniature__item-excerpt {
+      color: $primary-color-dark;
+    }
+    .miniature__item-title {
+      text-decoration: underline;
+    }
+    .miniature-actu-image {
+      box-shadow: 0 0 $border-shadow $shadow-color;
+    }
+  }
+}
+
+.min_container {
+
+  .min_body {
+    padding-left: 1em;
+
+    .title {
+      margin: 0 !important; // override
+      padding: 0;
+      // font-family: $sans-serif-narrow;
+      font-size: 1.25rem;
+    }
+
+    // .meta {
+    //   margin-top: 0.5em;
+    //   // font-family: $sans-serif;
+    //   font-size: 0.64rem;
+    //   text-transform: uppercase;
+    // }
+
+    // .time {
+    //   &:before {
+    //     content: "";
+    //     padding-left: 0.45em;
+    //     padding-right: 0.45em;
+    //   }
+    // }
+
+    .excerpt {
+      margin: 0.5em 0 0;
+      padding: 0;
+      font-size: 0.8rem;
+    }
+  }
+}
+
+
+
+
+// .miniature__item {
+//   display: flex;
+//   justify-content: flex-end;
+//   // padding-top: 1.5em;
+//   /* hover state */
+//   &:hover {
+//     .miniature__item-title,
+//     .miniature__item-excerpt {
+//       color: $primary-color-dark;
+//     }
+//     .miniature__item-title {
+//       text-decoration: underline;
+//     }
+//     .miniature-actu-image {
+//       box-shadow: 0 0 $border-shadow $shadow-color;
+//     }
+//   }
+// }
+
+// .miniature__item-body {
+//   flex: 3;
+//   order: 1;
+//   // padding: 1em 0 1em 1em;
+//   padding-left: 1em;
+// }
+
+// .miniature__item-title {
+//   margin: 0 !important; // override
+//   padding: 0;
+//   // font-family: $sans-serif-narrow;
+//   font-size: 1.25rem;
+// }
+
+// .miniature__item-meta {
+//   margin-top: 0.5em;
+//   font-family: $sans-serif;
+//   font-size: 0.64rem;
+//   text-transform: uppercase;
+//   // color: $primary-text-color;
+// }
+
+// .miniature__item-time {
+//   &:before {
+//     content: "";
+//     padding-left: 0.45em;
+//     padding-right: 0.45em;
+//   }
+// }
+
+// .miniature__item-excerpt {
+//   margin: 0.5em 0 0;
+//   padding: 0;
+//   font-size: 0.8rem;
+// }
+
+
+// .miniature-image {
+//   display: flex;
+//   flex-direction: column;
+//   justify-content: space-between;
+//   flex: 2;
+//   // background-color: $secondary-color-light;
+//   // background-repeat: no-repeat;
+//   // background-size: cover;
+//   // background-position: center center;
+//   border-radius: $border-radius-site;
+// }

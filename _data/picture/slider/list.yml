@@ -1,0 +1,236 @@
+# slider list
+# id must be uniq !!
+
+- id: 'o-acc'
+  container: 'picture'
+  type: 'opacity'
+  # img_source : original (picture tag pluggin), baseurl, direct_url
+  img_source: 'original'
+  # add info height image for opacity slider, auto with original todo
+  slides_height: '400px'
+  list_img:
+
+    - image: "carousel-acceuil/reouverture.jpg"
+      description-image: "Réouverture de la Case Bio!"
+      lien: "/"
+      description-lien: "Réouverture de la Case Bio!"
+
+    - image: "carousel-acceuil/decouvrez-notre-marche-bio.jpg"
+      description-image: "Le rayon marché biologique"
+      lien: "/alimentation-biologique/"
+      description-lien: "Accéder au rayon Alimentation"
+
+    - image: "carousel-acceuil/espace-sante-bien-etre.jpg"
+      description-image: "Le rayon bien-être"
+      lien: "/sante-bien-etre/"
+      description-lien: "Accéder au rayon Santé & Bien-être"
+
+    - image: "carousel-acceuil/reouverture.jpg"
+      description-image: "Réouverture de la Case Bio!"
+      lien: "/"
+      description-lien: "Réouverture de la Case Bio!"
+
+    - image: "carousel-acceuil/decouvrez-notre-marche-bio.jpg"
+      description-image: "Le rayon marché biologique"
+      lien: "/alimentation-biologique/"
+      description-lien: "Accéder au rayon Alimentation"
+
+    - image: "carousel-acceuil/decouvrez-notre-marche-bio.jpg"
+      description-image: "Le rayon marché biologique"
+      lien: "/alimentation-biologique/"
+      description-lien: "Accéder au rayon Alimentation"
+
+- id: 'o-bj'
+  container: 'picture'
+  type: 'opacity'
+  # img_source : original (picture tag pluggin), baseurl, direct_url
+  img_source: 'baseurl'
+  # add info height image for opacity slider, auto with original
+  slides_height: '400px'
+  list_img:
+
+    - image: "CouldDragonByBjzaba.png"
+      description-image: "CouldDragonByBjzaba.png"
+      lien: "/"
+
+    - image: "MountainFortByBjzaba.png"
+      description-image: "MountainFortByBjzaba.png"
+      lien: "/"
+
+    - image: "MountainOutpostByBjzaba.png"
+      description-image: "MountainOutpostByBjzaba.png"
+      lien: "/"
+
+    - image: "CliffsByBjzaba.png"
+      description-image: "CliffsByBjzaba.png"
+      lien: "/"
+
+    - image: "HillFortByBjzaba.png"
+      description-image: "HillFortByBjzaba.png"
+      lien: "/"
+
+- id: 'o-nat'
+  container: 'picture'
+  type: 'opacity'
+  # img_source : original (picture tag pluggin), baseurl, direct_url
+  img_source: 'baseurl'
+  # add info height image for opacity slider, auto with original
+  slides_height: '600px'
+  list_img:
+    - image: "carousel-1.JPG"
+      description-image: "carousel-1"
+      lien: "/"
+
+    - image: "carousel-2.jpg"
+      description-image: "carousel-2"
+      lien: "/"
+
+    - image: "carousel-3.jpg"
+      description-image: "carousel-3"
+      lien: "/"
+
+    - image: "carousel-4.jpg"
+      description-image: "carousel-4"
+      lien: "/"
+
+    - image: "carousel-5.jpg"
+      description-image: "carousel-5"
+      lien: "/"
+
+    - image: "carousel-3.jpg"
+      description-image: "carousel-3"
+      lien: "/"
+
+    - image: "carousel-4.jpg"
+      description-image: "carousel-4"
+      lien: "/"
+
+    - image: "carousel-5.jpg"
+      description-image: "carousel-5"
+      lien: "/"
+
+
+- id: 't-nat'
+  container: 'picture'
+  type: 'translate'
+  # img_source : original (picture tag pluggin), baseurl, direct
+  img_source: 'baseurl'
+  list_img:
+
+    - image: "carousel-1.JPG"
+      description-image: "carousel-1"
+      lien: "/"
+
+    - image: "carousel-2.jpg"
+      description-image: "carousel-2"
+      lien: "/"
+
+    - image: "carousel-3.jpg"
+      description-image: "carousel-3"
+      lien: "/"
+
+    - image: "carousel-4.jpg"
+      description-image: "carousel-4"
+      lien: "/"
+
+    - image: "carousel-5.jpg"
+      description-image: "carousel-5"
+      lien: "/"
+
+    - image: "carousel-4.jpg"
+      description-image: "carousel-4"
+      lien: "/"
+
+    - image: "carousel-5.jpg"
+      description-image: "carousel-5"
+      lien: "/"
+
+- id: 't-acc'
+  container: 'picture'
+  type: 'translate'
+  # img_source : original (picture tag pluggin), baseurl, direct
+  img_source: 'original'
+  list_img:
+
+    - image: "carousel-acceuil/reouverture.jpg"
+      description-image: "Réouverture de la Case Bio!"
+      lien: "/"
+      description-lien: "Réouverture de la Case Bio!"
+
+    - image: "carousel-acceuil/decouvrez-notre-marche-bio.jpg"
+      description-image: "Le rayon marché biologique"
+      lien: "/alimentation-biologique/"
+      description-lien: "Accéder au rayon Alimentation"
+
+    # - image: "carousel-acceuil/espace-sante-bien-etre.jpg"
+    #   description-image: "Le rayon bien-être"
+    #   lien: "/sante-bien-etre/"
+    #   description-lien: "Accéder au rayon Santé & Bien-être"
+
+    # - image: "carousel-acceuil/reouverture.jpg"
+    #   description-image: "Réouverture de la Case Bio!"
+    #   lien: "/"
+    #   description-lien: "Réouverture de la Case Bio!"
+
+- id: 'i-nat'
+  container: 'picture'
+  type: 'infinite'
+  # img_source : original (picture tag pluggin), baseurl, direct
+  img_source: 'baseurl'
+  slides_max_witdh: '960px'
+  list_img:
+
+    - image: "carousel-1.JPG"
+      description-image: "carousel-1"
+      lien: "/"
+
+    - image: "carousel-2.jpg"
+      description-image: "carousel-2"
+      lien: "/"
+
+    - image: "carousel-3.jpg"
+      description-image: "carousel-3"
+      lien: "/"
+    - image: "carousel-4.jpg"
+      description-image: "carousel-4"
+      lien: "/"
+    - image: "carousel-5.jpg"
+      description-image: "carousel-5"
+      lien: "/"
+    - image: "carousel-2.jpg"
+      description-image: "carousel-2"
+      lien: "/"
+    - image: "carousel-3.jpg"
+      description-image: "carousel-3"
+      lien: "/"
+    - image: "carousel-4.jpg"
+      description-image: "carousel-4"
+      lien: "/"
+    - image: "carousel-5.jpg"
+      description-image: "carousel-5"
+      lien: "/"
+
+
+- id: 'i-acc'
+  container: 'picture'
+  type: 'infinite'
+  # img_source : original (picture tag pluggin), baseurl, direct
+  img_source: 'original'
+  slides_max_witdh: '600px'
+  list_img:
+    - image: "carousel-acceuil/reouverture.jpg"
+      description-image: "Réouverture de la Case Bio!"
+      lien: "/"
+      description-lien: "Réouverture de la Case Bio!"
+    - image: "carousel-acceuil/decouvrez-notre-marche-bio.jpg"
+      description-image: "Le rayon marché biologique"
+      lien: "/alimentation-biologique/"
+      description-lien: "Accéder au rayon Alimentation"
+    - image: "carousel-acceuil/espace-sante-bien-etre.jpg"
+      description-image: "Le rayon bien-être"
+      lien: "/sante-bien-etre/"
+      description-lien: "Accéder au rayon Santé & Bien-être"
+    - image: "carousel-acceuil/reouverture.jpg"
+      description-image: "Réouverture de la Case Bio!"
+      lien: "/"
+      description-lien: "Réouverture de la Case Bio!"

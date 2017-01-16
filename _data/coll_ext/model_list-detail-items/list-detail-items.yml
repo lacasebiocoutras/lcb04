@@ -1,0 +1,172 @@
+# - title : 'Derniers ajouts au rayon alimentation :'
+#   collection: 'magasin'
+#    #display all items, or the ones from subpart inside the collection : section array
+#   section: ['alimentation', 'fruits-et-legumes/legumes']
+#   # priority section >  filter_section
+#   #here case : display all items except some subpart, ones in filter_section array
+#   filter_section:
+#   display_name_section_items:
+#   design :
+#     style: 'list-items li-resize-color01'
+#     ul-grid: 'Grid Grid--gutters-m'
+#     li-grid: 'item_list Grid-cell u-full u-small-1of2-m u-med-1of3-m'
+#   sort :
+#     # available  'date-publication' | 'order' | 'title' (| 'date-publication')
+#     # defined in /_data/coll_ext/config/sort_site-documents.yml
+#     # default : 'order'
+#     filter: 'date-publication-limit-max-order-10'
+#     nb-max-item: 9
+
+- title : 'Dernières promotions au rayon alimentation :'
+  collection: 'nos-promotions'
+  force_display_coll_ext: true
+  force_display_coll_ext_section: 'nos-promotions'
+  # force_display_coll_ext_model: 'default-promotions-slider'
+  force_display_coll_ext_model: 'default-list-items-custom2-dist0'
+  sort :
+    # available  'date-publication' | 'order' | 'title' (| 'date-evenement')
+    # defined in /_data/coll_ext/config/sort_site-documents.yml
+    # default : 'order'
+    filter: 'date-publication'
+    nb-max-item-per-section: 9
+    # choose-subsections: ['alimentation', 'sante-bien-etre']
+    choose-subsections: ['alimentation']
+    filter-subsections: []
+
+
+
+# - title : 'A découvrir également : '
+#   collection: 'magasin'
+#   section:
+#   # priority section >  filter_section
+#   filter_section: ['alimentation']
+#   display_name_section_items:
+#   design :
+#     style: 'list-items case-list-unresize li-unresize-color01'
+#     ul-grid: 'Grid Grid--gutters-m'
+#     li-grid: 'item_list Grid-cell u-full u-small-1of2-m u-med-1of3-m'
+#   sort :
+#     # available  'date-publication' | 'order' | 'title' (| 'date-publication')
+#     # defined in /_data/coll_ext/config/sort_site-documents.yml
+#     # default : 'order'
+#     filter: 'order-limit-max-order-10'
+#     nb-max-item: 6
+
+- title : 'A découvrir également : '
+  collection: 'nos-promotions'
+  force_display_coll_ext: true
+  force_display_coll_ext_section: 'nos-promotions'
+  # force_display_coll_ext_model: 'default-promotions-slider'
+  force_display_coll_ext_model: 'default-list-items-custom3-dist0'
+  sort :
+    # available  'date-publication' | 'order' | 'title' (| 'date-evenement')
+    # defined in /_data/coll_ext/config/sort_site-documents.yml
+    # default : 'order'
+    filter: 'order-limit-max-order-10'
+    nb-max-item-per-section: 6
+    # choose-subsections: ['alimentation', 'sante-bien-etre']
+    choose-subsections: []
+    filter-subsections: ['alimentation']
+
+# - title : 'Dernières actualités :'
+#   collection: 'nos-informations'
+#   section: ['notre-actualite']
+#   # priority section >  filter_section
+#   filter_section:
+#   display_name_section_items:
+#   design :
+#     style: 'list-items case-list-unresize li-unresize-color02'
+#     ul-grid: 'Grid Grid--gutters-m'
+#     li-grid: 'item_list Grid-cell u-full u-small-1of2-m '
+#   sort :
+#     # available  'date-publication' | 'order' | 'title' (| 'date-publication')
+#     # defined in /_data/coll_ext/config/sort_site-documents.yml
+#     # default : 'order'
+#     filter: 'date-publication'
+#     nb-max-item: 6
+
+# - title : 'evenements, rencontres :'
+#   collection: 'nos-informations'
+#   section: ['evenements']
+#   # priority section >  filter_section
+#   filter_section:
+#   display_name_section_items:
+#   design :
+#     style: 'list-items case-list-unresize li-unresize-color02'
+#     ul-grid: 'Grid Grid--gutters-m'
+#     li-grid: 'item_list Grid-cell u-full u-small-1of2-m '
+#   sort :
+#     # available  'date-publication' | 'order' | 'title' (| 'date-evenement') | 'date-publication-limit-max-order-10'
+#     # defined in /_data/coll_ext/config/sort_site-documents.yml
+#     # default : 'order'
+#     filter: 'date-evenement'
+#     nb-max-item: 10
+
+- title : 'Evenements, rencontres :'
+  collection: 'nos-informations'
+  force_display_coll_ext: true
+  force_display_coll_ext_section: 'evenements'
+  # force_display_coll_ext_model: 'default-promotions-slider'
+  force_display_coll_ext_model: 'default-list-items-dist0'
+  sort :
+    # available  'date-publication' | 'order' | 'title' (| 'date-evenement')
+    # defined in /_data/coll_ext/config/sort_site-documents.yml
+    # default : 'order'
+    filter: 'date-evenement'
+    nb-max-item-per-section: 20
+    # choose-subsections: ['alimentation', 'sante-bien-etre']
+    choose-subsections: []
+    filter-subsections: []
+
+- title : 'Derniers ajouts blog :'
+  collection: 'nos-informations'
+  force_display_coll_ext: true
+  force_display_coll_ext_section: 'blog'
+  # force_display_coll_ext_model: 'default-promotions-slider'
+  force_display_coll_ext_model: 'default-list-items-dist1'
+  sort :
+    # available  'date-publication' | 'order' | 'title' (| 'date-evenement')
+    # defined in /_data/coll_ext/config/sort_site-documents.yml
+    # default : 'order'
+    filter: 'date-publication'
+    nb-max-item-per-section: 20
+    # choose-subsections: ['alimentation', 'sante-bien-etre']
+    choose-subsections: []
+    filter-subsections: []
+
+
+
+- title : 'Dernieres promotion :'
+  collection: 'nos-promotions'
+  force_display_coll_ext: true
+  force_display_coll_ext_section: 'nos-promotions'
+  # force_display_coll_ext_model: 'default-promotions-slider'
+  force_display_coll_ext_model: 'default-promotions-slider-detail'
+  sort :
+    # available  'date-publication' | 'order' | 'title' (| 'date-evenement')
+    # defined in /_data/coll_ext/config/sort_site-documents.yml
+    # default : 'order'
+    filter: 'date-publication'
+    nb-max-item-per-section: 20
+    # choose-subsections: ['alimentation', 'sante-bien-etre']
+    choose-subsections: []
+    filter-subsections: []
+
+
+
+
+
+# - title : 'fruits-et-legumes :'
+#   collection: 'magasin'
+#   force_display_coll_ext: true
+#   force_display_coll_ext_section: 'fruits-et-legumes'
+#   force_display_coll_ext_model: 'default-promotions-slider'
+#   sort :
+#     # available  'date-publication' | 'order' | 'title' (| 'date-evenement')
+#     # defined in /_data/coll_ext/config/sort_site-documents.yml
+#     # default : 'order'
+#     filter: 'date-publication'
+#     nb-max-item-per-section: 50
+#     choose-subsections:
+#     filter-subsections: ['legumes', 'les-fraises-de-saison']
+

@@ -1,0 +1,95 @@
+# V0-1, trie chronologique à respecter, delai-alerte en jours !
+# congé date-fin inclus
+
+# Jour de l'an
+
+- titre: Fermeture du magasin
+  date-debut: 01 Janvier 2016
+  date-fin:
+  delai-alerte: 7 jours
+
+#exemple congé
+- titre: Congé d'Hiver
+  date-debut: 16 Février 2016
+  date-fin: 20 Février 2016
+  delai-alerte: 15 jours
+
+# Lundi de Pâques
+
+- titre: Fermeture du magasin
+  date-debut: 28 Mars 2016
+  date-fin:
+  delai-alerte: 7 jours
+
+
+# Fête du Travail
+
+- titre: Fermeture du magasin
+  date-debut: 01 Mai 2016
+  date-fin:
+  delai-alerte: 7 jours
+
+# Jeudi de l'Ascension
+
+- titre: Fermeture du magasin
+  date-debut: 5 Mai 2016
+  date-fin:
+  delai-alerte: 7 jours
+
+# 8 Mai 1945
+
+- titre: Fermeture du magasin
+  date-debut: 08 Mai 2016
+  date-fin:
+  delai-alerte: 7 jours
+
+
+
+# Lundi de Pentecôte
+
+- titre: Fermeture du magasin
+  date-debut: 16 Mai 2016
+  date-fin:
+  delai-alerte: 7 jours
+
+# Fête Nationale
+
+- titre: Fermeture du magasin
+  date-debut: 14 Juillet 2016
+  date-fin:
+  delai-alerte: 7 jours
+
+# Assomption
+
+- titre: Fermeture du magasin
+  date-debut: 15 Août 2016
+  date-fin:
+  delai-alerte: 7 jours
+
+# La Toussaint  1 Novembre
+
+- titre: Fermeture du magasin
+  date-debut: 1 Novembre 2016
+  date-fin:
+  delai-alerte: 7 jours
+
+# Armistice 11 Novembre
+
+- titre: Fermeture du magasin
+  date-debut: 11 Novembre 2016
+  date-fin:
+  delai-alerte: 7 jours
+
+# Noël  25 Décembre
+
+- titre: Fermeture du magasin
+  date-debut: 25 Décembre 2016
+  date-fin:
+  delai-alerte: 7 jours
+
+# Jour de l'an 2017
+
+- titre: Fermeture du magasin
+  date-debut: 01 Janvier 2017
+  date-fin:
+  delai-alerte: 7 jours

@@ -1,0 +1,14 @@
+---
+layout: null
+---
+[
+  {% for event in site.data.custom.evenements %}
+    {
+      "title"    : "{{ event.titre | escape}}",
+      "description" : "{{ event.description-courte | escape}}",
+      "lienPost" : "{{ event.lien-post | escape}}",
+      "dateParution"     : "{{ event.date-parution | escape}}",
+      "dateExpire"      : "{{ event.date-expire | escape}}"
+    } {% unless forloop.last %},{% endunless %}
+  {% endfor %}
+]

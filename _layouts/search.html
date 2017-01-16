@@ -1,0 +1,39 @@
+---
+layout: compress
+---
+
+{% comment %}<!-- specific compared to default layout :  right and left aside are completed directly on the page (html reported) -->{% endcomment %}
+
+<!DOCTYPE html>
+<html lang="fr">
+
+  {% include head.html %}
+
+  <body class="Site-body container-body default-page">
+    <div id="haut-page" class="u-hiddenVisually"></div>
+
+    <header id='header-default' class="Site-header header--fixed">
+        {% include header-default.html %}
+    </header>
+
+    <main class="Site-main " id="main" role="main">
+
+      {{ content }}
+
+    </main>
+
+
+
+
+    <footer class="Site-footer">
+      <div class="Footer">
+        {% include footer.html %}
+      </div>
+    </footer>
+
+
+
+    {% include scripts.html %}
+
+  </body>
+</html>

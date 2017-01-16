@@ -1,0 +1,72 @@
+---
+layout: compress
+---
+
+<!DOCTYPE html>
+<html lang="fr">
+
+  {% include head.html %}
+
+  <body class="Site-body container-body">
+
+    <header id='header-default' class="Site-header header--fixed">
+        {% include header-default.html %}
+    </header>
+
+    <div class="Site-header-home">
+        {% include header-home.html %}
+    </div>
+
+    <main class="Site-main " id="main" role="main">
+
+      <!-- <aside class="Site-left-aside u-textCenter ">
+
+        <div class="sticky-aside-left">
+          <p class="exp-2016-04-30 Message Warning ">Site en construction</p>
+          <ul id="aside-events"></ul>
+        </div>
+      </aside> -->
+
+      <div class="Site-content-right-aside">
+
+        <div class="Site-content">
+            {{ content }}
+        </div>
+
+        <aside class="Site-right-aside">
+          <div class="sticky-aside-right">
+            <div class="Message Ouverture">
+              <ul class='message-list-aside-right'>
+                <!-- <li class="on-md-only">Ouverture: </li> -->
+                <li><h4>Du Mardi au Samedi</h4> </li>
+                <li class="on-md-only">:</li>
+                <li>9H - 12h30 </li>
+                <li class="on-md-only">/</li>
+                <li>15H - 19h15</li>
+              </ul>
+            </div>
+            <div class="Message Warning invisible">
+              <ul id="aside-fermeture" class='message-list-aside-right ' ></ul>
+            </div>
+          </div>
+         <!--  <div class="Message Info">
+              <ul iclass='message-list-aside-right'>
+                <li><h4>Evenements à venir :</h4> </li>
+              </ul>
+            </div> -->
+        </aside>
+
+      </div> <!-- fin Site-content-right-aside -->
+
+    </main>
+
+
+    <footer class="Site-footer">
+      <div class="Footer">
+        {% include footer.html %}
+      </div>
+    </footer>
+    {% include scripts.html %}
+
+  </body>
+</html>

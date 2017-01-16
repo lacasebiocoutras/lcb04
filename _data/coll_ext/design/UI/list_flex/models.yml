@@ -1,0 +1,113 @@
+- model: 'items-default'
+  config_flex:
+    grid_styling: 'Grid--gutters-m'
+    responsive: 'u-full u-small-1of2-m'
+  styling:
+    container: 'list-items'
+    container_color: 'li-unresize-color02'
+    article: 'item_list'
+    #add class case-list-unresize
+    box_unresize: true
+
+- model: 'list-details-items-custom2'
+  config_flex:
+    grid_styling: 'Grid--gutters-m'
+    responsive: 'u-full u-small-1of2-m u-med-1of3-m'
+  styling:
+    container: 'list-items'
+    container_color: 'li-resize-color01'
+    article: 'item_list'
+    #add class case-list-unresize
+    box_unresize: false
+
+  model: 'list-details-items-custom3'
+  config_flex:
+    grid_styling: 'Grid--gutters-m'
+    responsive: 'u-full u-small-1of2-m u-med-1of3-m'
+  styling:
+    container: 'list-items'
+    container_color: 'li-unresize-color01'
+    article: 'item_list'
+    #add class case-list-unresize
+    box_unresize: true
+
+- model: 'subsections-default'
+  config_flex:
+    grid_styling: 'Grid--gutters-m'
+    responsive: 'u-full'
+  styling:
+    container: 'list-items '
+    container_color: 'li-unresize-color02 li-extra-subsections'
+    article: 'item_list'
+    #add class case-list-unresize
+    box_unresize: true
+
+
+- model: 'items-default-dist1'
+  config_flex:
+    grid_styling: 'Grid--gutters-m'
+    responsive: 'u-full u-small-1of2-m'
+  styling:
+    container: 'list-items'
+    container_color: 'li-resize-color02'
+    article: 'item_list'
+    #add class case-list-unresize
+    box_unresize: false
+
+- model: 'subsections-default-dist1'
+  config_flex:
+    grid_styling: 'Grid--gutters-m'
+    responsive: 'u-full'
+  styling:
+    container: 'list-items'
+    container_color: 'li-unresize-color02'
+    article: 'item_list'
+    #add class case-list-unresize
+    box_unresize: true
+
+
+- model: 'subsections-default-dist1-1of2'
+  config_flex:
+    grid_styling: 'Grid--gutters-m'
+    responsive: 'u-full u-small-1of2-m'
+  styling:
+    container: 'list-items'
+    container_color: 'li-unresize-color02'
+    article: 'item_list'
+    #add class case-list-unresize
+    box_unresize: true
+
+
+
+- model: 'items-default-dist2'
+  config_flex:
+    grid_styling: 'Grid--gutters-m'
+    responsive: 'u-full u-small-1of2-m'
+  styling:
+    container: 'list-items '
+    container_color: 'li-resize-color03'
+    article: 'item_list'
+    #add class case-list-unresize
+    box_unresize: false
+
+- model: 'subsections-default-dist2'
+  config_flex:
+    grid_styling: 'Grid--gutters-m'
+    responsive: 'u-full'
+  styling:
+    container: 'list-items'
+    container_color: 'li-unresize-color03'
+    article: 'item_list'
+    #add class case-list-unresize
+    box_unresize: true
+
+- model: 'categorie-search'
+  config_flex:
+    grid_styling:
+    responsive: 'u-full'
+  styling:
+    container: 'list-cat '
+    container_color: 'color-cat'
+    article: 'item_list'
+    #add class case-list-unresize
+    box_unresize: false

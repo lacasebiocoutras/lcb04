@@ -1,0 +1,100 @@
+{% assign site_title = site.title | replace:' ', '&nbsp;' | prepend: 'Menu&nbsp;' %}
+{% assign site_title_id = site_title | downcase | replace: '&nbsp;', '-' %}
+{% assign link_homepage = "Acceuil" %}
+
+<div class="site-nav-target">
+  <nav id="clic-header" class="header-nav">
+    <a href="#{{site_title_id}}" class="header-nav-menu u-textRight" title={{site_title}}>
+      <span>{{site_title}}</span>
+      <svg viewBox="0 0 16 16" >
+        <path class="path1" d="M1 3h14v3h-14zM1 7h14v3h-14zM1 11h14v3h-14z"></path>
+      </svg>
+    </a>
+
+
+
+    {%comment%}<!-- filtering file extension -->{%endcomment%}
+    {% assign extension_item = site.collections_ext.path_extension_item %}
+    {% assign extension_section = site.collections_ext.path_extension_section %}
+    {% assign delim = site.data.coll_ext.config.common.delimitator.array %}
+
+
+    {% assign detect-type=0 %}
+    {% assign array_masthead = delim %}
+    {% assign nb_masthead = 0 %}
+    {% for item in site.data.custom.home-page.navigation.masthead %}
+      {% if item.url %}
+        {% assign item_url_tmp = item.url | remove_first: extension_section | remove_first: extension_item %}
+        {% assign page_url_tmp = page.url | remove_first: extension_section | remove_first: extension_item %}
+        {% assign compar-url = item_url_tmp | remove_first: page_url_tmp  | replace:'/','' %}
+        {% if compar-url == '' %} {% assign detect-type=1 %} {% endif %}
+      {% else %}
+        {% assign nb_masthead = nb_masthead | plus: 1 %}
+      {% endif %}
+      {% assign array_masthead = array_masthead | append : nb_masthead | append: delim %}
+    {% endfor %}
+    {% comment %}
+      {% assign array_masthead_part = array_masthead | remove_first: delim | split: delim%}
+      <!-- why not with remove_first: delim  -->
+    {% endcomment %}
+    {% assign array_masthead_part = array_masthead | split: delim%}
+
+
+    {% assign class_li_retour = 'Grid-cell u-full u-spaceBN' %}
+    {% if nb_masthead <= 2 %}
+      {% assign class_li = 'Grid-cell u-full u-med-1of2-m u-spaceBN' %}
+    {% endif %}
+
+    <div class="trigger container-body" id="{{site_title_id}}">
+
+      <ul class="Grid Grid--gutters-m u-spaceVN">
+
+        <li class=" Grid-cell u-full u-spaceBN u-textRight">
+           <a href="#X" title="X Fermer le menu" class="closeNav menu-nav-item">X Fermer le menu</a>
+        </li>
+
+
+        <li class=" Grid-cell u-full u-spaceBN">
+          <ul class="Grid Grid--gutters-m u-spaceVN">
+
+            {% for index_masthead in (1..nb_masthead) %}
+
+              <li class={{class_li}}>
+                <ul class="navigation">
+
+                  {% if index_masthead == 1 and page.url != '/' %}
+                    <li><a class="menu-nav-item" href="{{site.baseurl}}/">{{link_homepage}}</a></li>
+                  {% endif %}
+
+                  {% for item in site.data.custom.home-page.navigation.masthead %}
+                    {% assign diff = array_masthead_part[forloop.index] | minus: index_masthead %}
+
+                    {% if diff == 0 and item.url != null %}
+                        {% assign item_url_tmp = item.url | remove_first: extension_section | remove_first: extension_item %}
+                        {% assign page_url_tmp = page.url | remove_first: extension_section | remove_first: extension_item %}
+                        {% assign compar-url = item_url_tmp | remove_first: page_url_tmp  | replace:'/','' %}
+                        {% if detect-type == 0  %}
+                          {% if page_url_tmp contains item_url_tmp %}
+                            {% assign compar-url = '' %}
+                          {% endif %}
+                        {% endif %}
+
+                        <li>
+                          <a {% if compar-url == '' %} class="menu-nav-item active"{% else %}class="menu-nav-item"{% endif %} href="{{site.baseurl}}{{item.url}}">{{item.title}}</a>
+                        </li>
+                    {% endif %}
+
+                  {% endfor %}
+                </ul>
+              </li>
+
+            {% endfor %}
+          </ul>
+        </li>
+
+       </ul>
+    </div>
+
+
+  </nav>
+</div>

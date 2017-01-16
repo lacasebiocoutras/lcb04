@@ -1,0 +1,181 @@
+{%comment%}
+<!--
+param in :
+  include.input_slider
+
+variable globale
+
+param out:
+
+
+-->
+<!-- from https://github.com/dangvanthanh/carousel.sass -->
+
+<!-- http://hugogiraudel.com/2014/07/16/automating-css-animations-with-sass/
+      http://www.sassmeister.com/gist/b657072d11c527f3a016 -->
+
+<!--
+  add js :
+  todo: affichage point nav apres f5, a masquer; animation radio buton
+    optim affichage radio : http://codepen.io/rgfx/pen/aixDn
+ -->
+{%endcomment%}
+
+
+{% assign container_slider_pict = 'picture'  %}
+
+{% assign delim_id = site.data.scss_liquid.optim.config.param.delim_id %}
+
+{% comment %}
+  <!-- info current slider -->
+{% endcomment %}
+
+{% assign input_slider = null %}
+{% for slider in site.data.picture.slider.list  %}
+  {% if slider.id == include.input_slider %}
+    {% assign input_slider = slider %}
+  {% endif %}
+{% endfor %}
+
+{% assign config_slide = null %}
+{% for config in site.data.scss_liquid.UI.slider.config.list_type  %}
+  {% if config.type == input_slider.type %}
+    {% assign config_slide = config %}
+  {% endif %}
+{% endfor %}
+
+
+
+
+{% assign container_slider = input_slider.container | remplace: ' ',delim_id  %}
+{% assign type_slider = input_slider.type | remplace: ' ',delim_id %}
+{% assign id_slider = input_slider.id | remplace: ' ',delim_id %}
+
+
+{% assign list_img_slider = input_slider.list_img %}
+{% assign dim_slider = list_img_slider.size  %}
+
+
+{% comment %}
+  <!-- specific slider infinite -->
+{% endcomment %}
+{% if type_slider == site.data.scss_liquid.UI.slider.config.type.infinite %}
+  {% assign dim_slider = 0  %}
+{% endif %}
+
+
+
+{% comment %}
+  <!--optim css : html part, add global var-->
+{% endcomment %}
+{% include scss-liquid/optim/list-class.html
+  optim_class_css=site.data.scss_liquid.optim.css_slider
+  config_optim_css=site.data.scss_liquid.optim.config
+  delim_array=site.data.coll_ext.config.common.delimitator.array
+%}
+
+{% comment %}
+  <!-- compress extra class, id pr css, html -->
+{% endcomment %}
+{% include scss-liquid/optim/extra.html name_extra=container_slider
+  optim_class_css=site.data.scss_liquid.optim.css_slider
+  config_optim_css=site.data.scss_liquid.optim.config
+%}
+{% assign container_slider_display = extra_compress %}
+
+{% include scss-liquid/optim/extra.html name_extra=type_slider
+  optim_class_css=site.data.scss_liquid.optim.css_slider
+  config_optim_css=site.data.scss_liquid.optim.config
+%}
+{% assign type_slider_display = extra_compress %}
+
+
+
+
+
+{% include UI/slider/container/display.html
+  before=true
+  container_slider_display=container_slider_display
+  container_slider_ref=container_slider
+  type_slider=type_slider_display
+  id_slider=id_slider
+  nb_items=dim_slider
+  share-container-betw-car=config_slide.share-container-betw-car
+  style_prev_next=config_slide.style_prev_next
+  delim_id=delim_id
+  page_ref_url=null
+  display_header=null
+  add_url_to_header=null
+  header=null
+  list_items_sub=null
+%}
+
+
+
+
+
+{% for item in list_img_slider %}
+
+
+  {% if forloop.first %}
+    {% assign current_style = config_slide.style_item_first %}
+  {% else %}
+    {% assign current_style = config_slide.style_item_next %}
+  {% endif %}
+
+
+
+  {% include UI/slider/article/display.html
+    before=true
+    current_style=current_style
+  %}
+
+  {% comment %}//specific picture : img & info{% endcomment %}
+  <article>
+
+
+    {% include scss-liquid/optim/class.html class_gl='info_gl' %}
+    <div class="{{class_gl}}">
+      <h3>{{item.description-image}}</h3>
+      {% comment %}by <a href="http://voyager3.tumblr.com/">Brendan Zabarauskas</a>{% endcomment %}
+    </div>
+
+
+    {% if input_slider.img_source == site.data.scss_liquid.UI.slider.config.type_img_source.original %}
+      {% picture slider-home {{item.image}} alt="{{item.description-image}}" %}
+
+    {% elsif input_slider.img_source == site.data.scss_liquid.UI.slider.config.type_img_source.baseurl  %}
+      <img src="{{site.baseurl}}/images/{{item.image}}" alt="{{item.description-image}}">
+
+    {% elsif input_slider.img_source == site.data.scss_liquid.UI.slider.config.type_img_source.direct_url %}
+      <img src="{{item.image}}" alt="{{item.description-image}}">
+    {% endif %}
+
+  </article>
+
+
+  {% include UI/slider/article/display.html
+    before=false
+    current_style=null
+  %}
+
+{% endfor %}
+
+
+
+{% include UI/slider/container/display.html
+  before=false
+  container_slider_display=container_slider_display
+  container_slider_ref=container_slider
+  type_slider=type_slider_display
+  id_slider=id_slider
+  nb_items=dim_slider
+  share-container-betw-car=config_slide.share-container-betw-car
+  style_prev_next=config_slide.style_prev_next
+  delim_id=delim_id
+  page_ref_url=null
+  display_header=null
+  add_url_to_header=null
+  header=null
+  list_items_sub=null
+%}

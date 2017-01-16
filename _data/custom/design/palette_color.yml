@@ -1,0 +1,114 @@
+- name: 'white'
+  code: '#fff'
+  type: 'raw'
+
+- name: 'black'
+  code: '#000'
+  type: 'raw'
+
+
+
+
+
+- name: 'primary-color'
+  code: '#8d6e63'
+  type: 'raw'
+  # brown 400
+
+- name: 'primary-color-dark'
+  code: '#795548'
+  type: 'raw'
+  # brown 800
+
+- name: 'primary-color-light'
+  code: '#bcaaa4'
+  type: 'raw'
+  # brown 50
+
+
+
+
+- name: 'secondary-color'
+  code: '#cddc39'
+  type: 'raw'
+  # Lime 500
+
+- name: 'secondary-color-dark'
+  code: '#9e9d24'
+  type: 'raw'
+  # Lime 800
+
+- name: 'secondary-color-light'
+  code: '#e6ee9c'
+  type: 'raw'
+  # Lime 300
+
+
+
+
+- name: 'accent-color'
+  code: '#7cb342'
+  type: 'raw'
+  # Light-green 600
+
+
+
+
+
+- name: 'primary-color-text'
+  code: 'white'
+  type: 'scss'
+
+- name: 'primary-text-color'
+  code: 'secondary-color'
+  type: 'scss'
+
+- name: 'secondary-text-color'
+  code: '#4e342e'
+  type: 'raw'
+
+- name: 'divider-color'
+  code: '#B6B6B6'
+  type: 'raw'
+
+
+
+- name: 'success-color'
+  code: '#5CB85C'
+  type: 'raw'
+
+- name: 'info-color'
+  code: '#5BC0DE'
+  type: 'raw'
+
+- name: 'warning-color'
+  code: '#F0AD4E'
+  type: 'raw'
+
+- name: 'danger-color'
+  code: '#D9534F'
+  type: 'raw'
+
+
+
+- name: 'shadow-color'
+  code: 'primary-color-dark'
+  type: 'scss'
+
+
+
+
+# - name: 'dark-gray'
+#   code: '#191413'
+#   type: 'raw'
+
+
+# - name: 'light-gray'
+#   code: '#e2e2e2'
+#   type: 'raw'
+
+
+# - name: 'lighter-gray'
+#   code: '#f9f9f9'
+#   type: 'raw'
+

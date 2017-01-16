@@ -1,0 +1,56 @@
+---
+layout: compress
+---
+
+<!DOCTYPE html>
+<html lang="fr">
+
+  {% include head.html %}
+
+  <body class="Site-body container-body default-page">
+    <div id="haut-page" class="u-hiddenVisually"></div>
+
+    <header id='header-default' class="Site-header header--fixed">
+        {% include header-default.html %}
+    </header>
+
+    <main class="Site-main " id="main" role="main">
+
+      <!-- <aside class="Site-left-aside u-textLeft ">
+      </aside> -->
+
+      <div class="Site-content-right-aside">
+
+        <div class="Site-content">
+            {{ content }}
+        </div>
+
+        {% if page.showContent %}
+          <aside class="Site-right-aside u-textCenter ">
+            <!-- <div class="toc--sidebar"></div> -->
+            <strong>Right Aside</strong>
+          </aside>
+        {% else %}
+          <aside class="Site-right-aside u-textCenter ">
+
+          </aside>
+        {% endif %}
+      </div> <!-- fin Site-content-right-aside -->
+
+    </main>
+
+
+
+
+    <footer class="Site-footer">
+      <div class="Footer">
+        {% include footer.html %}
+      </div>
+    </footer>
+
+
+
+    {% include scripts.html %}
+
+  </body>
+</html>

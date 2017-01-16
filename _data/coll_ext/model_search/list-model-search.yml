@@ -1,0 +1,29 @@
+- id: 'recherche-promotions'
+  title : 'Toutes les promotions'
+  collection: 'nos-promotions'
+  force_display_coll_ext: true
+  force_display_coll_ext_section: 'nos-promotions'
+  force_display_coll_ext_model: 'default-promotions'
+  sort :
+    # available  'date-publication' | 'order' | 'title' (| 'date-evenement')
+    # defined in /_data/coll_ext/config/sort_site-documents.yml
+    # default : 'order'
+    filter: 'date-promotion'
+    nb-max-item-per-section: 50
+    choose-subsections: []
+    filter-subsections: []
+
+- id: 'categorie-recherche-promotions'
+  title : 'Toutes les promotions'
+  collection: 'nos-promotions'
+  force_display_coll_ext: true
+  force_display_coll_ext_section: 'nos-promotions'
+  force_display_coll_ext_model: 'default-categorie-promotions'
+  sort :
+    # available  'date-publication' | 'order' | 'title' (| 'date-evenement')
+    # defined in /_data/coll_ext/config/sort_site-documents.yml
+    # default : 'order'
+    filter: 'order'
+    nb-max-item-per-section: 50
+    choose-subsections: []
+    filter-subsections: []

@@ -1,0 +1,219 @@
+html {
+    background-attachment: fixed;
+    background-color: $secondary-color-light;
+    background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.1) 25%, rgba(0, 0, 0, 0) 25%, rgba(0, 0, 0, 0) 50%, rgba(255, 255, 255, 0.1) 50%, rgba(255, 255, 255, 0.1) 75%, rgba(0, 0, 0, 0) 75%, rgba(0, 0, 0, 0));
+    background-size: 50px 50px;
+
+  // http://www.alsacreations.com/astuce/lire/1216-arriere-plan-background-extensible.html
+  // margin:0;
+  // padding:0;
+  // background: url(image/bg.jpg) no-repeat center fixed;
+  // -webkit-background-size: cover; /* pour anciens Chrome et Safari */
+  // background-size: cover; /* version standardisée */
+
+}
+
+/*@media (--high-dppx) {
+  html {
+    font-weight: 300;
+  }
+}*/
+
+body {
+  font-size: 0.7em;
+  //ajust responsive
+  @include breakpoint($break-ssm-max){font-size: 0.7em;}
+
+  font-family: $serif ; //$base-font-family;
+  -webkit-font-smoothing: antialiased;
+
+  &.overflow--hidden {
+    /* when primary navigation is visible, the content in the background won't scroll */
+    overflow: hidden;
+  }
+  overflow-y:scroll;
+
+  // overflow: hidden; //body don't scroll
+
+
+}
+
+p {
+  font-size: 1em;
+  line-height: 1.25em;
+  // margin-bottom: 1.5em;
+  font-weight: normal;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  -webkit-font-smoothing: antialiased;
+  text-align: left;
+  font-weight: normal;
+  line-height: 1em;
+  margin-bottom: .5em;
+}
+
+h1 {
+  font-size: 1.5em;
+  line-height: 2em;
+  // margin-bottom: .5em;
+  // letter-spacing: -.015em;
+  // margin: .25em 0 .75em;
+
+}
+
+h2 {
+  font-size: 1.3em;
+  line-height: 1.7em;
+  margin-top: .6em;
+  // margin-bottom: .6em;
+  // font-weight: 600;
+  // font-family: KievitWebPro-Bold;
+  // margin: 0 0 calc(1.5em/1.333);
+}
+
+h3 {
+  font-size: 1em;
+  line-height: 1.45em;
+  // line-height: 1em;
+  margin-top: 1em;
+  // margin-bottom: .4em;
+  // text-align: left;
+  // font-weight: 600;
+  // margin: 0 0 1.5em;
+}
+
+h4 {
+  font-size: 1.2em;
+  // line-height: 1.5em;
+
+}
+h5 {
+    font-size: 1.125em;
+    // line-height: 1.6em;
+    // margin-bottom: 1.5em;
+    // text-align: left;
+}
+h6 {
+    font-size: 1em;
+    // font-weight: bold;
+    // line-height: 1.5em;
+    // margin-bottom: .4em;
+    // color: #818c97;
+    // text-align: left;
+    // margin-left: .5em;
+    // margin-top: 1em !important;
+}
+
+
+
+// ol,
+// // li,
+// ul {
+//   list-style: none;//disc
+//   margin: 0;
+//   // margin: 0 0 1.5em;
+//   // padding: 0 0 0 1.5em;
+//   // padding-left: 1px;
+//   // list-style-position: inside;
+//   -webkit-font-smoothing: antialiased;
+// }
+
+// li {
+//   margin-bottom: 0.333em;
+// }
+
+
+/* Links */
+a {
+    // color: $primary-color;
+    // color: $accent-color;
+    text-decoration: none;
+
+    // &:visited {
+    //     color: $primary-color-dark;
+    // }
+
+    &:hover {
+        color: inherit; //$primary-color;
+        text-decoration: none;
+    }
+
+    // &:focus {}
+}
+
+
+
+
+.invisible {
+  display:none;
+}
+
+.invSearch {
+  display:none;
+}
+
+
+/**
+ * Icons
+ */
+// .icon {
+
+//     > svg {
+//         display: inline-block;
+//         width: 1.8em;
+//         height: 1.8em;
+//         vertical-align: middle;
+
+//         path {
+//             fill: $grey-color;
+//         }
+//     }
+// }
+// .icon--home {
+//   > svg {
+//     // margin-top:-0.5em;
+//     path {
+//         fill: $nav-active-color; //$header-color;
+//     }
+//   }
+// }
+
+// .icon--search {
+//   width: 2.0em;
+//   height: 2.0em;
+//   > svg {
+//     margin-top:-0.5em;
+//     path {
+//         fill: $nav-active-color; //$header-color;
+//     }
+//   }
+// }
+
+// .logo-peb {
+
+//     > svg {
+//         display: inline-block;
+//         width: 50px;
+//         height: 50px;
+//         vertical-align: middle;
+
+//         path {
+//             fill: $grey-color;
+//         }
+//     }
+// }
+
+/*
+   Global animation transition
+   ========================================================================== */
+
+// b, i, strong, em, blockquote, p, q, span, figure, img, h1, h2, header, input, a, tr, td, form button, input[type="submit"], .btn, .highlight{
+//   transition: all 0.2s ease-in-out;
+// }
+
+.modernizr {
+
+ul{-webkit-column-count: 3;-moz-column-count: 3;column-count: 3;}
+li{color:green}.no-borderimage li.borderimage{ color: red; }.no-canvastext li.canvastext{ color: red; }.no-canvaswinding li.canvaswinding{ color: red; }.no-csspositionsticky li.csspositionsticky{ color: red; }.no-flexbox li.flexbox{ color: red; }.no-flexboxlegacy li.flexboxlegacy{ color: red; }.no-flexboxtweener li.flexboxtweener{ color: red; }.no-inlinesvg li.inlinesvg{ color: red; }.no-json li.json{ color: red; }.no-mediaqueries li.mediaqueries{ color: red; }.no-serviceworker li.serviceworker{ color: red; }.no-smil li.smil{ color: red; }.no-srcset li.srcset{ color: red; }.no-svg li.svg{ color: red; }.no-svgasimg li.svgasimg{ color: red; }.no-svgclippaths li.svgclippaths{ color: red; }.no-svgfilters li.svgfilters{ color: red; }.no-svgforeignobject li.svgforeignobject{ color: red; }.no-setclasses li.setclasses{ color: red; }
+}

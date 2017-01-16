@@ -1,0 +1,116 @@
+---
+layout: home
+---
+
+
+
+<div class="main-presentation">
+ <!--  Presentation (text, navigation, ..) first left
+  Images, last right  -->
+  <ul class="Grid Grid--gutters-m u-spaceVN">
+
+  <!-- .presentation Presentation part -->
+    <li class=" Grid-cell u-full u-med-2of3-m u-spaceBN">
+      <div class="presentation">
+        <ul class="Grid Grid--gutters-m u-spaceVN">
+
+          <!-- .li-presentation & .presentation-text (gestion padding responsive), part left on lg screen, first on small -->
+          <li class="li-presentation Grid-cell u-full  ">
+            <div class="presentation-text">
+              {% for item in site.data.custom.home-page.text-intro.bienvenue %}
+                <p>{{item.paragraph}}</p>
+              {% endfor %}
+            </div>
+          </li> <!--fin .li-presentation -->
+
+          <!-- .li-nav-ab , navigation list + AB logo -->
+          <li class="li-nav-ab Grid-cell u-full  u-spaceBN" >
+            <!-- add one level imbrication -->
+            <!-- <ul class="Grid Grid--center Grid--flexCells Grid--gutters-m u-spaceVN"> -->
+            <ul class="Grid  Grid--gutters-m u-spaceVN">
+              <li class="li-nav Grid-cell Grid-cell--center ">
+                <ul class="navigation">
+                  {% for item in site.data.custom.home-page.navigation.home-short-nav %}
+                    <li id="menu-item" {% comment %}style="margin-left: {{ forloop.index | minus: 1 | times: 2}}em;"{% endcomment %}> <a class="menu-item u-textTruncate " href="{{site.baseurl}}{{item.url}}"><h2>{{item.title}}</h2></a> </li>
+                  {% endfor %}
+                </ul>
+                <!-- u-textTruncate u-textNoWrap -->
+              </li>
+              {% for item in site.data.custom.home-page.img.image-intergrid-acceuil limit:1 %}
+              <li class="li-ab Grid-cell Grid-cell--autoSize not-inf-sm">
+                {% picture logo-intergrid-home {{item.image}} alt="{{item.description-image}}" title="{{item.description-image}}" %}
+              </li>
+              {% endfor %}
+            </ul>
+
+          </li> <!-- fin .li-nav-ab-->
+        <!-- fin navigation list + AB logo -->
+        </ul>
+
+      </div>
+    </li>
+  <!--fin .presentation Presentation part -->
+
+
+  <!-- image-acceuil, part right on lg screen -->
+    <li class="Grid-cell u-full u-med-1of3-m ">
+      <div class="part-welcome-img">
+        <ul class="Grid Grid--gutters-m u-spaceVN">
+          {% for item in site.data.custom.home-page.img.image-acceuil limit:2 %}
+          <li class="li-img-primdark Grid-cell u-1of2-m u-ssmall-1of3-m u-small-1of2-m u-med-full ">
+
+            {% if item.lien != "" %}
+              <a href="{{site.baseurl}}{{item.lien}}" title="{{item.description-lien}}">
+            {% endif %}
+            {% picture welcome-home {{item.image}} alt="{{item.description-image}}" %}
+            <div class="u-textCenter">{% if item.text-icone != "" %}<i class="{{item.icone-text}}" aria-hidden="true"></i>&nbsp;{% endif %}{{item.text}}</div>
+            {% if item.lien != "" %}</a>{% endif %}
+          </li>
+          {% endfor %}
+          {% for item in site.data.custom.home-page.img.image-intergrid-acceuil limit:1 %}
+          <li class=" Grid-cell  u-full u-ssmall-1of3-m on-sm-only" >
+            {% picture logo-intergrid-home {{item.image}} alt="{{item.description-image}}" title="{{item.description-image}}" %}
+          </li>
+          {% endfor %}
+        </ul>
+      </div>
+    </li>
+  <!-- fin image-acceuil, part right on lg screen -->
+  </ul>
+</div>
+<!-- carousel page d'acceuil -->
+<!-- TODO : add text-->
+<!-- <div id="slider-presentation">
+{% for item in site.data.custom.home-page.img.carousel-acceuil.list_img %}
+
+  {% assign title-image = item.description-image %}
+
+  <div {% if forloop.index > 1 %} class="invisible" {% endif %}>
+    {% if item.lien != "" %}
+      {% assign title-image = item.description-lien %}
+      <a href="{{site.baseurl }}{{item.lien}}" title="{{item.description-lien}}">
+    {% endif %}
+
+    {% picture slider-home {{item.image}} alt="{{item.description-image}}" title="{{title-image}}"  %}
+
+    {% if item.lien != "" %}</a>{% endif %}
+  </div>
+{% endfor %}
+</div> -->
+{% include picture/slider-standard.html
+  input_slider='i-acc'
+%}
+
+<!-- list items -->
+{% for list in site.data.coll_ext.model_list-detail-items.list-detail-items %}
+
+
+  {% if list.force_display_coll_ext == true %}
+    {% include coll_ext_utils/list-detail-items_init_step.html %}
+    {% include coll_ext/main.html
+      force_page_ref_input=true
+    %}
+
+  {% endif %}
+
+{% endfor %}

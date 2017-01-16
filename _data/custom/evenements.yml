@@ -1,0 +1,32 @@
+- titre: Fermeture 1er Mai
+  description-courte: la prochaine AG se tiendra le 12 Avril 2016, à 20h, au siège de l'association.
+  lien-post:
+  image:
+  date-debut: 12-04-2016
+  date-fin:
+  date-unique: oui
+  date-parution: 22 Avril 2016
+  date-expire: 01 Mai 2016
+  ajout-calendrier : non
+
+- titre: WE biodiversité
+  description-courte: Dernier week-en de Mai; un week-end d'échanges avec les associations régionales sur un site naturel.
+  lien-post:
+  image:
+  date-debut:
+  date-fin:
+  date-unique: non
+  date-parution: 25 Avril 2016
+  date-expire: 03 Mai 2016
+  ajout-calendrier : non
+
+- titre: Journée éolienne
+  description-courte:
+  lien-post:
+  image:
+  date-debut: 30-04-2016
+  date-fin:
+  date-unique: oui
+  date-parution: 26 Avril 2016
+  date-expire: 27 Avril 2016
+  ajout-calendrier : non

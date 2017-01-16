@@ -1,0 +1,18 @@
+- model: 'default'
+  type_custom: 'default'
+  styling:
+   # ! take of type raw in palette_color list
+    heading_color: 'white'
+    slides_background: 'secondary-color-light'
+    # spacing-h: 'spacing-h'
+    # spacing-v: 'spacing-v'
+
+
+- model: 'default-black'
+  type_custom: 'default'
+  styling:
+    # ! take of type raw in palette_color list
+    heading_color: 'primary-color-dark'
+    slides_background: 'primary-color-light'
+    # spacing-h: 'spacing-h'
+    # spacing-v: 'spacing-v'

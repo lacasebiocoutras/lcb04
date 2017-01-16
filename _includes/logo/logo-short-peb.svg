@@ -1,0 +1,12 @@
+<svg class="svg--responsive" version="1.1" viewBox="0 0 20 20">
+  <defs>
+    <rect id="rect" x="0" y="0" width="20px" height="20px" rx="15px" style="fill-opacity:0;"></rect>
+    <clippath id="clip">
+      <use xlink:href="#rect"></use>
+   </clippath>
+  </defs>
+  <use xlink:href="#rect"></use>
+  {% include logo/image-peb.svg %}
+
+</svg>
+<noscript>&nbsp;</noscript>

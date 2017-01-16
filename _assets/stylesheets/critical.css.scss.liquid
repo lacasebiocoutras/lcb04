@@ -1,0 +1,48 @@
+/* ==========================================================================
+   CRITICAL CSS
+   ========================================================================== */
+
+{% comment %}//palette color, dynamic load{% endcomment %}
+{% include scss-liquid/palette_color/scss.html
+  palette_color=site.data.custom.design.palette_color
+%}
+
+@import "base/variables";
+@import "base/font-critical";
+
+@import "breakpoint"; // media query mixins
+@import "base/mixins";
+@import "init/reset";
+@import "init/suitcss-utils-display";
+@import "init/suitcss-utils-text";
+@import "base/base";
+
+
+@import 'components/container';
+// @import 'components/demo';
+@import 'components/footer';
+@import 'components/grid';
+@import 'components/header-default';
+{% comment %}// @import 'components/header-nav';{% endcomment %}
+@import 'components/header-nav-target';
+@import 'components/navigation-home';
+@import "components/list_flex_styling";
+@import "components/message";
+@import 'components/miniature';
+@import 'components/search';
+@import 'components/site';
+{% comment %}//@import 'components/slick';{% endcomment %}
+@import 'components/default-page';
+@import 'components/home-page';
+@import 'components/post-content';
+
+{% comment %}// @import 'components/slideshow';{% endcomment %}
+
+{% comment %}// @import 'components/section';{% endcomment %}
+@import 'utils/animations';
+@import 'utils/media';
+@import 'utils/spacing';
+
+{% comment %}// @import "basetmp/base";{% endcomment %}
+
+

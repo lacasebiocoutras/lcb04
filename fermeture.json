@@ -1,0 +1,14 @@
+---
+layout: null
+---
+[
+  {% for event in site.data.custom.fermeture %}
+    {
+      "title"       : "{{ event.titre }}",
+      "dateDebut"   : "{{ event.date-debut }}",
+      "dateFin"     : "{{ event.date-fin }}",
+      "delaiAlerte" : "{{ event.delai-alerte | remove_first: 'jours' | strip}}"
+    } {% unless forloop.last %},{% endunless %}
+  {% endfor %}
+]
+

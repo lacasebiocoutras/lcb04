@@ -1,0 +1,107 @@
+// cas spécifique default-layout, ne concerne pas home.html
+//integration library headroom.js
+
+ //add class header--fixed on layout default.html
+  //  for layout home.html too
+  .header--fixed {
+    left: 0;
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 10;
+    // max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit} * 2));
+    // max-width:         calc(#{$content-width} - (#{$spacing-unit} * 2));
+    max-width: $content-width;
+    margin-right: auto;
+    margin-left: auto;
+    background: $white;
+  }
+
+  .Site-header-home {
+    margin-top: 5em;
+    background-color: $secondary-color-light;
+  }
+
+.default-page {
+
+  // note : header in layout post.html
+  //from site.scss
+  .Site-main {
+    margin-top: 3em;
+  }
+  //add class,  _include header-default.html
+  // .grid-logo {
+  //   display:none;
+  //     @include breakpoint($break-sm) {display:block;}
+  // }
+  //from header.scss
+  // .header-logo {
+  //   min-width: 20px;
+  //   max-width: 60px;
+  //   margin-left: 0.2em;
+  //   margin-bottom: 0;
+  // }
+
+  // from header-nav.scss
+  // .site-nav {
+  //   background: none;
+  // }
+
+  // .site-backtotop {
+  //   flex: none;
+  //   width: 100%;
+  //   margin-top: 0;
+  //   margin-bottom: 2em;
+  //   text-align: center;
+  // }
+
+  // a.backtotop {
+  //   // font-size: .7em;
+  //   // font-family: KievitWebPro-Bold;
+  //   line-height: 1em;
+  //   background-color: $primary-color-text;
+  //   color: $secondary-text-color;
+  //   border: 2px solid $primary-color;
+  //   -moz-border-radius: 40px;
+  //   -webkit-border-radius: 40px;
+  //   -khtml-border-radius: 40px;
+  //   border-radius: 40px;
+
+  //   padding: 12px 17px 10px 17px;
+  //   text-decoration: none;
+  //   position: relative;
+  //   z-index:1000;
+  // }
+
+  // a:hover.backtotop {
+  //   border: none;
+  //   color: $primary-color-text;
+  //   background-color: $secondary-text-color;
+  // }
+}
+
+// class used in _layout/page.html
+.default-page-content {
+
+  .logo-back {
+    display: inline-block;
+    background-image: url(asset_path("logo-lcb.png"));
+    // background-repeat:repeat-x;
+    background-size: 100% 100%;
+    height: 50px;
+    width: 50px
+  }
+
+  h1 {
+    display: inline-block;
+    margin-left: $spacing-h/2;
+  }
+
+  .content {
+    // overflow: hidden; //test carousel, affichage fantome
+  }
+
+
+
+}
+

@@ -1,0 +1,17 @@
+<svg class="svg--responsive" version="1.1" viewBox="0 0 200 20">
+  <defs>
+    <rect id="rect" x="0" y="0" width="20px" height="20px" rx="15px" style="fill-opacity:0;"></rect>
+    <clippath id="clip">
+      <use xlink:href="#rect"></use>
+   </clippath>
+  </defs>
+  <use xlink:href="#rect"></use>
+  {% include logo/image-peb.svg %}
+  {%comment%}<!-- dim image 20 ,20 -->{%endcomment%}
+  <text class="text-svg-logo" x="21" y="15"><tspan font-weight = "bold"><tspan id="mask-first-line-text-svg" >{{site.short-title}}, </tspan>{{site.title}}</tspan></text>
+  {%comment%}<!--
+  <text class="text-svg-logo" id="mask-second-line-text-svg" x="31" y="20">blablabla</text>
+  -->{%endcomment%}
+
+</svg>
+<noscript> Javascript désactivé!</noscript>

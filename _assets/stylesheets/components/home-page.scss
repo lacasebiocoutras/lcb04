@@ -1,0 +1,196 @@
+.main-presentation {
+
+  .presentation {
+    // width: 100%;
+    padding: $spacing-v/2 0 0 0; //1em;
+    // background: $primary-color-light;
+    // border-radius: $border-radius-site;
+    // box-shadow: 0 0 $border-shadow rgba($shadow-color, 0.5);
+    // color: $primary-text-color;
+  }
+  // .presentation::after {
+  //   content: '\00a0'; /* &nbsp; */
+  //   display: block;
+  //   margin-top: $spacing-v/2;
+  //   height: 0px;
+  //   visibility: hidden;
+  // }
+
+  .part-welcome-img {
+    // width: 100%;
+    padding: $spacing-v/2 0;
+    margin-left: 0.5em;
+    // background: $accent-color; //hsla(31, 15%, 50%, 0.1);
+    // box-shadow: 0 0 $border-shadow rgba($shadow-color, 0.5);
+    // border-radius: $border-radius-site;
+
+
+  }
+
+  /**
+   * custom li part
+   */
+  .li-img-primdark {
+    background: $primary-color-dark; //hsla(31, 15%, 50%, 0.1);
+    border: 0.2em solid $primary-color-dark;
+    // box-shadow: 0 0 $border-shadow rgba($shadow-color, 0.5);
+    border-radius: 0 0 $border-radius-site $border-radius-site;
+    color: $secondary-color-light;
+  }
+
+  .li-nav-ab {
+    // background: $accent-color; //hsla(31, 15%, 50%, 0.1);
+    // border: 0.2em solid $primary-color-dark;
+    // box-shadow: 0 0 $border-shadow rgba($shadow-color, 0.5);
+    border-radius: $border-radius-site;
+    color: $secondary-color-light;
+  }
+  .li-nav {
+    background: $accent-color; //hsla(31, 15%, 50%, 0.1);
+    // border: 0.2em solid $primary-color-dark;
+    // box-shadow: 0 0 $border-shadow rgba($shadow-color, 0.5);
+    border-radius: $border-radius-site;
+    // color: $primary-color-text;
+
+    //maj margin right à 0, on sm
+    @include breakpoint($break-sm-max) {
+      margin-right: 0em;
+    }
+  }
+
+  .li-ab {
+    // background: $white; //hsla(31, 15%, 50%, 0.1);
+    // border: 0.2em solid $primary-color-dark;
+    // box-shadow: 0 0 $border-shadow rgba($shadow-color, 0.5);
+    border-radius: $border-radius-site;
+    // color: $primary-color-text;
+  }
+
+
+  .presentation {
+
+    .li-presentation {
+      background: $secondary-color; //hsla(31, 15%, 50%, 0.1);
+      // border: 0.2em solid $primary-color-dark;
+      // box-shadow: 0 0 $border-shadow rgba($shadow-color, 0.5);
+      border-radius: $border-radius-site;
+      color: $primary-color-text;
+      // padding: 0 5em;
+      //gestion padding responsive
+      padding: 0 $spacing-h;
+      // @include breakpoint($break-sm) {
+      //   padding-right: 5em;
+      // }
+      @include breakpoint($break-sm) {
+       padding-right: 5em;
+      }
+      @include breakpoint($break-md) {
+        padding: 0 $spacing-h;
+      }
+      // // @include breakpoint(900px) {
+      // //   padding: 0 5em;
+      // // }
+      // @include breakpoint($break-lg) {
+      //   padding: 0 $spacing-h;
+      // }
+      @include breakpoint($break-xlg) {
+        padding-right: 5em;
+      }
+
+      p {
+
+        font-size:1.2em;
+          line-height: 1.5em;
+
+        @include breakpoint($break-md) {
+          font-size:1.3em;
+          line-height: 1.8em;
+        }
+      }
+
+    }
+    .presentation-text {
+      // font-size: 2.7em;
+      // line-height: 3em;
+      // font-weight: 600;
+      // background : white;
+      // margin-top: $spacing-v/2;
+       // margin: 0 5em;
+       p:first-of-type  {
+        text-indent: 3em;
+
+        span {
+          font-size: 1.7em;
+         }
+       }
+
+    }
+
+
+
+    // @include breakpoint($break-lg-max) {
+    //   .header-welcome {
+    //     display: none;
+    //   }
+    // }
+
+    // @include breakpoint($break-md) {
+    //   .main-welcome {
+    //     margin-right: 3em; //Extra margin for lisibility
+    //   }
+
+    // }
+  }
+  //end details .presentation
+
+  .welcome-home-image {
+    width: 100%;
+    box-shadow: 0 0 $border-shadow rgba($shadow-color, 0.5);
+  }
+
+
+
+
+}
+
+.logo-home-image {
+  width: 100%;
+  max-width: 1600px;
+  min-width: $break-ssm-header !important;
+
+  @include breakpoint($break-ssm-header-max){
+    margin-left: -5em;
+  }
+
+
+}
+
+.logo-intergrid-home-image {
+
+  width: 45%;
+  margin: auto;
+  @include breakpoint($break-ssm) {
+    width: 100%;
+
+  }
+  @include breakpoint($break-sm) {
+    width: 7em;
+
+  }
+
+  // max-width: 8em;
+  // min-width: 6em;
+}
+
+// .logo-ab-backgr {
+//   width: 100%;
+//   height: 5em;
+//   // height: 10em;
+//   // margin-top: 0.5em;
+//   // margin-bottom: 1.9em;
+//   background-size: cover;
+//   background-position: center;
+//   // box-shadow: 0px 4px 8px #999;
+//   z-index: 2;
+// }
+

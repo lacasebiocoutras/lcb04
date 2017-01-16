@@ -1,0 +1,33 @@
+/**
+ * Search
+ */
+#search-demo-container {
+  max-width: 40em;
+  padding: 1em;
+  margin: 1em auto;
+  border: 1px solid $accent-color;
+}
+#search-input {
+  display: inline-block;
+  padding: .5em;
+  width: 100%;
+  font-size: 0.8em;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.inline-list {
+  list-style: none;
+  margin: 0;
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.tag {
+  display: block;
+  color: $accent-color;
+  text-align: center;
+  padding: 5px;
+
+}

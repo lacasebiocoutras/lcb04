@@ -1,0 +1,18 @@
+---
+layout: null
+---
+
+ { "list" : [
+    {"url":"promotions/index.html",
+    "name":"search-promotions.json"
+    }
+  ],
+  "config" :
+  {
+    "class_invisible_search": "{{site.data.coll_ext.config.display_list-items.config.class_invisible }}",
+    "add_delim_categorie_search": "{{site.data.coll_ext.model_search.config.add_delim_categorie}}"
+   }
+
+}
+
+

@@ -1,0 +1,17 @@
+---
+layout: null
+---
+
+ { "list" : [
+    {"url":"/lcb03-admin/",
+    "class_slider": "slider-translate-nos-promotions-di-0",
+    "id_item_slider": "translate-nos-promotions-di-0-",
+    "nb_items_slider": 13,
+    "delay_sec": 5
+    }
+  ],
+  "config" :
+  {
+  }
+
+}

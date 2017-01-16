@@ -1,0 +1,86 @@
+{%comment%}
+<!--
+  param in :
+    include
+      container_display
+      container_ref
+      type_slider_display
+      type_slider_ref
+      list_sliders
+      config_type
+
+
+  var global :
+
+-->
+{%endcomment%}
+
+
+{% assign config_slide = null %}
+{% for config in include.config_type  %}
+  {% if config.type == include.type_slider_ref %}
+    {% assign config_slide = config %}
+  {% endif %}
+{% endfor %}
+
+
+{% assign max_items_slider = 0 %}
+{% for slider in include.list_sliders  %}
+  {% if slider.type == include.type_slider_ref %}
+
+
+    {% assign nb_items =  slider.list_img.size | plus: 0 %}
+
+    {% if nb_items >  max_items_slider %}
+      {% assign max_items_slider = nb_items %}
+    {% endif %}
+
+    {% if config_slide.force_nb_item_to_one == true %}
+      {% assign nb_items = 1  %}
+    {% endif %}
+
+    {% assign height_items = 'auto' %}
+    {% if slider.slides_height != null %}
+      {% assign height_items = slider.slides_height %}
+    {% elsif config_slide.default_slides_height != null %}
+      {% assign height_items = config_slide.default_slides_height %}
+    {% endif %}
+
+
+    @include  slider_standard_extra_before({{include.container_display}}, {{include.type_slider_display}}, {{include.type_slider_ref}}, {{slider.id}}, {{nb_items}}, {{height_items}});
+
+  {% endif %}
+{% endfor %}
+
+
+{% if max_items_slider > 0 %}
+
+  @include slider_design_standard({{include.container_display}}, {{include.container_ref}}, {{include.type_slider_display}}, {{include.type_slider_ref}});
+
+  @include slider_article_standard({{include.container_display}}, {{include.type_slider_display}}, {{include.type_slider_ref}});
+
+  @include slider_standard({{include.container_display}}, {{include.container_ref}}, {{include.type_slider_display}}, {{include.type_slider_ref}}, {{max_items_slider}});
+
+  @include slider_controls_ctl_standard({{include.container_display}}, {{include.type_slider_display}}, {{include.type_slider_ref}});
+
+  @include slider_active_ctl_standard({{include.container_display}}, {{include.type_slider_display}}, {{include.type_slider_ref}});
+
+  @include slider_info_box_standard({{include.container_display}}, {{include.type_slider_display}}, {{include.type_slider_ref}});
+
+  @include slider_animation_standard({{include.container_display}}, {{include.type_slider_display}}, {{include.type_slider_ref}});
+
+
+{% endif %}
+
+{% comment %}
+  //add extra class to control prev/next when less img in slider
+{% endcomment %}
+
+{% for slider in site.data.picture.slider.list  %}
+  {% if slider.type == include.type_slider_ref  %}
+    {% assign sizeTmp =  slider.list_img.size | plus: 0 %}
+    @include  slider_standard_extra_after({{include.container_display}}, {{include.type_slider_display}}, {{include.type_slider_ref}}, {{slider.id}}, {{sizeTmp}}, {{max_items_slider}});
+  {% endif %}
+{% endfor %}
+
+

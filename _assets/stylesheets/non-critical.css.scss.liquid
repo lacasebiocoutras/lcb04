@@ -1,0 +1,21 @@
+/* ==========================================================================
+   NON CRITICAL CSS
+   ========================================================================== */
+{% comment %}//palette color, dynamic load{% endcomment %}
+{% include scss-liquid/palette_color/scss.html
+  palette_color=site.data.custom.design.palette_color
+%}
+
+@import "base/variables";
+@import "base/mixins";
+
+{% comment %}// @import "components/message";{% endcomment %}
+{% comment %}// @import "basetmp/custom";{% endcomment %}
+@import "components/datamaps";
+@import "components/modal";
+{% comment %}// @import "components/carousel";{% endcomment %}
+
+
+{% comment %}// @import "lib/leaflet.scss";{% endcomment %}
+{% comment %}@import "lib/slick";{% endcomment %}
+{% comment %}@import "lib/slick-theme";{% endcomment %}

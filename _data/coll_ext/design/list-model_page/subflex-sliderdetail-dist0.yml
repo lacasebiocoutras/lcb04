@@ -1,0 +1,15 @@
+model: 'subflex-sliderdetail-dist0'
+list-model-dist:
+  - dist: 0
+    list-model-type:
+      - type: ["detail_items", "subsection_items", "mix_items"]
+        design_model:
+          type: 'slider'
+          custom: 'default'
+
+      - type: ["subsections"]
+        design_model:
+          # type: 'list_flex'
+          # custom: 'subsections-default'
+          type: 'list_flex'
+          custom: 'subsections-default'

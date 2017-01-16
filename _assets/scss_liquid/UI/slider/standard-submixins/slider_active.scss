@@ -1,0 +1,85 @@
+
+
+// ++++++++++++++++++++++
+// active ctl part
+
+%animation-active {
+  background: #333;
+  border-color: #333 !important;
+}
+
+@mixin slider_active_ctl_standard($container, $type, $type_ref) {
+
+  .#{$containerSlider_gl}-#{$container}-#{$type} {
+
+    .#{$active_gl} {
+      margin: 30% 0 0;
+      text-align: center;
+    }
+
+    .#{$active_gl} label {
+      border-radius: 5px;
+      display: inline-block;
+      width: 10px;
+      height: 10px;
+      background: #bbb;
+    }
+
+    .#{$active_gl} label:hover {
+      background: #ccc;
+      border-color: #777 !important;
+    }
+
+  }
+}
+
+
+%animation-active-coll-ext {
+  .radius, .miniature {
+    background: #333;
+    border-color: #333 !important;
+  }
+}
+
+@mixin slider_active_ctl_coll_ext($container, $type, $type_ref) {
+
+  .#{$containerSlider_gl}-#{$container}-#{$type} {
+
+    .#{$active_gl} {
+      margin: 5% 0 0;
+      text-align: center;
+    }
+
+    .#{$active_gl} {
+
+      label {
+
+        .radius {
+          border-radius: 5px;
+          display: inline-block;
+          width: 10px;
+          height: 10px;
+          background: #bbb;
+        }
+
+        .miniature {
+          display: inline-block;
+          background: #bbb;
+        }
+      }
+
+      label:hover {
+        .radius {
+          background: #ccc;
+          border-color: #777 !important;
+        }
+
+        .miniature {
+          background: #ccc;
+          border-color: #777 !important;
+        }
+      }
+    }
+
+  }
+}

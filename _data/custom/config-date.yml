@@ -1,0 +1,6 @@
+date_shop:
+  firstday: mardi
+  lastday: samedi
+  opening-hours:
+    morning: ['09:00','12:30']
+    afternoon: ['15:00','19:15']

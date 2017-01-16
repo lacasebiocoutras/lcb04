@@ -1,0 +1,112 @@
+{% comment %}
+
+  NOTE integrated directy on _pages/ xxxx-search.md
+  main reason : to be integrated with th page design (aside left, right)
+
+{% endcomment %}
+
+{% comment %}<section class="Section">
+  <div class="Container">
+
+    <form action="" id="site_search">
+      <input type="search" id="search_box" placeholder="Que recherchez vous?" autocomplete="off">
+    </form>
+  </div>
+</section>
+
+<section class="Section">
+  <h2 class="Section-heading">Filtrer par catégories : </h2>
+
+  {% for list in site.data.coll_ext.model_search.list-model-search %}
+    {% if list.id == 'categorie-recherche-promotions' %}
+
+      {% assign title_search = list.title  %}
+      <button class="catSearchShowAll">
+        <h3 class="termSearch">{{title_search}}</h3>
+      </button>
+
+      {% include coll_ext_utils/list-detail-items_init_step.html %}
+      {% include coll_ext/main.html
+        force_page_ref_input=true
+        force_display_no_details=true
+      %}
+    {% endif %}
+  {% endfor %}
+
+</section>
+
+
+
+{% for list in site.data.coll_ext.model_search.list-model-search %}
+  {% if list.id == 'recherche-promotions' %}
+    {% include coll_ext_utils/list-detail-items_init_step.html %}
+    {% include coll_ext/main.html
+      force_page_ref_input=true
+    %}
+  {% endif %}
+{% endfor %}{% endcomment %}
+
+
+
+
+
+{% comment %} output utils : info_section_subsection_ref_categories_gl{% endcomment %}
+
+{% comment %}
+{% capture site_tags %}{% for tag in site.tags %}{{ tag | first }}{% unless forloop.last %},{% endunless %}{% endfor %}{% endcapture %}
+{% assign tags_list = site_tags | split:',' | sort %}
+{% endcomment %}
+{% comment %}
+<section class="Section">
+  <div class="Container">
+    <h2 class="Section-heading">Filtrer par catégories : </h2>
+    <ul class="inline-list">
+      {% for item in (0..site.tags.size) %}{% unless forloop.last %}
+        {% capture this_word %}{{ tags_list[item] | strip_newlines }}{% endcapture %}
+        <li><div class="tag"><span class="term">{{ this_word }}</span> <span class="count">{{ site.tags[this_word].size }}</span></div></li>
+      {% endunless %}{% endfor %}
+    </ul>
+  </div>
+</section>
+{% endcomment %}
+
+
+{% comment %}<ul id="search_results"></ul>{% endcomment %}
+
+ {% comment %}<div class="Container">
+    <h2 class="Section-heading">Filtrer par catégories : </h2>
+    <ul class="inline-list">
+      <li><button class="categoryShowAll"><h3 class="heading">{{title_search}}</h3></button></li>
+      {% for iter_cat in (0..iter_max_cat)  %}
+        {% assign categorie = array_categories[iter_cat] %}
+
+        <li><button class="category"><h3 class="heading">{{categorie}}</h3></button></li>
+      {% endfor %}
+    </ul>
+  </div>{% endcomment %}
+
+
+  {% comment %}<!-- add categories-->{% endcomment %}
+{% comment %}{% for list in site.data.coll_ext.model_search.list-model-search %}
+
+  {% if list.id == 'recherche-promotions' %}
+    {% assign title_search = list.title  %}
+    {% include coll_ext_utils/list-detail-items_init_step.html %}
+    {% include coll_ext/main.html
+      force_page_ref_input=true
+      force_no_display=true
+    %}
+  {% endif %}
+{% endfor %}{% endcomment %}
+{% comment %} output utils : info_section_subsection_ref_categories_gl{% endcomment %}
+<!-- form list categories -->
+{% comment %}{% assign list_categories = delim %}
+{% assign list_url_ref_categories = delim %}
+
+{% include coll_ext_search/json/assign_list_categories.html
+  list_subsection_categories=info_section_subsection_ref_categories_gl
+%}
+{% assign array_categories = list_categories | remove_first: delim | split: delim %}
+{% assign array_url_ref_categories = list_url_ref_categories | remove_first: delim | split: delim %}
+{% assign iter_max_cat = array_categories.size | minus: 1 %}
+{% endcomment %}

@@ -1,0 +1,26 @@
+language: ruby
+rvm:
+- 2.3.3
+branches:
+  only:
+  - master
+before_install:
+- chmod u+x deploy_init.sh
+- bash deploy_init.sh
+- npm install
+before_script:
+- gulp jsmin_travis
+script:
+- bundle exec jekyll build
+- gulp imagemin
+before_deploy:
+- chmod u+x deploy.sh
+deploy:
+  provider: script
+  script: "./deploy.sh"
+  skip_cleanup: true
+env:
+  global:
+    secure: GggXMXP5TglTAtz67BNLGLaP/HbA/A8u7btIDBSIcRw3mMKN59eaLzpx3PvfpYwUXuP/hrh0M8aadN6BEUh/Res2ohQxaOiv25wPqCZ1vyFRil1OTLI9EBPiD63nyEqXXMswnKzggolCKXinJ8efgIWkjYgdVy/6bdwgmwMj3zko83c9asAA3KoLFA+sojar3fAGGWPEd8EnEXsiPxWqZCanV6w9RndqdQdPu550UIRmgyHzdjwM7ytDOteUn2pt2MNNC4aGYs1oAqEDlWrbdbdlKq/1WV6UWetXxEY7QRtWMTELDeWH1H9+Dbvqj1+wdftWcJDS4YFYTEuwOy03Pyjhiv8jJDKE3M73BDbVdq/KYkYMxImbmVLdw4YeifBc0azGJE1owbcF6U6Fa5IVKodA3aP3WSW6d+8pRl7lah4dbcPC1H0ni3a9azalJ5R+215lrxz8/TDulnfEcaMfqTvzitQz+0k9LX8SW8nlevxEGZT6+r11mFcff/Iu6YMgTz9DXQUvyDNpmIq9ruqP+fZr00HdqEsgBEdz3x58Hx+Zuzk9tw3P8Hahy5+Vmw7h8AnDNUsFjAtWBLl4db0l6ANEcurLPICj8QR9TB8mGMKJ3h+iva0s/SIjwlCmQVruyysUrzjT0lcN125GVRNQ7nOIXTE/vKERx1KkgU9NtjI=
+
+sudo: false # route your build to the container-based infrastructure for a faster build

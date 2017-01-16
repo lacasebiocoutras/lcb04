@@ -1,0 +1,54 @@
+---
+layout: null
+---
+[
+{% for list in site.data.coll_ext.model_search.list-model-search %}
+  {% if list.id == 'recherche-promotions' %}
+    {% assign collection_name = list.collection %}
+    {% assign section_to_comp = list.force_display_coll_ext_section | append: site.data.coll_ext.config.common.delimitator.url | prepend: site.data.coll_ext.config.common.delimitator.url %}
+    {% assign last_section_to_comp = list.force_display_coll_ext_section | append: site.collections_ext.path_extension_section | prepend: site.data.coll_ext.config.common.delimitator.url %}
+    {% for collection in site.collections %}
+      {% if collection.label == collection_name %}
+        {% assign raw_items = collection.docs %}
+        {% break %}
+      {% endif %}
+    {% endfor %}
+    {% for item in raw_items  %}
+      {% unless item.url contains site.collections_ext.path_extension_section %}
+        {% if item.url contains section_to_comp or item.url contains last_section_to_comp %}
+          {% assign url_item_tmp = item.url | remove_first: site.collections_ext.path_extension_section | remove_first: site.collections_ext.path_extension_item  %}
+          {% assign url_item_part_tmp = url_item_tmp | split: '/' %}
+          {% assign url_item_size_tmp = url_item_part_tmp.size | minus: 1  %}
+          {% assign name_id = url_item_part_tmp[url_item_size_tmp] %}
+          {% if url_item_size_tmp > 1 %}
+            {% assign size_tmp = url_item_size_tmp | minus : 1 %}
+            {% assign name_id = name_id | prepend : '-' | prepend : url_item_part_tmp[size_tmp] | strip  %}
+          {% endif %}
+          {
+            "name_id" : "{{ name_id }}",
+            "title" : "{{ item.title | escape }}",
+            "category" : "{{ item.category }}",
+            "tags" : "{{ item.tags | array_to_sentence_string }}",
+            "url" : "{{ site.baseurl }}{{ item.url }}",
+            "date_debut" : "{{ item.date-debut-promotion }}",
+            "date_fin" : "{{ item.date-fin-promotion }}"
+          } {% unless forloop.last %},{% endunless %}
+        {% endif %}
+      {% endunless %}
+    {% endfor %}
+  {% endif %}
+{% endfor %}
+]
+
+{% comment %}
+[{% for list in site.data.coll_ext.model_search.list-model-search %}{% if list.id == 'recherche-promotions' %}{% assign collection_name = list.collection %}{% assign section_to_comp = list.force_display_coll_ext_section | append: site.data.coll_ext.config.common.delimitator.url | prepend: site.data.coll_ext.config.common.delimitator.url %}{% assign last_section_to_comp = list.force_display_coll_ext_section | append: site.collections_ext.path_extension_section | prepend: site.data.coll_ext.config.common.delimitator.url %}{% for collection in site.collections %}{% if collection.label == collection_name %}{% assign raw_items = collection.docs %}{% break %}{% endif %}{% endfor %}{% for item in raw_items  %}{% if item.url contains section_to_comp or item.url contains last_section_to_comp %}{% assign url_item_tmp = item.url | remove_first: site.collections_ext.path_extension_section | remove_first: site.collections_ext.path_extension_item  %}{% assign url_item_part_tmp = url_item_tmp | split: '/' %}{% assign url_item_size_tmp = url_item_part_tmp.size | minus: 1  %}{% assign name_id = url_item_part_tmp[url_item_size_tmp] %}{% if url_item_size_tmp > 1 %}{% assign size_tmp = url_item_size_tmp | minus : 1 %}{% assign name_id = name_id | prepend : '-' | prepend : url_item_part_tmp[size_tmp] | strip  %}{% endif %}
+  {
+    "id"       : "{{ name_id }}",
+    "title"    : "{{ item.title | escape }}",
+    "category" : "{{ item.category }}",
+    "tags"     : "{{ item.tags | array_to_sentence_string }}",
+    "url"      : "{{ site.baseurl }}{{ item.url }}",
+    "date"     : "{{ item.date-publication }}"
+  } {% unless forloop.last %},{% endunless %}{% endif %}{% endfor %}{% endif %}{% endfor %}
+]
+{% endcomment %}

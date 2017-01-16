@@ -1,0 +1,41 @@
+{%comment%}<!-- filtering file extension -->{%endcomment%}
+{% assign extension_item = site.collections_ext.path_extension_item %}
+{% assign extension_section = site.collections_ext.path_extension_section %}
+
+{% assign collection_name_navig = page.path | split: '/' %}
+{% assign collection_name_navig = collection_name_navig[0] | remove_first: '_' %}
+{% for collection in site.collections %}
+  {% if collection.label == collection_name_navig %}
+    {% assign raw_items_navig = collection.docs %}
+    {% break %}
+  {% endif %}
+{% endfor %}
+
+<div class="path-navig">
+<span><a href="{{site.baseurl}}/" title="{{include.title}}"><div class="{{include.class_logo}}"></div></a></span>
+{% assign url_item_part = page.url | remove_first: extension_section | split: '/' %}
+
+{% assign url_item_size = url_item_part.size | minus: 2 %}
+
+{% if url_item_size > 0 %}
+  {% assign url_tmp = '' %}
+  {% for i in (1..url_item_size) %}
+    {% assign url_tmp = url_tmp | append: '/' | append: url_item_part[i] %}
+    {% assign url_item_tmp = url_tmp | append: extension_section %}
+
+    {% assign items_tmp = raw_items_navig %}
+    {% for item_tmp in items_tmp %}
+      {% if item_tmp.url == url_item_tmp %}
+        {% include coll_ext/config/model-subsections.html modelSubsection=item_tmp.model %}
+        {% if model_subsection.hide-page == null or  model_subsection.hide-page == false %}
+          <span> > <a  href="{{site.baseurl}}{{item_tmp.url}}">{{item_tmp.title}}</a></span>
+        {% endif %}
+       {% break %}
+      {% endif %}
+    {% endfor %}
+  {% endfor %}
+{% endif %}
+{% if page.title %}
+  > <h1>{{page.title}}</h1>
+{% endif %}
+</div>

@@ -1,0 +1,95 @@
+
+
+.navigation {
+  list-style: none;
+  margin: 0 $spacing-h;
+  padding: 0;
+  display: flex;
+  flex-flow: column wrap;
+  text-align: center;
+  @include breakpoint($break-ssm-max){text-align: left;}
+
+}
+
+// .navigation #menu-item:before {
+//     content: '.';
+//     position: relative;
+//     left:-0.2em;
+//     bottom: 0.4em;
+//     color: $primary-text-color;
+//     font-size:2em;
+//     vertical-align:middle;
+//     background-color: none;
+
+// }
+
+.navigation a {
+  text-decoration: none;
+  display: inline;
+  // text-align: left;
+
+}
+
+.navigation h2 {
+  display: inline;
+  font-weight: bold;
+
+}
+
+// .navigation a:hover, a:visited{
+// }
+
+// .navigation li a {
+//   // display : inline;
+//   // padding: 0.4em 0 ;
+//   // margin-top: 0.3em;
+//   // @include breakpoint($break-sm){
+//   //   padding: 0 0.25em 0.5em 0.25em;
+//   //   margin: 0 0.1em 0 0;
+//   // }
+// }
+
+// .navigation li:first-of-type a {
+//   // margin-top: 1.2em;
+//   // @include breakpoint($break-sm){ margin-top: 0;}
+// }
+
+
+// .navigation li:last-of-type a {
+//   // border-bottom: none;
+//   // margin-bottom: 0.3em;
+//   // @include breakpoint($break-sm){ margin-right: 0.3em;}
+// }
+
+
+
+.menu-item {
+  position: relative;
+  display: inline-block;
+  font-weight: bold;
+  // font-size: 2em;
+  // line-height: 1em;
+  color : $primary-text-color;
+
+  // underline effect
+  &:before {
+    content: '';
+    position: absolute;
+    left:0;
+    bottom: -2px;
+    height: 4px;
+    width: 100%;
+    background-color: $primary-text-color;
+    transition: all 300ms cubic-bezier(0.325, -0.075, 0, 1.65);
+    transform: scaleX(0); // hide
+  }
+  &:hover:before {
+    transform: scaleX(1); // reveal
+  }
+
+
+  // @include breakpoint($break-sm-max) {
+  //   // font-size: 0.9rem;
+  //   &:before,&:hover:before {  display:none;}
+  // }
+}

@@ -1,0 +1,66 @@
+.Message {
+  padding: $spacing-h 0;
+  color: $primary-color-text;
+  font-weight: 600;
+  box-shadow: 0 0 $border-shadow rgba($shadow-color , 0.5);
+  border-radius: $border-radius-site;
+
+}
+
+.Error {
+  background: $danger-color;
+}
+
+.Warning {
+  background: $warning-color;
+}
+
+.Info {
+  background: $info-color;
+}
+
+.Ouverture {
+  color : $secondary-color-light;
+  background: $primary-color-dark;
+  // font-size:1.7em; //avec p font size : 1em !
+  // text-align: center !important;
+
+  // @include breakpoint($break-lg){
+  //   text-align: center !important;
+  //   // justify-content: flex-end; //space-around;
+  // }
+
+
+}
+
+.message-list-aside-right {
+  text-align: center !important;
+
+  list-style: none;
+  margin: 0 0 0 $spacing-h;
+  padding: 0;
+  display: flex;
+  flex-flow: row wrap;
+  // margin-right:
+  // text-align: center !important;
+  @include breakpoint($break-lg){
+    flex-flow: column wrap;
+    // text-align: left !important;
+    // justify-content: flex-end; //space-around;
+  }
+
+  li {
+    margin: 0 $spacing-h/2 0 0 ;
+
+    @include breakpoint($break-lg){
+      margin: 0;
+    }
+  }
+
+  h4 {
+    display: inline-block;
+    margin:0 !important;
+  }
+
+
+}

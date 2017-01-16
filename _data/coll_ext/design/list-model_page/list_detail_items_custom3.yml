@@ -1,0 +1,25 @@
+model: 'list_detail_items_custom3'
+list-model-dist:
+  - dist: 0
+    list-model-type:
+      - type: ["detail_items", "subsection_items", "mix_items"]
+        design_model:
+          type: 'list_flex'
+          custom: 'list-details-items-custom3'
+
+      - type: ["subsections"]
+        design_model:
+          type: 'list_flex'
+          custom: 'subsections-default'
+
+  - dist: 1
+    list-model-type:
+      - type: ["detail_items", "subsection_items", "mix_items"]
+        design_model:
+          type: 'list_flex'
+          custom: 'items-default-dist1'
+
+      - type: ["subsections"]
+        design_model:
+          type: 'list_flex'
+          custom: 'subsections-default-dist1'
