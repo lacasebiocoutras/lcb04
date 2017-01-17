@@ -1,52 +1,68 @@
-- title : 'Dernières promotions au rayon alimentation :'
+- title : 'Dernieres promotion :'
   collection: 'nos-promotions'
   force_display_coll_ext: true
   force_display_coll_ext_section: 'nos-promotions'
   # force_display_coll_ext_model: 'default-promotions-slider'
-  force_display_coll_ext_model: 'default-list-items-custom2-dist0'
+  force_display_coll_ext_model: 'default-promotions-slider-detail'
   sort :
     # available  'date-publication' | 'order' | 'title' (| 'date-evenement')
     # defined in /_data/coll_ext/config/sort_site-documents.yml
     # default : 'order'
     filter: 'date-publication'
-    nb-max-item-per-section: 9
-    # choose-subsections: ['alimentation', 'sante-bien-etre']
-    choose-subsections: ['alimentation']
-    filter-subsections: []
-
-
-- title : 'A découvrir également : '
-  collection: 'nos-promotions'
-  force_display_coll_ext: true
-  force_display_coll_ext_section: 'nos-promotions'
-  # force_display_coll_ext_model: 'default-promotions-slider'
-  force_display_coll_ext_model: 'default-list-items-custom3-dist0'
-  sort :
-    # available  'date-publication' | 'order' | 'title' (| 'date-evenement')
-    # defined in /_data/coll_ext/config/sort_site-documents.yml
-    # default : 'order'
-    filter: 'order-limit-max-order-10'
-    nb-max-item-per-section: 6
-    # choose-subsections: ['alimentation', 'sante-bien-etre']
-    choose-subsections: []
-    filter-subsections: ['alimentation']
-
-
-- title : 'Evenements, rencontres :'
-  collection: 'nos-informations'
-  force_display_coll_ext: true
-  force_display_coll_ext_section: 'evenements'
-  # force_display_coll_ext_model: 'default-promotions-slider'
-  force_display_coll_ext_model: 'default-list-items-dist0'
-  sort :
-    # available  'date-publication' | 'order' | 'title' (| 'date-evenement')
-    # defined in /_data/coll_ext/config/sort_site-documents.yml
-    # default : 'order'
-    filter: 'date-evenement'
-    nb-max-item-per-section: 20
+    nb-max-item-per-section: 4
     # choose-subsections: ['alimentation', 'sante-bien-etre']
     choose-subsections: []
     filter-subsections: []
+
+# - title : 'Dernières promotions au rayon alimentation :'
+#   collection: 'nos-promotions'
+#   force_display_coll_ext: true
+#   force_display_coll_ext_section: 'nos-promotions'
+#   # force_display_coll_ext_model: 'default-promotions-slider'
+#   force_display_coll_ext_model: 'default-list-items-custom2-dist0'
+#   sort :
+#     # available  'date-publication' | 'order' | 'title' (| 'date-evenement')
+#     # defined in /_data/coll_ext/config/sort_site-documents.yml
+#     # default : 'order'
+#     filter: 'date-publication'
+#     nb-max-item-per-section: 9
+#     # choose-subsections: ['alimentation', 'sante-bien-etre']
+#     choose-subsections: ['alimentation']
+#     filter-subsections: []
+
+
+# - title : 'A découvrir également : '
+#   collection: 'nos-promotions'
+#   force_display_coll_ext: true
+#   force_display_coll_ext_section: 'nos-promotions'
+#   # force_display_coll_ext_model: 'default-promotions-slider'
+#   force_display_coll_ext_model: 'default-list-items-custom3-dist0'
+#   sort :
+#     # available  'date-publication' | 'order' | 'title' (| 'date-evenement')
+#     # defined in /_data/coll_ext/config/sort_site-documents.yml
+#     # default : 'order'
+#     filter: 'order-limit-max-order-10'
+#     nb-max-item-per-section: 6
+#     # choose-subsections: ['alimentation', 'sante-bien-etre']
+#     choose-subsections: []
+#     filter-subsections: ['alimentation']
+
+
+# - title : 'Evenements, rencontres :'
+#   collection: 'nos-informations'
+#   force_display_coll_ext: true
+#   force_display_coll_ext_section: 'evenements'
+#   # force_display_coll_ext_model: 'default-promotions-slider'
+#   force_display_coll_ext_model: 'default-list-items-dist0'
+#   sort :
+#     # available  'date-publication' | 'order' | 'title' (| 'date-evenement')
+#     # defined in /_data/coll_ext/config/sort_site-documents.yml
+#     # default : 'order'
+#     filter: 'date-evenement'
+#     nb-max-item-per-section: 20
+#     # choose-subsections: ['alimentation', 'sante-bien-etre']
+#     choose-subsections: []
+#     filter-subsections: []
 
 - title : 'Derniers ajouts blog :'
   collection: 'nos-informations'
@@ -66,20 +82,6 @@
 
 
 
-- title : 'Dernieres promotion :'
-  collection: 'nos-promotions'
-  force_display_coll_ext: true
-  force_display_coll_ext_section: 'nos-promotions'
-  # force_display_coll_ext_model: 'default-promotions-slider'
-  force_display_coll_ext_model: 'default-promotions-slider-detail'
-  sort :
-    # available  'date-publication' | 'order' | 'title' (| 'date-evenement')
-    # defined in /_data/coll_ext/config/sort_site-documents.yml
-    # default : 'order'
-    filter: 'date-publication'
-    nb-max-item-per-section: 6
-    # choose-subsections: ['alimentation', 'sante-bien-etre']
-    choose-subsections: []
-    filter-subsections: []
+
 
 

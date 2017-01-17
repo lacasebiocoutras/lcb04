@@ -60,6 +60,18 @@
 
   .#{$containerSlider_gl}-#{$container}-#{$type} {
 
+    .heading {
+      width: 100%;
+      font-size: 1.7em;
+      font-weight: 600;
+      margin-left: 0.5em; //$spacing-h/2; //0.5em;
+      padding-top: 1em; //$spacing-v/2; //1em;
+
+      color : $heading_color;
+     
+
+    }
+
 
     .#{$slider_gl}-#{$type}-#{$id} {
 

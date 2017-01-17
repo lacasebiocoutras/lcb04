@@ -7,7 +7,8 @@ config_container_detail:
   force_url_with_id: false
 
 # config_article_detail:
-# config_container_list:
+config_container_list:
+  force_header_dist_0: true
 config_article_list:
   # visible with js, or noscript, force visible
   add_class_invisible: false
