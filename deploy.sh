@@ -4,7 +4,7 @@ cd ./_site && \
 git init && \
 git config user.name "lacasebiocoutras" && \
 git config user.email "lacasebiocoutras.adm@gmail.com" && \
-git remote add upstream "https://$GH_TOKEN@github.com/lacasebiocoutras/lcb03-admin.git"  && \
+git remote add upstream "https://$GH_TOKEN@github.com/lacasebiocoutras/lcb04.git"  && \
 git fetch upstream  && \
 git reset upstream/gh-pages  && \
 git add -A . && \

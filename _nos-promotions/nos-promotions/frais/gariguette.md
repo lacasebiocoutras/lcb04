@@ -1,17 +1,18 @@
 ---
-order: 3
 
-title:  Le savon de Marseille, sous toutes ses formes
-date-publication: 30 avril 2016
+order: 11
+
+title:  Gariguette frais
+date-publication: 8 mai 2016
 
 date-debut-promotion: 4 juillet 2016
 date-fin-promotion: 23 décembre 2017
 
-description: 
+description: Fraises en provenance du Lot-et-Garonne direct producteur
 
-lire-plus:
+lire-plus: 
 
-miniature:
+miniature: fraise.jpg
 carousel: 
 
 marque:
@@ -27,6 +28,4 @@ tags:
 
 <!-- **** fin contenu détaillé **** -->
 <!-- ****************************** -->
-
-
 

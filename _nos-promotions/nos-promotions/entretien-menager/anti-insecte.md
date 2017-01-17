@@ -5,7 +5,7 @@ title:  Les solutions anti insectes, répulsifs et pièges écologiques
 date-publication: 29 avril 2016
 
 date-debut-promotion: 4 juillet 2016
-date-fin-promotion: 23 décembre 2016
+date-fin-promotion: 23 décembre 2017
 
 description: 
 

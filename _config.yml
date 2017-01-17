@@ -9,7 +9,7 @@
 title: "La Case Bio"
 email: lacasebiocoutras@gmail.com
 description: "La case Bio, votre magasin biologique de proximité, au 12bis rue Edouard Vaillant, 33230 Coutras, France"
-baseurl: "/lcb03-admin" # the subpath of your site, e.g. /blog
+baseurl: "/lcb04" # the subpath of your site, e.g. /blog
 url: "https://lacasebiocoutras.github.io" # the base hostname & protocol for your site
 twitter_username: lacasebiocoutras
 github_username:  lacasebiocoutras
@@ -96,6 +96,7 @@ assets:
   compress:
     css: true
     js: true
+  cache: false
   digest: true
   #fait planter carousel, optim css si active, a analyser, todo
   features:

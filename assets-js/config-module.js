@@ -1,5 +1,5 @@
 define({
-    base_url: '/lcb03-admin/',
+    base_url: '/lcb04/',
     json_search_config: 'search-config.json',
     json_slider_inf_coll_ext: 'slider-inf-coll-ext.json'
 
