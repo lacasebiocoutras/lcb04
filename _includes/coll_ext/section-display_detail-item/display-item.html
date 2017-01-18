@@ -248,10 +248,11 @@
       <p class="excerpt" itemprop="text">{{item_raw.lire-plus}}</p>
     {% endif %}
 
-    {% comment %}temp{% endcomment %}
+    {% comment %}temp
     {% if item_raw.date-publication %}
       <p class="excerpt" itemprop="text">{{ item_raw.date-publication}}-{{ item_raw.order}}</p>
     {% endif %}
+    {% endcomment %}
 
     {% if add_url_section_in_container == true %}
       {% assign add_text_section_in_container = empty_string  %}
@@ -268,10 +269,7 @@
 
       {% if current_detail_model.type == site.data.coll_ext.design.config.param.type_miniature %}
         {%comment%}<!-- detail content, todo, show in specific windows, on hover -->{%endcomment%}
-        <p class="excerpt" itemprop="text">{{ item_raw.content}}</p>
-        {% if item_raw.date-publication %}
-          <p class="excerpt" itemprop="text">{{ item_raw.date-publication}}-{{ item_raw.order}}</p>
-        {% endif %}
+        <p class="excerpt" itemprop="text">{{ item_raw.content}}</p>        
 
       {% endif %}
 

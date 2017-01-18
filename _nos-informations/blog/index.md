@@ -16,6 +16,7 @@ carousel:
 
 tags : 
 
+model: blog-list-items
 sort_items : "order"
 ---
 

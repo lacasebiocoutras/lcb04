@@ -2,6 +2,37 @@
 layout: home
 ---
 
+{% include coll_ext/config/common-param.html %}
+
+{% assign list_title_item_acceuil = delim %}
+{% assign list_url_article_item_acceuil = delim %}
+
+{% for collection in site.collections %}
+  {% if collection.label == 'nos-informations' %}
+    {% assign raw_items_navig_acceuil = collection.docs %}
+    {% break %}
+  {% endif %}
+{% endfor %}
+{% assign items_tmp = raw_items_navig_acceuil | sort: 'order' %}
+{% for item_tmp in items_tmp %}
+  {% if item_tmp.path contains '/page-acceuil/bienvenue.md' %} 
+    {% assign textBienvenue = item_tmp.content %} 
+  {% endif %}
+  {% if item_tmp.path contains '/page-acceuil/menu-liens-articles/' %} 
+    {% unless item_tmp.path contains '/index.md'  %}
+      {% assign list_title_item_acceuil = list_title_item_acceuil | append : item_tmp.title | append: delim %}
+      {% assign list_url_article_item_acceuil = list_url_article_item_acceuil | append : item_tmp.url-article | append: delim %}
+    {% endunless %}
+  {% endif %}
+{% endfor %}
+
+{% assign array_title_item_acceuil = list_title_item_acceuil | remove_first: delim | split: delim  %}
+{% assign array_title_item_acceuil_size = array_title_item_acceuil.size | minus: 1 %}
+{% assign array_url_article_item_acceuil = list_url_article_item_acceuil | remove_first: delim | split: delim  %}
+
+
+
+      
 
 
 <div class="main-presentation">
@@ -15,13 +46,13 @@ layout: home
         <ul class="Grid Grid--gutters-m u-spaceVN">
 
           <!-- .li-presentation & .presentation-text (gestion padding responsive), part left on lg screen, first on small -->
-          <li class="li-presentation Grid-cell u-full  ">
-            <div class="presentation-text">
-              {% for item in site.data.custom.home-page.text-intro.bienvenue %}
-                <p>{{item.paragraph}}</p>
-              {% endfor %}
-            </div>
-          </li> <!--fin .li-presentation -->
+          {% if textBienvenue != null and textBienvenue != "" %}          
+            <li class="li-presentation Grid-cell u-full  ">
+              <div class="presentation-text">
+                {{textBienvenue}}              
+              </div>
+            </li> <!--fin .li-presentation -->
+          {% endif %}
 
           <!-- .li-nav-ab , navigation list + AB logo -->
           <li class="li-nav-ab Grid-cell u-full  u-spaceBN" >
@@ -30,8 +61,14 @@ layout: home
             <ul class="Grid  Grid--gutters-m u-spaceVN">
               <li class="li-nav Grid-cell Grid-cell--center ">
                 <ul class="navigation">
-                  {% for item in site.data.custom.home-page.navigation.home-short-nav %}
-                    <li id="menu-item" {% comment %}style="margin-left: {{ forloop.index | minus: 1 | times: 2}}em;"{% endcomment %}> <a class="menu-item u-textTruncate " href="{{site.baseurl}}{{item.url}}"><h2>{{item.title}}</h2></a> </li>
+                  {% comment %}
+                  {% for item in site.data.custom.home-page.navigation.home-short-nav %}                    
+                  {% endfor %}
+                  {% endcomment %}
+                  {% for iter_array in (0..array_title_item_acceuil_size) %}
+                    {% assign title_tmp = array_title_item_acceuil[iter_array]  %}
+                    {% assign url_tmp = array_url_article_item_acceuil[iter_array] %}                    
+                    <li id="menu-item" {% comment %}style="margin-left: {{ forloop.index | minus: 1 | times: 2}}em;"{% endcomment %}> <a class="menu-item u-textTruncate " href="{{site.baseurl}}{{url_tmp}}"><h2>{{title_tmp}}</h2></a> </li>
                   {% endfor %}
                 </ul>
                 <!-- u-textTruncate u-textNoWrap -->
