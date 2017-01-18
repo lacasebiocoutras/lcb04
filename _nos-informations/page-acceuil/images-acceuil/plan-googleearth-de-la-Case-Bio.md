@@ -5,8 +5,8 @@ order: 2
 descriptif: Nous sommes situés au 12bis rue Edouard Vaillant, Coutras
 image: plan-googleearth-lacasebiocoutras.jpg
 description-image: plan googleearth de la Case Bio, Coutras
-url: /qui-sommes-nous/index.html#qui-sommes-nous-nous-situer
-description-url: Retrouvez toutes nos informations détaillées
+link: /qui-sommes-nous/index.html#qui-sommes-nous-nous-situer
+description-link: Retrouvez toutes nos informations détaillées
 
 lire-plus: 
 tags: 

@@ -4,7 +4,7 @@
 - id: 'o-acc'
   container: 'picture'
   type: 'opacity'
-  # img_source : original (picture tag pluggin), baseurl, direct_url
+  # img_source : original (picture tag pluggin), baselink, direct_link
   img_source: 'original'
   # add info height image for opacity slider, auto with original todo
   slides_height: '400px'
@@ -12,237 +12,237 @@
 
     - image: "carousel-acceuil/reouverture.jpg"
       description-image: "Réouverture de la Case Bio!"
-      url: "/"
-      description-url:
+      link: "/"
+      description-link:
     - image: "carousel-acceuil/decouvrez-notre-marche-bio.jpg"
       description-image: "Le rayon marché biologique"
-      url: "/alimentation-biologique/"
-      description-url:
+      link: "/alimentation-biologique/"
+      description-link:
 
     - image: "carousel-acceuil/espace-sante-bien-etre.jpg"
       description-image: "Le rayon bien-être"
-      url: "/sante-bien-etre/"
-      description-url:
+      link: "/sante-bien-etre/"
+      description-link:
 
     - image: "carousel-acceuil/reouverture.jpg"
       description-image: "Réouverture de la Case Bio!"
-      url: "/"
-      description-url:
+      link: "/"
+      description-link:
 
     - image: "carousel-acceuil/decouvrez-notre-marche-bio.jpg"
       description-image: "Le rayon marché biologique"
-      url: "/alimentation-biologique/"
-      description-url:
+      link: "/alimentation-biologique/"
+      description-link:
 
     - image: "carousel-acceuil/decouvrez-notre-marche-bio.jpg"
       description-image: "Le rayon marché biologique"
-      url: "/alimentation-biologique/"
-      description-url:
+      link: "/alimentation-biologique/"
+      description-link:
 
 - id: 'o-bj'
   container: 'picture'
   type: 'opacity'
-  # img_source : original (picture tag pluggin), baseurl, direct_url
-  img_source: 'baseurl'
+  # img_source : original (picture tag pluggin), baselink, direct_link
+  img_source: 'baselink'
   # add info height image for opacity slider, auto with original
   slides_height: '400px'
   list_img:
 
     - image: "CouldDragonByBjzaba.png"
       description-image: "CouldDragonByBjzaba.png"
-      url: "/"
-      description-url:
+      link: "/"
+      description-link:
 
     - image: "MountainFortByBjzaba.png"
       description-image: "MountainFortByBjzaba.png"
-      url: "/"
-      description-url:
+      link: "/"
+      description-link:
 
     - image: "MountainOutpostByBjzaba.png"
       description-image: "MountainOutpostByBjzaba.png"
-      url: "/"
-      description-url:
+      link: "/"
+      description-link:
 
     - image: "CliffsByBjzaba.png"
       description-image: "CliffsByBjzaba.png"
-      url: "/"
-      description-url:
+      link: "/"
+      description-link:
 
     - image: "HillFortByBjzaba.png"
       description-image: "HillFortByBjzaba.png"
-      url: "/"
-      description-url:
+      link: "/"
+      description-link:
 
 - id: 'o-nat'
   container: 'picture'
   type: 'opacity'
-  # img_source : original (picture tag pluggin), baseurl, direct_url
-  img_source: 'baseurl'
+  # img_source : original (picture tag pluggin), baselink, direct_link
+  img_source: 'baselink'
   # add info height image for opacity slider, auto with original
   slides_height: '600px'
   list_img:
     - image: "carousel-1.JPG"
       description-image: "carousel-1"
-      url: "/"
-      description-url:
+      link: "/"
+      description-link:
 
     - image: "carousel-2.jpg"
       description-image: "carousel-2"
-      url: "/"
-      description-url:
+      link: "/"
+      description-link:
 
     - image: "carousel-3.jpg"
       description-image: "carousel-3"
-      url: "/"
-      description-url:
+      link: "/"
+      description-link:
 
     - image: "carousel-4.jpg"
       description-image: "carousel-4"
-      url: "/"
-      description-url:
+      link: "/"
+      description-link:
 
     - image: "carousel-5.jpg"
       description-image: "carousel-5"
-      url: "/"
-      description-url:
+      link: "/"
+      description-link:
 
     - image: "carousel-3.jpg"
       description-image: "carousel-3"
-      url: "/"
-      description-url:
+      link: "/"
+      description-link:
 
     - image: "carousel-4.jpg"
       description-image: "carousel-4"
-      url: "/"
-      description-url:
+      link: "/"
+      description-link:
 
     - image: "carousel-5.jpg"
       description-image: "carousel-5"
-      url: "/"
-      description-url:
+      link: "/"
+      description-link:
 
 
 - id: 't-nat'
   container: 'picture'
   type: 'translate'
-  # img_source : original (picture tag pluggin), baseurl, direct
-  img_source: 'baseurl'
+  # img_source : original (picture tag pluggin), baselink, direct
+  img_source: 'baselink'
   list_img:
 
     - image: "carousel-1.JPG"
       description-image: "carousel-1"
-      url: "/"
-      description-url:
+      link: "/"
+      description-link:
 
     - image: "carousel-2.jpg"
       description-image: "carousel-2"
-      url: "/"
-      description-url:
+      link: "/"
+      description-link:
 
     - image: "carousel-3.jpg"
       description-image: "carousel-3"
-      url: "/"
-      description-url:
+      link: "/"
+      description-link:
 
     - image: "carousel-4.jpg"
       description-image: "carousel-4"
-      url: "/"
-      description-url:
+      link: "/"
+      description-link:
 
     - image: "carousel-5.jpg"
       description-image: "carousel-5"
-      url: "/"
-      description-url:
+      link: "/"
+      description-link:
 
     - image: "carousel-4.jpg"
       description-image: "carousel-4"
-      url: "/"
-      description-url:
+      link: "/"
+      description-link:
 
     - image: "carousel-5.jpg"
       description-image: "carousel-5"
-      url: "/"
-      description-url:
+      link: "/"
+      description-link:
 
 - id: 't-acc'
   container: 'picture'
   type: 'translate'
-  # img_source : original (picture tag pluggin), baseurl, direct
+  # img_source : original (picture tag pluggin), baselink, direct
   img_source: 'original'
   list_img:
 
     - image: "carousel-acceuil/reouverture.jpg"
       description-image: "Réouverture de la Case Bio!"
-      url: "/"
-      description-url:
+      link: "/"
+      description-link:
       
     - image: "carousel-acceuil/decouvrez-notre-marche-bio.jpg"
       description-image: "Le rayon marché biologique"
-      url: "/alimentation-biologique/"
-      description-url:
+      link: "/alimentation-biologique/"
+      description-link:
       
     # - image: "carousel-acceuil/espace-sante-bien-etre.jpg"
     #   description-image: "Le rayon bien-être"
-    #   url: "/sante-bien-etre/"
-    #   description-url:
+    #   link: "/sante-bien-etre/"
+    #   description-link:
     
     # - image: "carousel-acceuil/reouverture.jpg"
     #   description-image: "Réouverture de la Case Bio!"
-    #   url: "/"
-    #   description-url:
+    #   link: "/"
+    #   description-link:
     
 - id: 'i-nat'
   container: 'picture'
   type: 'infinite'
-  # img_source : original (picture tag pluggin), baseurl, direct
-  img_source: 'baseurl'
+  # img_source : original (picture tag pluggin), baselink, direct
+  img_source: 'baselink'
   slides_max_witdh: '960px'
   list_img:
 
     - image: "carousel-1.JPG"
       description-image: "carousel-1"
-      url: "/"
-      description-url:
+      link: "/"
+      description-link:
 
     - image: "carousel-2.jpg"
       description-image: "carousel-2"
-      url: "/"
-      description-url:
+      link: "/"
+      description-link:
 
     - image: "carousel-3.jpg"
       description-image: "carousel-3"
-      url: "/"
-      description-url:
+      link: "/"
+      description-link:
     - image: "carousel-4.jpg"
       description-image: "carousel-4"
-      url: "/"
-      description-url:
+      link: "/"
+      description-link:
     - image: "carousel-5.jpg"
       description-image: "carousel-5"
-      url: "/"
-      description-url:
+      link: "/"
+      description-link:
     - image: "carousel-2.jpg"
       description-image: "carousel-2"
-      url: "/"
-      description-url:
+      link: "/"
+      description-link:
     - image: "carousel-3.jpg"
       description-image: "carousel-3"
-      url: "/"
-      description-url:
+      link: "/"
+      description-link:
     - image: "carousel-4.jpg"
       description-image: "carousel-4"
-      url: "/"
-      description-url:
+      link: "/"
+      description-link:
     - image: "carousel-5.jpg"
       description-image: "carousel-5"
-      url: "/"
-      description-url:
+      link: "/"
+      description-link:
 
 
 - id: 'i-acc'
   container: 'picture'
   type: 'infinite'  
-  # img_source : original (picture tag pluggin), baseurl, direct
+  # img_source : original (picture tag pluggin), baselink, direct
   img_source: 'original'
   slides_max_witdh: '600px'
   list_from_collection: 'nos-informations'
@@ -250,12 +250,13 @@
   list_img:
     - image: "carousel-acceuil/reouverture.jpg"
       description-image: "Réouverture de la Case Bio!"
-      url:
-      description-url:
+      link:
+      description-link:
     # - image: "carousel-acceuil/decouvrez-notre-marche-bio.jpg"
     #   description-image: "Le rayon marché biologique"
-    #   url: "/blog/mieux-nous-connaitre/marche-biologique.html"
+    #   link: "/blog/mieux-nous-connaitre/marche-biologique.html"
+    #   description-link: "Découvrez notre marché biologique"
     # - image: "carousel-acceuil/espace-sante-bien-etre.jpg"
     #   description-image: "Le rayon bien-être"
-    #   url: 
+    #   link: 
    

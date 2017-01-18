@@ -5,11 +5,12 @@ layout: home
 {% include coll_ext/config/common-param.html %}
 
 {% assign list_title_item_acceuil = delim %}
-{% assign list_url_article_item_acceuil = delim %}
+{% assign list_link_article_item_acceuil = delim %}
 
 {% assign list_car_image_acceuil = delim %}
-{% assign list_car_description_acceuil = delim %}
-{% assign list_car_url_acceuil = delim %}
+{% assign list_car_description_img_acceuil = delim %}
+{% assign list_car_link_acceuil = delim %}
+{% assign list_car_description_link_acceuil = delim %}
 
 
 {% for collection in site.collections %}
@@ -29,14 +30,15 @@ layout: home
   {% if item_tmp.path contains '/page-acceuil/menu-liens-articles/' %} 
     {% unless item_tmp.path contains '/index.md'  %}
       {% assign list_title_item_acceuil = list_title_item_acceuil | append : item_tmp.title | append: delim %}
-      {% assign list_url_article_item_acceuil = list_url_article_item_acceuil | append : item_tmp.url | append: delim %}
+      {% assign list_link_article_item_acceuil = list_link_article_item_acceuil | append : item_tmp.link | append: delim %}
     {% endunless %}
   {% endif %}
   {% if item_tmp.path contains '/page-acceuil/carousel/' %} 
     {% unless item_tmp.path contains '/index.md'  %}
       {% assign list_car_image_acceuil = list_car_image_acceuil | append : item_tmp.image | append: delim %}
-      {% assign list_car_description_acceuil = list_car_description_acceuil | append : item_tmp.description | append: delim %}
-      {% assign list_car_url_acceuil = list_car_url_acceuil | append : item_tmp.url | append: delim %}
+      {% assign list_car_description_img_acceuil = list_car_description_img_acceuil | append : item_tmp.description-image | append: delim %}
+      {% assign list_car_link_acceuil = list_car_link_acceuil | append : item_tmp.link | append: delim %}
+      {% assign list_car_description_link_acceuil = list_car_description_link_acceuil | append : item_tmp.description-link | append: delim %}
     {% endunless %}
   {% endif %}
   {% if item_tmp.path contains '/page-acceuil/image-logo-acceuil/' %} 
@@ -63,7 +65,7 @@ layout: home
 
 {% assign array_title_item_acceuil = list_title_item_acceuil | remove_first: delim | split: delim  %}
 {% assign array_title_item_acceuil_size = array_title_item_acceuil.size | minus: 1 %}
-{% assign array_url_article_item_acceuil = list_url_article_item_acceuil | remove_first: delim | split: delim  %}
+{% assign array_link_article_item_acceuil = list_link_article_item_acceuil | remove_first: delim | split: delim  %}
 
 
 
@@ -81,7 +83,7 @@ layout: home
         <ul class="Grid Grid--gutters-m u-spaceVN">
 
           <!-- .li-presentation & .presentation-text (gestion padding responsive), part left on lg screen, first on small -->
-          {% if textBienvenue != null and textBienvenue != "" %}          
+          {% if textBienvenue != null and textBienvenue != '' %}          
             <li class="li-presentation Grid-cell u-full  ">
               <div class="presentation-text">
                 {{textBienvenue}}              
@@ -102,8 +104,8 @@ layout: home
                   {% endcomment %}
                   {% for iter_array in (0..array_title_item_acceuil_size) %}
                     {% assign title_tmp = array_title_item_acceuil[iter_array]  %}
-                    {% assign url_tmp = array_url_article_item_acceuil[iter_array] %}                    
-                    <li id="menu-item" {% comment %}style="margin-left: {{ forloop.index | minus: 1 | times: 2}}em;"{% endcomment %}> <a class="menu-item u-textTruncate " href="{{site.baseurl}}{{url_tmp}}"><h2>{{title_tmp}}</h2></a> </li>
+                    {% assign link_tmp = array_link_article_item_acceuil[iter_array] %}                    
+                    <li id="menu-item" {% comment %}style="margin-left: {{ forloop.index | minus: 1 | times: 2}}em;"{% endcomment %}> <a class="menu-item u-textTruncate " href="{{site.baseurl}}{{link_tmp}}"><h2>{{title_tmp}}</h2></a> </li>
                   {% endfor %}
                 </ul>
                 <!-- u-textTruncate u-textNoWrap -->
@@ -137,42 +139,26 @@ layout: home
 
           {% if item_image_acceuil1 != null %}
             <li class="li-img-primdark Grid-cell u-1of2-m u-ssmall-1of3-m u-small-1of2-m u-med-full ">
-              {% if item_image_acceuil1.url != null and item_image_acceuil1.url != '' %}
-                <a href="{{site.baseurl}}{{item_image_acceuil1.url}}" title="{{item_image_acceuil1.description-url}}">
+              {% if item_image_acceuil1.link != null and item_image_acceuil1.link != '' %}
+                <a href="{{site.baseurl}}{{item_image_acceuil1.link}}" title="{{item_image_acceuil1.description-link}}">
               {% endif %}
               {% picture welcome-home {{item_image_acceuil1.image}} alt="{{item_image_acceuil1.description-image}}" %}
               <div class="u-textCenter">{{item_image_acceuil1.descriptif}}</div>
-              {% if item_image_acceuil1.url != null and item_image_acceuil1.url != '' %}</a>{% endif %}
+              {% if item_image_acceuil1.link != null and item_image_acceuil1.link != '' %}</a>{% endif %}
             </li>
           {% endif %}
           {% if item_image_acceuil2 != null %}
             <li class="li-img-primdark Grid-cell u-1of2-m u-ssmall-1of3-m u-small-1of2-m u-med-full ">
-              {% if item_image_acceuil2.url != null and item_image_acceuil2.url != '' %}
-                <a href="{{site.baseurl}}{{item_image_acceuil2.url}}" title="{{item_image_acceuil2.description-url}}">
+              {% if item_image_acceuil2.link != null and item_image_acceuil2.link != '' %}
+                <a href="{{site.baseurl}}{{item_image_acceuil2.link}}" title="{{item_image_acceuil2.description-link}}">
               {% endif %}
               {% picture welcome-home {{item_image_acceuil2.image}} alt="{{item_image_acceuil2.description-image}}" %}
               <div class="u-textCenter">{{item_image_acceuil2.descriptif}}</div>
-              {% if item_image_acceuil2.url != null and item_image_acceuil2.url != '' %}</a>{% endif %}
+              {% if item_image_acceuil2.link != null and item_image_acceuil2.link != '' %}</a>{% endif %}
             </li>
           {% endif %}
 
-
-          {% comment %}{% for item in site.data.custom.home-page.img.image-acceuil limit:2 %}
-            <li class="li-img-primdark Grid-cell u-1of2-m u-ssmall-1of3-m u-small-1of2-m u-med-full ">
-
-              {% if item.lien != "" %}
-                <a href="{{site.baseurl}}{{item.lien}}" title="{{item.description-lien}}">
-              {% endif %}
-              {% picture welcome-home {{item.image}} alt="{{item.description-image}}" %}
-              <div class="u-textCenter">{% if item.text-icone != "" %}<i class="{{item.icone-text}}" aria-hidden="true"></i>&nbsp;{% endif %}{{item.text}}</div>
-              {% if item.lien != "" %}</a>{% endif %}
-            </li>
-          {% endfor %}{% endcomment %}
-          {% comment %}{% for item in site.data.custom.home-page.img.image-intergrid-acceuil limit:1 %}
-            <li class=" Grid-cell  u-full u-ssmall-1of3-m on-sm-only" >
-              {% picture logo-intergrid-home {{item.image}} alt="{{item.description-image}}" title="{{item.description-image}}" %}
-            </li>
-          {% endfor %}{% endcomment %}
+          
           <li class=" Grid-cell  u-full u-ssmall-1of3-m on-sm-only" >
             {% picture logo-intergrid-home {{item_logo_acceuil.image}} alt="{{item_logo_acceuil.description-image}}" title="{{item_logo_acceuil.description-image}}" %}
           </li>
@@ -184,32 +170,14 @@ layout: home
   <!-- fin image-acceuil, part right on lg screen -->
   </ul>
 </div>
+
 <!-- carousel page d'acceuil -->
-<!-- TODO : add text-->
-<!-- <div id="slider-presentation">
-{% for item in site.data.custom.home-page.img.carousel-acceuil.list_img %}
-
-  {% assign title-image = item.description-image %}
-
-  <div {% if forloop.index > 1 %} class="invisible" {% endif %}>
-    {% if item.lien != "" %}
-      {% assign title-image = item.description-lien %}
-      <a href="{{site.baseurl }}{{item.lien}}" title="{{item.description-lien}}">
-    {% endif %}
-
-    {% picture slider-home {{item.image}} alt="{{item.description-image}}" title="{{title-image}}"  %}
-
-    {% if item.lien != "" %}</a>{% endif %}
-  </div>
-{% endfor %}
-</div> -->
-
-
 {% include picture/slider-standard.html
   input_slider='i-acc'
   list_image=list_car_image_acceuil
-  list_description=list_car_description_acceuil
-  list_url=list_car_url_acceuil
+  list_description_image=list_car_description_img_acceuil
+  list_link=list_car_link_acceuil
+  list_description_link=list_car_description_link_acceuil
 %}
 
 <!-- list items -->

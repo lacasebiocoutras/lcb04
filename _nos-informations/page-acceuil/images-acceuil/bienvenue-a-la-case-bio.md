@@ -5,8 +5,8 @@ order: 1
 descriptif: Une large gamme de produits proposés sur plus de 200m&sup2;
 image: Bienvenue-lacasebiocoutras.jpg
 description-image: Bienvenue à La Case Bio
-url: 
-description-url:
+link: 
+description-link:
 
 lire-plus: 
 tags: 

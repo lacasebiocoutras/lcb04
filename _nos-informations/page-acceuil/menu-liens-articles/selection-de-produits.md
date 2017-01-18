@@ -4,7 +4,7 @@ date-publication: 17 janv 2017
 
 order: 1
 
-url: /promotions/index.html
+link: /promotions/index.html
 
 
 description: 

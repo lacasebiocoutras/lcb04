@@ -5,8 +5,8 @@ order: 1
 descriptif:
 image: carousel-acceuil/reouverture.jpg
 description-image: Réouverture de la Case Bio!
-url: 
-description-url:
+link: 
+description-link:
 
 lire-plus: 
 tags: 
