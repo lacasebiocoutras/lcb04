@@ -106,11 +106,7 @@ assets:
 
 
 
-collections:
-  magasin:
-    output: true
-    permalink: /:path.html
-    title: magasin
+collections:  
   nos-informations:
     output: true
     permalink: /:path.html
@@ -131,13 +127,7 @@ collections_ext:
   path_extension_item: .html
 
 # Defaults
-defaults:
-   # alimentation-biologique
-  - scope:
-      path: _magasin
-      type: magasin
-    values:
-      layout: post
+defaults: 
   # nos-informations
   - scope:
       path: _nos-informations
