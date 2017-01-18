@@ -1,20 +1,20 @@
 # carousel page d'acceuil, format width: '320' height: '120'
 
-carousel-acceuil :
-  id: 'acceuil'
-  list_img:
-    - image: 'carousel-acceuil/reouverture.jpg'
-      description-image: 'Réouverture de la Case Bio!'
-      lien: '/'
-      description-lien: 'Réouverture de la Case Bio!'
-    - image: 'carousel-acceuil/decouvrez-notre-marche-bio.jpg'
-      description-image: 'Le rayon marché biologique'
-      lien: '/alimentation-biologique/'
-      description-lien: 'Accéder au rayon Alimentation'
-    - image: 'carousel-acceuil/espace-sante-bien-etre.jpg'
-      description-image: 'Le rayon bien-être'
-      lien: '/sante-bien-etre/'
-      description-lien: 'Accéder au rayon Santé & Bien-être'
+# carousel-acceuil :
+#   id: 'acceuil'
+#   list_img:
+#     - image: 'carousel-acceuil/reouverture.jpg'
+#       description-image: 'Réouverture de la Case Bio!'
+#       lien: '/'
+#       description-lien: 'Réouverture de la Case Bio!'
+#     - image: 'carousel-acceuil/decouvrez-notre-marche-bio.jpg'
+#       description-image: 'Le rayon marché biologique'
+#       lien: '/alimentation-biologique/'
+#       description-lien: 'Accéder au rayon Alimentation'
+#     - image: 'carousel-acceuil/espace-sante-bien-etre.jpg'
+#       description-image: 'Le rayon bien-être'
+#       lien: '/sante-bien-etre/'
+#       description-lien: 'Accéder au rayon Santé & Bien-être'
 
 #images bienvenu, nb=2 max
 

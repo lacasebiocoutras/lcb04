@@ -7,6 +7,11 @@ layout: home
 {% assign list_title_item_acceuil = delim %}
 {% assign list_url_article_item_acceuil = delim %}
 
+{% assign list_car_image_acceuil = delim %}
+{% assign list_car_description_acceuil = delim %}
+{% assign list_car_url_acceuil = delim %}
+
+
 {% for collection in site.collections %}
   {% if collection.label == 'nos-informations' %}
     {% assign raw_items_navig_acceuil = collection.docs %}
@@ -14,6 +19,7 @@ layout: home
   {% endif %}
 {% endfor %}
 {% assign items_tmp = raw_items_navig_acceuil | sort: 'order' %}
+
 {% for item_tmp in items_tmp %}
   {% if item_tmp.path contains '/page-acceuil/bienvenue.md' %} 
     {% assign textBienvenue = item_tmp.content %} 
@@ -21,7 +27,14 @@ layout: home
   {% if item_tmp.path contains '/page-acceuil/menu-liens-articles/' %} 
     {% unless item_tmp.path contains '/index.md'  %}
       {% assign list_title_item_acceuil = list_title_item_acceuil | append : item_tmp.title | append: delim %}
-      {% assign list_url_article_item_acceuil = list_url_article_item_acceuil | append : item_tmp.url-article | append: delim %}
+      {% assign list_url_article_item_acceuil = list_url_article_item_acceuil | append : item_tmp.url | append: delim %}
+    {% endunless %}
+  {% endif %}
+  {% if item_tmp.path contains '/page-acceuil/carousel/' %} 
+    {% unless item_tmp.path contains '/index.md'  %}
+      {% assign list_car_image_acceuil = list_car_image_acceuil | append : item_tmp.image | append: delim %}
+      {% assign list_car_description_acceuil = list_car_description_acceuil | append : item_tmp.description | append: delim %}
+      {% assign list_car_url_acceuil = list_car_url_acceuil | append : item_tmp.url | append: delim %}
     {% endunless %}
   {% endif %}
 {% endfor %}
@@ -134,8 +147,13 @@ layout: home
   </div>
 {% endfor %}
 </div> -->
+
+
 {% include picture/slider-standard.html
   input_slider='i-acc'
+  list_image=list_car_image_acceuil
+  list_description=list_car_description_acceuil
+  list_url=list_car_url_acceuil
 %}
 
 <!-- list items -->

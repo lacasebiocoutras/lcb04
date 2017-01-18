@@ -2,6 +2,9 @@
 <!--
 param in :
   include.input_slider
+  include.list_image
+  include.list_description
+  include.list_url
 
 variable globale
 
@@ -52,8 +55,26 @@ param out:
 {% assign id_slider = input_slider.id | remplace: ' ',delim_id %}
 
 
+{% comment %}
+  <!-- default use case, info list image from /_data/picture/slider/list.yml -->
+{% endcomment %}
 {% assign list_img_slider = input_slider.list_img %}
 {% assign dim_slider = list_img_slider.size  %}
+{% comment %}
+  <!-- specifi, list from  collection files .md metadata-->
+{% endcomment %}
+{% assign add_list_from_collection = false %}
+{% if include.list_image != null and include.list_image != delim  %}
+  {% assign add_list_from_collection = true %}
+  {% assign array_image_slider = include.list_image | remove_first: delim | split: delim  %}
+
+  {% assign array_image_slider_size = array_image_slider.size | minus: 1 %}
+  {% assign dim_slider = array_image_slider.size  %}
+
+  {% assign array_description_slider = include.list_description | remove_first: delim | split: delim  %}
+  {% assign array_url_slider = include.list_url | remove_first: delim | split: delim  %}
+{% endif %}
+
 
 
 {% comment %}
@@ -92,7 +113,6 @@ param out:
 
 
 
-
 {% include UI/slider/container/display.html
   before=true
   container_slider_display=container_slider_display
@@ -113,53 +133,53 @@ param out:
 
 
 
+{% if add_list_from_collection == false %} 
 
-{% for item in list_img_slider %}
+  {% for item in list_img_slider %}
+    {% if forloop.first %}
+      {% assign current_style = config_slide.style_item_first %}
+    {% else %}
+      {% assign current_style = config_slide.style_item_next %}
+    {% endif %}
+    {% include UI/slider/article/display.html before=true current_style=current_style %}
+    <article> 
 
+      {% include picture/slider-standard-article.html 
+        image=item.image
+        description=item.description
+        url=item.url
+      %}    
+    </article>
+    {% include UI/slider/article/display.html before=false current_style=null %}
+  {% endfor %}
 
-  {% if forloop.first %}
-    {% assign current_style = config_slide.style_item_first %}
-  {% else %}
-    {% assign current_style = config_slide.style_item_next %}
-  {% endif %}
+{% else %}
 
+  {% for iter_array in (0..array_image_slider_size) %}
+    {% assign image_tmp = array_image_slider[iter_array]  %}
+    {% assign description_tmp = array_description_slider[iter_array]  %}
+    {% assign url_tmp = array_url_slider[iter_array] %} 
 
-
-  {% include UI/slider/article/display.html
-    before=true
-    current_style=current_style
-  %}
-
-  {% comment %}//specific picture : img & info{% endcomment %}
-  <article>
-
-
-    {% include scss-liquid/optim/class.html class_gl='info_gl' %}
-    <div class="{{class_gl}}">
-      <h3>{{item.description-image}}</h3>
-      {% comment %}by <a href="http://voyager3.tumblr.com/">Brendan Zabarauskas</a>{% endcomment %}
-    </div>
-
-
-    {% if input_slider.img_source == site.data.scss_liquid.UI.slider.config.type_img_source.original %}
-      {% picture slider-home {{item.image}} alt="{{item.description-image}}" %}
-
-    {% elsif input_slider.img_source == site.data.scss_liquid.UI.slider.config.type_img_source.baseurl  %}
-      <img src="{{site.baseurl}}/images/{{item.image}}" alt="{{item.description-image}}">
-
-    {% elsif input_slider.img_source == site.data.scss_liquid.UI.slider.config.type_img_source.direct_url %}
-      <img src="{{item.image}}" alt="{{item.description-image}}">
+    {% if forloop.first %}
+      {% assign current_style = config_slide.style_item_first %}
+    {% else %}
+      {% assign current_style = config_slide.style_item_next %}
     {% endif %}
 
-  </article>
+    {% include UI/slider/article/display.html before=true current_style=current_style %}
+    <article> 
+      {% include picture/slider-standard-article.html 
+        image=image_tmp
+        description=description_tmp
+        url=url_tmp
+      %}    
+    </article>
+    {% include UI/slider/article/display.html before=false current_style=null %}
+  {% endfor %}
+
+ {% endif %} 
 
 
-  {% include UI/slider/article/display.html
-    before=false
-    current_style=null
-  %}
-
-{% endfor %}
 
 
 

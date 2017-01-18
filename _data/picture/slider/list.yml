@@ -11,34 +11,28 @@
   list_img:
 
     - image: "carousel-acceuil/reouverture.jpg"
-      description-image: "Réouverture de la Case Bio!"
-      lien: "/"
-      description-lien: "Réouverture de la Case Bio!"
+      description: "Réouverture de la Case Bio!"
+      url: "/"
 
     - image: "carousel-acceuil/decouvrez-notre-marche-bio.jpg"
-      description-image: "Le rayon marché biologique"
-      lien: "/alimentation-biologique/"
-      description-lien: "Accéder au rayon Alimentation"
+      description: "Le rayon marché biologique"
+      url: "/alimentation-biologique/"
 
     - image: "carousel-acceuil/espace-sante-bien-etre.jpg"
-      description-image: "Le rayon bien-être"
-      lien: "/sante-bien-etre/"
-      description-lien: "Accéder au rayon Santé & Bien-être"
+      description: "Le rayon bien-être"
+      url: "/sante-bien-etre/"
 
     - image: "carousel-acceuil/reouverture.jpg"
-      description-image: "Réouverture de la Case Bio!"
-      lien: "/"
-      description-lien: "Réouverture de la Case Bio!"
+      description: "Réouverture de la Case Bio!"
+      url: "/"
 
     - image: "carousel-acceuil/decouvrez-notre-marche-bio.jpg"
-      description-image: "Le rayon marché biologique"
-      lien: "/alimentation-biologique/"
-      description-lien: "Accéder au rayon Alimentation"
+      description: "Le rayon marché biologique"
+      url: "/alimentation-biologique/"
 
     - image: "carousel-acceuil/decouvrez-notre-marche-bio.jpg"
-      description-image: "Le rayon marché biologique"
-      lien: "/alimentation-biologique/"
-      description-lien: "Accéder au rayon Alimentation"
+      description: "Le rayon marché biologique"
+      url: "/alimentation-biologique/"
 
 - id: 'o-bj'
   container: 'picture'
@@ -50,24 +44,24 @@
   list_img:
 
     - image: "CouldDragonByBjzaba.png"
-      description-image: "CouldDragonByBjzaba.png"
-      lien: "/"
+      description: "CouldDragonByBjzaba.png"
+      url: "/"
 
     - image: "MountainFortByBjzaba.png"
-      description-image: "MountainFortByBjzaba.png"
-      lien: "/"
+      description: "MountainFortByBjzaba.png"
+      url: "/"
 
     - image: "MountainOutpostByBjzaba.png"
-      description-image: "MountainOutpostByBjzaba.png"
-      lien: "/"
+      description: "MountainOutpostByBjzaba.png"
+      url: "/"
 
     - image: "CliffsByBjzaba.png"
-      description-image: "CliffsByBjzaba.png"
-      lien: "/"
+      description: "CliffsByBjzaba.png"
+      url: "/"
 
     - image: "HillFortByBjzaba.png"
-      description-image: "HillFortByBjzaba.png"
-      lien: "/"
+      description: "HillFortByBjzaba.png"
+      url: "/"
 
 - id: 'o-nat'
   container: 'picture'
@@ -78,36 +72,36 @@
   slides_height: '600px'
   list_img:
     - image: "carousel-1.JPG"
-      description-image: "carousel-1"
-      lien: "/"
+      description: "carousel-1"
+      url: "/"
 
     - image: "carousel-2.jpg"
-      description-image: "carousel-2"
-      lien: "/"
+      description: "carousel-2"
+      url: "/"
 
     - image: "carousel-3.jpg"
-      description-image: "carousel-3"
-      lien: "/"
+      description: "carousel-3"
+      url: "/"
 
     - image: "carousel-4.jpg"
-      description-image: "carousel-4"
-      lien: "/"
+      description: "carousel-4"
+      url: "/"
 
     - image: "carousel-5.jpg"
-      description-image: "carousel-5"
-      lien: "/"
+      description: "carousel-5"
+      url: "/"
 
     - image: "carousel-3.jpg"
-      description-image: "carousel-3"
-      lien: "/"
+      description: "carousel-3"
+      url: "/"
 
     - image: "carousel-4.jpg"
-      description-image: "carousel-4"
-      lien: "/"
+      description: "carousel-4"
+      url: "/"
 
     - image: "carousel-5.jpg"
-      description-image: "carousel-5"
-      lien: "/"
+      description: "carousel-5"
+      url: "/"
 
 
 - id: 't-nat'
@@ -118,32 +112,32 @@
   list_img:
 
     - image: "carousel-1.JPG"
-      description-image: "carousel-1"
-      lien: "/"
+      description: "carousel-1"
+      url: "/"
 
     - image: "carousel-2.jpg"
-      description-image: "carousel-2"
-      lien: "/"
+      description: "carousel-2"
+      url: "/"
 
     - image: "carousel-3.jpg"
-      description-image: "carousel-3"
-      lien: "/"
+      description: "carousel-3"
+      url: "/"
 
     - image: "carousel-4.jpg"
-      description-image: "carousel-4"
-      lien: "/"
+      description: "carousel-4"
+      url: "/"
 
     - image: "carousel-5.jpg"
-      description-image: "carousel-5"
-      lien: "/"
+      description: "carousel-5"
+      url: "/"
 
     - image: "carousel-4.jpg"
-      description-image: "carousel-4"
-      lien: "/"
+      description: "carousel-4"
+      url: "/"
 
     - image: "carousel-5.jpg"
-      description-image: "carousel-5"
-      lien: "/"
+      description: "carousel-5"
+      url: "/"
 
 - id: 't-acc'
   container: 'picture'
@@ -153,25 +147,21 @@
   list_img:
 
     - image: "carousel-acceuil/reouverture.jpg"
-      description-image: "Réouverture de la Case Bio!"
-      lien: "/"
-      description-lien: "Réouverture de la Case Bio!"
-
+      description: "Réouverture de la Case Bio!"
+      url: "/"
+      
     - image: "carousel-acceuil/decouvrez-notre-marche-bio.jpg"
-      description-image: "Le rayon marché biologique"
-      lien: "/alimentation-biologique/"
-      description-lien: "Accéder au rayon Alimentation"
-
+      description: "Le rayon marché biologique"
+      url: "/alimentation-biologique/"
+      
     # - image: "carousel-acceuil/espace-sante-bien-etre.jpg"
-    #   description-image: "Le rayon bien-être"
-    #   lien: "/sante-bien-etre/"
-    #   description-lien: "Accéder au rayon Santé & Bien-être"
-
+    #   description: "Le rayon bien-être"
+    #   url: "/sante-bien-etre/"
+    
     # - image: "carousel-acceuil/reouverture.jpg"
-    #   description-image: "Réouverture de la Case Bio!"
-    #   lien: "/"
-    #   description-lien: "Réouverture de la Case Bio!"
-
+    #   description: "Réouverture de la Case Bio!"
+    #   url: "/"
+    
 - id: 'i-nat'
   container: 'picture'
   type: 'infinite'
@@ -181,56 +171,52 @@
   list_img:
 
     - image: "carousel-1.JPG"
-      description-image: "carousel-1"
-      lien: "/"
+      description: "carousel-1"
+      url: "/"
 
     - image: "carousel-2.jpg"
-      description-image: "carousel-2"
-      lien: "/"
+      description: "carousel-2"
+      url: "/"
 
     - image: "carousel-3.jpg"
-      description-image: "carousel-3"
-      lien: "/"
+      description: "carousel-3"
+      url: "/"
     - image: "carousel-4.jpg"
-      description-image: "carousel-4"
-      lien: "/"
+      description: "carousel-4"
+      url: "/"
     - image: "carousel-5.jpg"
-      description-image: "carousel-5"
-      lien: "/"
+      description: "carousel-5"
+      url: "/"
     - image: "carousel-2.jpg"
-      description-image: "carousel-2"
-      lien: "/"
+      description: "carousel-2"
+      url: "/"
     - image: "carousel-3.jpg"
-      description-image: "carousel-3"
-      lien: "/"
+      description: "carousel-3"
+      url: "/"
     - image: "carousel-4.jpg"
-      description-image: "carousel-4"
-      lien: "/"
+      description: "carousel-4"
+      url: "/"
     - image: "carousel-5.jpg"
-      description-image: "carousel-5"
-      lien: "/"
+      description: "carousel-5"
+      url: "/"
 
 
 - id: 'i-acc'
   container: 'picture'
-  type: 'infinite'
+  type: 'infinite'  
   # img_source : original (picture tag pluggin), baseurl, direct
   img_source: 'original'
   slides_max_witdh: '600px'
+  list_from_collection: 'nos-informations'
+  list_from_path_collection: '/page-acceuil/carousel/'
   list_img:
     - image: "carousel-acceuil/reouverture.jpg"
-      description-image: "Réouverture de la Case Bio!"
-      lien: "/"
-      description-lien: "Réouverture de la Case Bio!"
-    - image: "carousel-acceuil/decouvrez-notre-marche-bio.jpg"
-      description-image: "Le rayon marché biologique"
-      lien: "/alimentation-biologique/"
-      description-lien: "Accéder au rayon Alimentation"
-    - image: "carousel-acceuil/espace-sante-bien-etre.jpg"
-      description-image: "Le rayon bien-être"
-      lien: "/sante-bien-etre/"
-      description-lien: "Accéder au rayon Santé & Bien-être"
-    - image: "carousel-acceuil/reouverture.jpg"
-      description-image: "Réouverture de la Case Bio!"
-      lien: "/"
-      description-lien: "Réouverture de la Case Bio!"
+      description: "Réouverture de la Case Bio!"
+      url:       
+    # - image: "carousel-acceuil/decouvrez-notre-marche-bio.jpg"
+    #   description: "Le rayon marché biologique"
+    #   url: "/blog/mieux-nous-connaitre/marche-biologique.html"
+    # - image: "carousel-acceuil/espace-sante-bien-etre.jpg"
+    #   description: "Le rayon bien-être"
+    #   url: 
+   

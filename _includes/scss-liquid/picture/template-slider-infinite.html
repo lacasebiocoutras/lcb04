@@ -34,6 +34,16 @@
 
 
     {% assign nb_items =  slider.list_img.size | plus: 0 %}
+
+    {% if slider.list_from_collection != null %}
+      {% assign nb_items_list_collection = 0 %}
+      {% include scss-liquid/picture/subfunction/nb_items_list_from_collection.html
+        name_collection=slider.list_from_collection
+        path_list=slider.list_from_path_collection
+      %}
+      {% assign nb_items =  nb_items_list_collection | plus: 0 %}  
+    {% endif %}
+
     {% if nb_items >  max_items_slider %}
       {% assign max_items_slider = nb_items %}
     {% endif %}
