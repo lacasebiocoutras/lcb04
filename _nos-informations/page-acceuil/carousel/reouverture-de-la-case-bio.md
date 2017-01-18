@@ -2,10 +2,12 @@
 title: Réouverture de la Case Bio!
 date-publication: 17 janv 2017
 order: 1
-description: Réouverture de la Case Bio!
+descriptif:
 image: carousel-acceuil/reouverture.jpg
+description-image: Réouverture de la Case Bio!
 url: 
-lire-plus: 
+description-url:
 
+lire-plus: 
 tags: 
 ---

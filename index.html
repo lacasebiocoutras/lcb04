@@ -20,6 +20,8 @@ layout: home
 {% endfor %}
 {% assign items_tmp = raw_items_navig_acceuil | sort: 'order' %}
 
+{% assign cpt_images_acceuil = 0 %}
+
 {% for item_tmp in items_tmp %}
   {% if item_tmp.path contains '/page-acceuil/bienvenue.md' %} 
     {% assign textBienvenue = item_tmp.content %} 
@@ -37,6 +39,26 @@ layout: home
       {% assign list_car_url_acceuil = list_car_url_acceuil | append : item_tmp.url | append: delim %}
     {% endunless %}
   {% endif %}
+  {% if item_tmp.path contains '/page-acceuil/image-logo-acceuil/' %} 
+    {% unless item_tmp.path contains '/index.md'  %}
+      {% comment %} une seule image attendue ! {% endcomment %}
+      {% assign item_logo_acceuil = item_tmp %}     
+    {% endunless %}
+  {% endif %}
+  {% if item_tmp.path contains '/page-acceuil/images-acceuil/' %} 
+    {% unless item_tmp.path contains '/index.md'  %}
+      {% comment %} 2 images attendues ! {% endcomment %}
+      {% if cpt_images_acceuil == 0 %}
+        {% assign item_image_acceuil1 = item_tmp %}
+        {% assign cpt_images_acceuil = cpt_images_acceuil | plus: 1 %}
+      {% elsif cpt_images_acceuil == 1 %}
+        {% assign item_image_acceuil2 = item_tmp %}
+        {% assign cpt_images_acceuil = cpt_images_acceuil | plus: 1 %}
+      {% endif %}
+          
+    {% endunless %}
+  {% endif %}
+
 {% endfor %}
 
 {% assign array_title_item_acceuil = list_title_item_acceuil | remove_first: delim | split: delim  %}
@@ -85,12 +107,18 @@ layout: home
                   {% endfor %}
                 </ul>
                 <!-- u-textTruncate u-textNoWrap -->
-              </li>
+              {% comment %}</li>
               {% for item in site.data.custom.home-page.img.image-intergrid-acceuil limit:1 %}
               <li class="li-ab Grid-cell Grid-cell--autoSize not-inf-sm">
                 {% picture logo-intergrid-home {{item.image}} alt="{{item.description-image}}" title="{{item.description-image}}" %}
               </li>
-              {% endfor %}
+              {% endfor %}{% endcomment %}
+              <li class="li-ab Grid-cell Grid-cell--autoSize not-inf-sm">
+                {% picture logo-intergrid-home {{item_logo_acceuil.image}} alt="{{item_logo_acceuil.description-image}}" title="{{item_logo_acceuil.description-image}}" %}
+              </li>
+
+
+
             </ul>
 
           </li> <!-- fin .li-nav-ab-->
@@ -106,22 +134,50 @@ layout: home
     <li class="Grid-cell u-full u-med-1of3-m ">
       <div class="part-welcome-img">
         <ul class="Grid Grid--gutters-m u-spaceVN">
-          {% for item in site.data.custom.home-page.img.image-acceuil limit:2 %}
-          <li class="li-img-primdark Grid-cell u-1of2-m u-ssmall-1of3-m u-small-1of2-m u-med-full ">
 
-            {% if item.lien != "" %}
-              <a href="{{site.baseurl}}{{item.lien}}" title="{{item.description-lien}}">
-            {% endif %}
-            {% picture welcome-home {{item.image}} alt="{{item.description-image}}" %}
-            <div class="u-textCenter">{% if item.text-icone != "" %}<i class="{{item.icone-text}}" aria-hidden="true"></i>&nbsp;{% endif %}{{item.text}}</div>
-            {% if item.lien != "" %}</a>{% endif %}
-          </li>
-          {% endfor %}
-          {% for item in site.data.custom.home-page.img.image-intergrid-acceuil limit:1 %}
+          {% if item_image_acceuil1 != null %}
+            <li class="li-img-primdark Grid-cell u-1of2-m u-ssmall-1of3-m u-small-1of2-m u-med-full ">
+              {% if item_image_acceuil1.url != null and item_image_acceuil1.url != '' %}
+                <a href="{{site.baseurl}}{{item_image_acceuil1.url}}" title="{{item_image_acceuil1.description-url}}">
+              {% endif %}
+              {% picture welcome-home {{item_image_acceuil1.image}} alt="{{item_image_acceuil1.description-image}}" %}
+              <div class="u-textCenter">{{item_image_acceuil1.descriptif}}</div>
+              {% if item_image_acceuil1.url != null and item_image_acceuil1.url != '' %}</a>{% endif %}
+            </li>
+          {% endif %}
+          {% if item_image_acceuil2 != null %}
+            <li class="li-img-primdark Grid-cell u-1of2-m u-ssmall-1of3-m u-small-1of2-m u-med-full ">
+              {% if item_image_acceuil2.url != null and item_image_acceuil2.url != '' %}
+                <a href="{{site.baseurl}}{{item_image_acceuil2.url}}" title="{{item_image_acceuil2.description-url}}">
+              {% endif %}
+              {% picture welcome-home {{item_image_acceuil2.image}} alt="{{item_image_acceuil2.description-image}}" %}
+              <div class="u-textCenter">{{item_image_acceuil2.descriptif}}</div>
+              {% if item_image_acceuil2.url != null and item_image_acceuil2.url != '' %}</a>{% endif %}
+            </li>
+          {% endif %}
+
+
+          {% comment %}{% for item in site.data.custom.home-page.img.image-acceuil limit:2 %}
+            <li class="li-img-primdark Grid-cell u-1of2-m u-ssmall-1of3-m u-small-1of2-m u-med-full ">
+
+              {% if item.lien != "" %}
+                <a href="{{site.baseurl}}{{item.lien}}" title="{{item.description-lien}}">
+              {% endif %}
+              {% picture welcome-home {{item.image}} alt="{{item.description-image}}" %}
+              <div class="u-textCenter">{% if item.text-icone != "" %}<i class="{{item.icone-text}}" aria-hidden="true"></i>&nbsp;{% endif %}{{item.text}}</div>
+              {% if item.lien != "" %}</a>{% endif %}
+            </li>
+          {% endfor %}{% endcomment %}
+          {% comment %}{% for item in site.data.custom.home-page.img.image-intergrid-acceuil limit:1 %}
+            <li class=" Grid-cell  u-full u-ssmall-1of3-m on-sm-only" >
+              {% picture logo-intergrid-home {{item.image}} alt="{{item.description-image}}" title="{{item.description-image}}" %}
+            </li>
+          {% endfor %}{% endcomment %}
           <li class=" Grid-cell  u-full u-ssmall-1of3-m on-sm-only" >
-            {% picture logo-intergrid-home {{item.image}} alt="{{item.description-image}}" title="{{item.description-image}}" %}
+            {% picture logo-intergrid-home {{item_logo_acceuil.image}} alt="{{item_logo_acceuil.description-image}}" title="{{item_logo_acceuil.description-image}}" %}
           </li>
-          {% endfor %}
+
+          
         </ul>
       </div>
     </li>

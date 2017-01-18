@@ -2,10 +2,12 @@
 title: Le rayon bien-être
 date-publication: 17 janv 2017
 order: 3
-description: Découvrez notre rayon Santé & Bien-être
+descriptif:
 image: carousel-acceuil/espace-sante-bien-etre.jpg
+description-image: Découvrez notre rayon Santé & Bien-être
 url: 
-lire-plus: 
+description-url:
 
+lire-plus: 
 tags: 
 ---

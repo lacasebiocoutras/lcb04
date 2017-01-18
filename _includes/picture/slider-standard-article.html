@@ -16,17 +16,17 @@
 </div>
 {% endcomment %}
 {% if include.url != null and include.url != '' %}
-  <a href="{{site.baseurl}}{{include.url}}" title="{{include.description}}">
+  <a href="{{site.baseurl}}{{include.url}}" title="{{include.description-url}}">
 {% endif %}
 
   {% if input_slider.img_source == site.data.scss_liquid.UI.slider.config.type_img_source.original %}
-    {% picture slider-home {{include.image}} alt="{{include.description}}" %}
+    {% picture slider-home {{include.image}} alt="{{include.description-image}}" %}
 
   {% elsif input_slider.img_source == site.data.scss_liquid.UI.slider.config.type_img_source.baseurl  %}
-    <img src="{{site.baseurl}}/images/{{include.image}}" alt="{{include.description}}">
+    <img src="{{site.baseurl}}/images/{{include.image}}" alt="{{include.description-image}}">
 
   {% elsif input_slider.img_source == site.data.scss_liquid.UI.slider.config.type_img_source.direct_url %}
-    <img src="{{include.image}}" alt="{{include.description}}">
+    <img src="{{include.image}}" alt="{{include.description-image}}">
   {% endif %}
 
 {% if include.url != null and include.url != '' %}
