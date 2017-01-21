@@ -19,11 +19,8 @@ tags :
 <!-- ******************************** -->
 <!-- **** début contenu détaillé **** -->
 
-<span>Bienvenue</span> lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce eget maximus enim. Donec id dapibus ipsum. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+<span>Bienvenue</span> sur le site de la Case Bio. Retrouvez toutes les informations utiles et l'actualité de votre magasin bio. 
 
-Mauris in augue non est molestie tincidunt eget eget diam. Suspendisse blandit nibh vitae quam iaculis, vel convallis mi imperdiet. Cras feugiat tristique sapien, ut sodales lectus laoreet non. Maecenas aliquet vehicula lobortis. Ut nunc justo, semper sed enim a, bibendum rhoncus nibh. Phasellus nec accumsan augue.
-
-abcde­fghijklmnopqrstu­vwxyz­abcde­fghijklmnopqrstu­vwxyz­abcd&hellip;
 
 
 <!-- **** fin contenu détaillé **** -->

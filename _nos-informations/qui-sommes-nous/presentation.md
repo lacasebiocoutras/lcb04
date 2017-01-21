@@ -2,7 +2,7 @@
 title: Présentation
 date-publication: 20 avril 2016
 
-order: 1
+order: 100
 
 
 description: 
@@ -18,6 +18,9 @@ tags :
 <!--fin-excerpt-->
 <!-- ******************************** -->
 <!-- **** début contenu détaillé **** -->
+
+N'hésitez à nous faire parvenir vos remarques pour améliorer le contenu, et la qualité de ce site.
+
 
 ## Présentation de l'équipe
 

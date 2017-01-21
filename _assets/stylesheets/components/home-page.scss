@@ -31,11 +31,11 @@
    * custom li part
    */
   .li-img-primdark {
-    background: $primary-color-dark; //hsla(31, 15%, 50%, 0.1);
-    border: 0.2em solid $primary-color-dark;
+    background: $primary-color;//$primary-color-dark; //hsla(31, 15%, 50%, 0.1);
+    border: 0.2em solid $primary-color;
     // box-shadow: 0 0 $border-shadow rgba($shadow-color, 0.5);
     border-radius: 0 0 $border-radius-site $border-radius-site;
-    color: $secondary-color-light;
+    color: $primary-text-color; //$secondary-color-light;
   }
 
   .li-nav-ab {
@@ -43,13 +43,13 @@
     // border: 0.2em solid $primary-color-dark;
     // box-shadow: 0 0 $border-shadow rgba($shadow-color, 0.5);
     border-radius: $border-radius-site;
-    color: $secondary-color-light;
+    color: $primary-color-light;
   }
   .li-nav {
-    background: $accent-color; //hsla(31, 15%, 50%, 0.1);
+    // background: $primary-color-light; //hsla(31, 15%, 50%, 0.1);
     // border: 0.2em solid $primary-color-dark;
     // box-shadow: 0 0 $border-shadow rgba($shadow-color, 0.5);
-    border-radius: $border-radius-site;
+    // border-radius: $border-radius-site;
     // color: $primary-color-text;
 
     //maj margin right à 0, on sm
@@ -59,18 +59,32 @@
   }
 
   .li-ab {
-    // background: $white; //hsla(31, 15%, 50%, 0.1);
-    // border: 0.2em solid $primary-color-dark;
-    // box-shadow: 0 0 $border-shadow rgba($shadow-color, 0.5);
+    background: $accent-color-ab; //hsla(31, 15%, 50%, 0.1);
+    border: 0.2em solid $primary-color-text;
+    box-shadow: 0 0 $border-shadow rgba($shadow-color, 0.5);
     border-radius: $border-radius-site;
-    // color: $primary-color-text;
+    color: $primary-color-text;
+  }
+
+  .horaire-acceuil{
+
+
+    list-style: none;
+    padding: 0.2em;
+
+    li {
+      font-size: 1.3em;
+      line-height: 1.7em;
+      // display: inline;
+      font-weight: bold;
+    }
   }
 
 
   .presentation {
 
     .li-presentation {
-      background: $secondary-color; //hsla(31, 15%, 50%, 0.1);
+      background: $accent-color-lcb-vert; //$secondary-color; //hsla(31, 15%, 50%, 0.1);
       // border: 0.2em solid $primary-color-dark;
       // box-shadow: 0 0 $border-shadow rgba($shadow-color, 0.5);
       border-radius: $border-radius-site;

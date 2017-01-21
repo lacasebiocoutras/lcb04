@@ -9,7 +9,7 @@ description: Nous sommes situés au 12bis rue Edouard Vaillant, à Coutras, 3323
 
 lire-plus: Lien street-view, google-maps, ...
 
-miniature: plan-googleearth-lacasebiocoutras.jpg
+miniature: plan-googleearth-lacasebiocoutras.png
 carousel: 
 
 tags : 

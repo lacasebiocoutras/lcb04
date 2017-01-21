@@ -1,10 +1,10 @@
 ---
-title: Les fleurs de Bach
+title: Une sélection de produits
 date-publication: 17 janv 2017
 
-order: 3
+order: 2
 
-link: /blog/mieux-nous-connaitre/fleurs-de-bach.html
+link: /promotions/index.html
 
 
 description: 

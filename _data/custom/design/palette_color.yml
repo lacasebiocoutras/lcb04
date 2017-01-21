@@ -6,32 +6,53 @@
   code: '#000'
   type: 'raw'
 
+# couleur logo affiche
+# vert : 8bcf20ff
+# marron : 3c080cff
+# vert ab : 00a54fff
+# marron clair : fbfd82ff
+
 
 
 
 
 - name: 'primary-color'
-  code: '#8d6e63'
-  type: 'raw'
+  #code: '#8d6e63'
   # brown 400
+  # code: '#795548'
+  # brown 800
+  code: '#4e342e'
+  type: 'raw'  
 
 - name: 'primary-color-dark'
-  code: '#795548'
-  type: 'raw'
+  # code: '#795548'
   # brown 800
+  code : '#3c080c'
+  #marron foncé logo lcb
+  type: 'raw'
+  
 
 - name: 'primary-color-light'
-  code: '#bcaaa4'
-  type: 'raw'
+  # code: '#bcaaa4'
   # brown 50
-
-
-
-
-- name: 'secondary-color'
-  code: '#cddc39'
+  code: '#fbfd82'
+  #marron clair text logo lcb
   type: 'raw'
+
+
+
+
+
+
+
+
+- name: 'secondary-color'  
+  # code: '#cddc39'
   # Lime 500
+  code: '#8bcf20'
+  # vert text logo lcb
+  type: 'raw'
+  
 
 - name: 'secondary-color-dark'
   code: '#9e9d24'
@@ -46,10 +67,29 @@
 
 
 
+
+
+
 - name: 'accent-color'
   code: '#7cb342'
-  type: 'raw'
   # Light-green 600
+  # code: '#8bcf20'
+  #vert logo lcb
+  type: 'raw'
+  
+- name: 'accent-color-ab'
+  code: '#00a54f'
+  # Light-green 600
+  # code: '#8bcf20'
+  #vert logo lcb
+  type: 'raw'
+
+- name: 'accent-color-lcb-vert'
+  code: '#8bcf20'
+  type: 'raw'
+
+
+
 
 
 
@@ -60,16 +100,30 @@
   type: 'scss'
 
 - name: 'primary-text-color'
-  code: 'secondary-color'
+  # code: 'secondary-color'
+  # type: 'scss'
+  #code: '#fbfd82'
+  #type: 'raw'
+  code: 'primary-color-light'
   type: 'scss'
 
 - name: 'secondary-text-color'
-  code: '#4e342e'
-  type: 'raw'
+  # code: '#4e342e'
+  # type: 'raw'
+  code: 'primary-color-dark'
+  type: 'scss'
 
 - name: 'divider-color'
   code: '#B6B6B6'
   type: 'raw'
+
+
+
+
+
+
+
+
 
 
 

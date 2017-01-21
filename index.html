@@ -56,6 +56,9 @@ layout: home
       {% elsif cpt_images_acceuil == 1 %}
         {% assign item_image_acceuil2 = item_tmp %}
         {% assign cpt_images_acceuil = cpt_images_acceuil | plus: 1 %}
+      {% comment %}{% elsif cpt_images_acceuil == 2 %}
+        {% assign item_image_acceuil3 = item_tmp %}
+        {% assign cpt_images_acceuil = cpt_images_acceuil | plus: 1 %}{% endcomment %}
       {% endif %}
           
     {% endunless %}
@@ -96,33 +99,25 @@ layout: home
             <!-- add one level imbrication -->
             <!-- <ul class="Grid Grid--center Grid--flexCells Grid--gutters-m u-spaceVN"> -->
             <ul class="Grid  Grid--gutters-m u-spaceVN">
-              <li class="li-nav Grid-cell Grid-cell--center ">
-                <ul class="navigation">
-                  {% comment %}
-                  {% for item in site.data.custom.home-page.navigation.home-short-nav %}                    
-                  {% endfor %}
-                  {% endcomment %}
+              <li class="li-ab Grid-cell Grid-cell--center ">
+                <ul class="horaire-acceuil">
+                  <li> Nos horaires : </li>
+                  <li> Le Lundi : 15H - 19h15 </li>
+                  <li> Du Mardi au Jeudi : 9H - 12h30 / 15H - 19h15 </li>
+                  <li> Le Vendredi : 9H - 12h30 / 14H - 19h15 </li>
+                  <li> Le Samedi : 9H - 13h / 15H - 19h </li>
+                </ul>                
+              </li>
+              <li class="li-nav Grid-cell--autoSize not-inf-sm">               
+                <ul class="navigation">                  
                   {% for iter_array in (0..array_title_item_acceuil_size) %}
                     {% assign title_tmp = array_title_item_acceuil[iter_array]  %}
                     {% assign link_tmp = array_link_article_item_acceuil[iter_array] %}                    
                     <li id="menu-item" {% comment %}style="margin-left: {{ forloop.index | minus: 1 | times: 2}}em;"{% endcomment %}> <a class="menu-item u-textTruncate " href="{{site.baseurl}}{{link_tmp}}"><h2>{{title_tmp}}</h2></a> </li>
                   {% endfor %}
                 </ul>
-                <!-- u-textTruncate u-textNoWrap -->
-              {% comment %}</li>
-              {% for item in site.data.custom.home-page.img.image-intergrid-acceuil limit:1 %}
-              <li class="li-ab Grid-cell Grid-cell--autoSize not-inf-sm">
-                {% picture logo-intergrid-home {{item.image}} alt="{{item.description-image}}" title="{{item.description-image}}" %}
               </li>
-              {% endfor %}{% endcomment %}
-              <li class="li-ab Grid-cell Grid-cell--autoSize not-inf-sm">
-                {% picture logo-intergrid-home {{item_logo_acceuil.image}} alt="{{item_logo_acceuil.description-image}}" title="{{item_logo_acceuil.description-image}}" %}
-              </li>
-
-
-
             </ul>
-
           </li> <!-- fin .li-nav-ab-->
         <!-- fin navigation list + AB logo -->
         </ul>
@@ -137,30 +132,45 @@ layout: home
       <div class="part-welcome-img">
         <ul class="Grid Grid--gutters-m u-spaceVN">
 
-          {% if item_image_acceuil1 != null %}
-            <li class="li-img-primdark Grid-cell u-1of2-m u-ssmall-1of3-m u-small-1of2-m u-med-full ">
-              {% if item_image_acceuil1.link != null and item_image_acceuil1.link != '' %}
-                <a href="{{site.baseurl}}{{item_image_acceuil1.link}}" title="{{item_image_acceuil1.description-link}}">
-              {% endif %}
-              {% picture welcome-home {{item_image_acceuil1.image}} alt="{{item_image_acceuil1.description-image}}" %}
-              <div class="u-textCenter">{{item_image_acceuil1.descriptif}}</div>
-              {% if item_image_acceuil1.link != null and item_image_acceuil1.link != '' %}</a>{% endif %}
-            </li>
-          {% endif %}
-          {% if item_image_acceuil2 != null %}
-            <li class="li-img-primdark Grid-cell u-1of2-m u-ssmall-1of3-m u-small-1of2-m u-med-full ">
-              {% if item_image_acceuil2.link != null and item_image_acceuil2.link != '' %}
-                <a href="{{site.baseurl}}{{item_image_acceuil2.link}}" title="{{item_image_acceuil2.description-link}}">
-              {% endif %}
-              {% picture welcome-home {{item_image_acceuil2.image}} alt="{{item_image_acceuil2.description-image}}" %}
-              <div class="u-textCenter">{{item_image_acceuil2.descriptif}}</div>
-              {% if item_image_acceuil2.link != null and item_image_acceuil2.link != '' %}</a>{% endif %}
-            </li>
-          {% endif %}
+          {% assign cpt_images_acceuil = cpt_images_acceuil | minus: 1 %}
+          {% for iter_array in (0..cpt_images_acceuil) %}
+            {% comment %}limit 2 images !{% endcomment %}
+            {% if iter_array == 0 %}
+              {% assign item_image_acceuil = item_image_acceuil1 %}
+            {% elsif iter_array == 1 %}
+              {% assign item_image_acceuil = item_image_acceuil2 %}
+            {% comment %}{% elsif iter_array == 2 %}
+              {% assign item_image_acceuil = item_image_acceuil3 %}{% endcomment %}
+            {% else %}
+              {% break %}
+            {% endif %}
 
-          
-          <li class=" Grid-cell  u-full u-ssmall-1of3-m on-sm-only" >
-            {% picture logo-intergrid-home {{item_logo_acceuil.image}} alt="{{item_logo_acceuil.description-image}}" title="{{item_logo_acceuil.description-image}}" %}
+            <li class="li-img-primdark Grid-cell u-1of2-m u-ssmall-1of2-m u-small-1of2-m u-med-full ">
+              {% if item_image_acceuil.link != null and item_image_acceuil.link != '' %}
+                <a href="{{site.baseurl}}{{item_image_acceuil.link}}" title="{{item_image_acceuil.description-link}}">
+              {% endif %}
+              {% picture welcome-home {{item_image_acceuil.image}} alt="{{item_image_acceuil.description-image}}" %}
+              <div class="u-textCenter">{{item_image_acceuil.descriptif}}</div>
+              {% if item_image_acceuil.link != null and item_image_acceuil.link != '' %}</a>{% endif %}
+            </li>
+          {% endfor %}
+
+          <li class="li-nav Grid-cell  u-full u-ssmall-1of2-m on-sm-only" >
+            {% comment %}{% picture logo-intergrid-home {{item_logo_acceuil.image}} alt="{{item_logo_acceuil.description-image}}" title="{{item_logo_acceuil.description-image}}" %}{% endcomment %}
+            {% comment %}<ul class="horaire-acceuil">
+              <li> Nos horaires : </li>
+              <li> Le Lundi : 15H - 19h15 </li>
+              <li> Du Mardi au Jeudi : 9H - 12h30 / 15H - 19h15 </li>
+              <li> Le Vendredi : 9H - 12h30 / 14H - 19h15 </li>
+              <li> Le Samedi : 9H - 13h / 15H - 19h </li>
+            </ul>{% endcomment %}
+            <ul class="navigation">                  
+                  {% for iter_array in (0..array_title_item_acceuil_size) %}
+                {% assign title_tmp = array_title_item_acceuil[iter_array]  %}
+                {% assign link_tmp = array_link_article_item_acceuil[iter_array] %}                    
+                <li id="menu-item" {% comment %}style="margin-left: {{ forloop.index | minus: 1 | times: 2}}em;"{% endcomment %}> <a class="menu-item u-textTruncate " href="{{site.baseurl}}{{link_tmp}}"><h2>{{title_tmp}}</h2></a> </li>
+              {% endfor %}
+            </ul>
           </li>
 
           
