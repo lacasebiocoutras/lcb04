@@ -46,10 +46,10 @@
     color: $primary-color-light;
   }
   .li-nav {
-    // background: $primary-color-light; //hsla(31, 15%, 50%, 0.1);
-    // border: 0.2em solid $primary-color-dark;
+    background: $primary-color-light; //hsla(31, 15%, 50%, 0.1);
+    border: 0.3em solid $primary-color-dark;
     // box-shadow: 0 0 $border-shadow rgba($shadow-color, 0.5);
-    // border-radius: $border-radius-site;
+    border-radius: $border-radius-site;
     // color: $primary-color-text;
 
     //maj margin right à 0, on sm
@@ -84,11 +84,11 @@
   .presentation {
 
     .li-presentation {
-      background: $accent-color-lcb-vert; //$secondary-color; //hsla(31, 15%, 50%, 0.1);
+      background: $secondary-color; //$secondary-color; //hsla(31, 15%, 50%, 0.1);
       // border: 0.2em solid $primary-color-dark;
       // box-shadow: 0 0 $border-shadow rgba($shadow-color, 0.5);
       border-radius: $border-radius-site;
-      color: $primary-color-text;
+      color: $primary-text-color;
       // padding: 0 5em;
       //gestion padding responsive
       padding: 0 $spacing-h;
@@ -113,8 +113,9 @@
 
       p {
 
-        font-size:1.2em;
-          line-height: 1.5em;
+        font-size:1.5em;
+          line-height: 1.7em;
+          font-weight: bold;
 
         @include breakpoint($break-md) {
           font-size:1.3em;
@@ -131,10 +132,10 @@
       // margin-top: $spacing-v/2;
        // margin: 0 5em;
        p:first-of-type  {
-        text-indent: 3em;
+        text-indent: 0.3em;
 
         span {
-          font-size: 1.7em;
+          font-size: 1.8em;
          }
        }
 

@@ -82,21 +82,21 @@ $border-radius-site: 0.8em;
 $border-shadow: 0.8em;
 
 //responsive size breakpoint
-$break-ssm:        440px;
+$break-ssm:        441px;
 $break-ssm-max:    max-width $break-ssm;
-$break-sm:         580px;
+$break-sm:         581px;
 $break-sm-max:     max-width $break-sm;
-$break-md:         880px;
+$break-md:         881px;
 $break-md-max:     max-width $break-md;
-$break-lg:         1180px;
+$break-lg:         1181px;
 $break-lg-max:     max-width $break-lg;
 $break-xlg:        $content-width;
 $break-xlg-max:    max-width $break-xlg;
 
 //ajout pour affichage logo header, decalage image
 // min-with img, correspond à logo-home default picture
-$break-ssm-header:        320px;
-$break-ssm-header-max:    max-width 250px;
+$break-ssm-header:        101px; //320px;
+$break-ssm-header-max:    max-width 1px;//250px;
 
 
 

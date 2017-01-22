@@ -19,7 +19,7 @@ tags :
 <!-- ******************************** -->
 <!-- **** début contenu détaillé **** -->
 
-<span>Bienvenue</span> sur le site de la Case Bio. Retrouvez toutes les informations utiles et l'actualité de votre magasin bio. 
+<span>Bienvenue</span>. Retrouvez toutes les informations utiles et l'actualité de votre magasin bio de Coutras. 
 
 
 

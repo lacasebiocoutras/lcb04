@@ -1,3 +1,20 @@
+- title : 'Derniers ajouts blog :'
+  collection: 'nos-informations'
+  force_display_coll_ext: true
+  force_display_coll_ext_section: 'blog'
+  # force_display_coll_ext_model: 'default-promotions-slider'
+  force_display_coll_ext_model: 'default-list-items-dist1'
+  sort :
+    # available  'date-publication' | 'order' | 'title' (| 'date-evenement')
+    # defined in /_data/coll_ext/config/sort_site-documents.yml
+    # default : 'order'
+    filter: 'date-publication'
+    nb-max-item-per-section: 20
+    # choose-subsections: ['alimentation', 'sante-bien-etre']
+    choose-subsections: []
+    filter-subsections: ['mieux-nous-connaitre']
+
+
 - title : 'Sélection de produits :'
   collection: 'nos-promotions'
   force_display_coll_ext: true
@@ -9,7 +26,7 @@
     # defined in /_data/coll_ext/config/sort_site-documents.yml
     # default : 'order'
     filter: 'date-publication'
-    nb-max-item-per-section: 4
+    nb-max-item-per-section: 2
     # choose-subsections: ['alimentation', 'sante-bien-etre']
     choose-subsections: []
     filter-subsections: []
@@ -64,21 +81,6 @@
 #     choose-subsections: []
 #     filter-subsections: []
 
-- title : 'Derniers ajouts blog :'
-  collection: 'nos-informations'
-  force_display_coll_ext: true
-  force_display_coll_ext_section: 'blog'
-  # force_display_coll_ext_model: 'default-promotions-slider'
-  force_display_coll_ext_model: 'default-list-items-dist1'
-  sort :
-    # available  'date-publication' | 'order' | 'title' (| 'date-evenement')
-    # defined in /_data/coll_ext/config/sort_site-documents.yml
-    # default : 'order'
-    filter: 'date-publication'
-    nb-max-item-per-section: 20
-    # choose-subsections: ['alimentation', 'sante-bien-etre']
-    choose-subsections: []
-    filter-subsections: []
 
 
 

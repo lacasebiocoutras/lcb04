@@ -46,7 +46,7 @@ description: "Mentions légales concernant La Case Bio, Coutras"
         http://madewithenvy.com/ecosystem/articles/2015/exploring-order-flexbox-carousel/
         http://codepen.io/nickawalsh/pen/gzwhq
 {% endcomment %}
-
+{% comment %}
 
 {% include picture/slider-standard.html 
   input_slider='t-nat' 
@@ -75,3 +75,4 @@ description: "Mentions légales concernant La Case Bio, Coutras"
 {% include picture/slider-standard.html 
   input_slider='o-acc' 
 %}
+{% endcomment %}

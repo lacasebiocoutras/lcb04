@@ -173,15 +173,18 @@ picture:
         class: "slider-home-image"
         itemprop: "image"
       ppi: [1]
-      source_1024:
-        media: "(min-width: 1024)"
-        width: "1024"
-      source_768:
-        media: "(min-width: 768px)"
+      source_1000:
+        media: "(min-width: 800)"
+        width: "1000"
+      source_800:
+        media: "(min-width: 600px)"
         width: "768"
       source_600:
-        media: "(min-width: 600px)"
+        media: "(min-width: 400px)"
         width: "600"
+      source_400:
+        media: "(min-width: 200px)"
+        width: "400"
       source_default:
         width: "320"
     welcome-home:
@@ -208,8 +211,11 @@ picture:
       source_600:
         media: "(min-width: 300px)"
         width: "600"
+      source_350:
+        media: "(min-width: 100px)"
+        width: "350"
       source_default:
-        width: "320"
+        width: "100"
     logo-intergrid-home:
       attr:
         class: "logo-intergrid-home-image"

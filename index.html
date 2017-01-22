@@ -87,15 +87,15 @@ layout: home
 
           <!-- .li-presentation & .presentation-text (gestion padding responsive), part left on lg screen, first on small -->
           {% if textBienvenue != null and textBienvenue != '' %}          
-            <li class="li-presentation Grid-cell u-full  ">
-              <div class="presentation-text">
-                {{textBienvenue}}              
-              </div>
-            </li> <!--fin .li-presentation -->
+          <li class="li-presentation Grid-cell u-full ">
+            <div class="presentation-text">
+              {{textBienvenue}}              
+            </div>
+          </li> <!--fin .li-presentation -->
           {% endif %}
 
           <!-- .li-nav-ab , navigation list + AB logo -->
-          <li class="li-nav-ab Grid-cell u-full  u-spaceBN" >
+          <li class="li-nav-ab Grid-cell u-full  " >
             <!-- add one level imbrication -->
             <!-- <ul class="Grid Grid--center Grid--flexCells Grid--gutters-m u-spaceVN"> -->
             <ul class="Grid  Grid--gutters-m u-spaceVN">
@@ -119,6 +119,19 @@ layout: home
               </li>
             </ul>
           </li> <!-- fin .li-nav-ab-->
+
+          <li class="li-slider Grid-cell  u-full u-spaceBN ">
+            <div class="">
+              {% include picture/slider-standard.html
+                input_slider='i-acc'
+                list_image=list_car_image_acceuil
+                list_description_image=list_car_description_img_acceuil
+                list_link=list_car_link_acceuil
+                list_description_link=list_car_description_link_acceuil
+              %}
+            </div>
+          </li> <!--fin .li-presentation -->
+
         <!-- fin navigation list + AB logo -->
         </ul>
 
@@ -131,6 +144,16 @@ layout: home
     <li class="Grid-cell u-full u-med-1of3-m ">
       <div class="part-welcome-img">
         <ul class="Grid Grid--gutters-m u-spaceVN">
+
+           <li class="li-nav Grid-cell Grid-cell--center  u-full  on-sm-only" >           
+            <ul class="navigation">                  
+                  {% for iter_array in (0..array_title_item_acceuil_size) %}
+                {% assign title_tmp = array_title_item_acceuil[iter_array]  %}
+                {% assign link_tmp = array_link_article_item_acceuil[iter_array] %}                    
+                <li id="menu-item" {% comment %}style="margin-left: {{ forloop.index | minus: 1 | times: 2}}em;"{% endcomment %}> <a class="menu-item u-textTruncate " href="{{site.baseurl}}{{link_tmp}}"><h2>{{title_tmp}}</h2></a> </li>
+              {% endfor %}
+            </ul>
+          </li>
 
           {% assign cpt_images_acceuil = cpt_images_acceuil | minus: 1 %}
           {% for iter_array in (0..cpt_images_acceuil) %}
@@ -145,7 +168,8 @@ layout: home
               {% break %}
             {% endif %}
 
-            <li class="li-img-primdark Grid-cell u-1of2-m u-ssmall-1of2-m u-small-1of2-m u-med-full ">
+            {% comment %}<li class="li-img-primdark Grid-cell u-1of2-m u-ssmall-1of2-m u-small-1of2-m u-med-full ">{% endcomment %}
+            <li class="li-img-primdark Grid-cell u-full u-small-1of2-m u-med-full ">
               {% if item_image_acceuil.link != null and item_image_acceuil.link != '' %}
                 <a href="{{site.baseurl}}{{item_image_acceuil.link}}" title="{{item_image_acceuil.description-link}}">
               {% endif %}
@@ -153,27 +177,7 @@ layout: home
               <div class="u-textCenter">{{item_image_acceuil.descriptif}}</div>
               {% if item_image_acceuil.link != null and item_image_acceuil.link != '' %}</a>{% endif %}
             </li>
-          {% endfor %}
-
-          <li class="li-nav Grid-cell  u-full u-ssmall-1of2-m on-sm-only" >
-            {% comment %}{% picture logo-intergrid-home {{item_logo_acceuil.image}} alt="{{item_logo_acceuil.description-image}}" title="{{item_logo_acceuil.description-image}}" %}{% endcomment %}
-            {% comment %}<ul class="horaire-acceuil">
-              <li> Nos horaires : </li>
-              <li> Le Lundi : 15H - 19h15 </li>
-              <li> Du Mardi au Jeudi : 9H - 12h30 / 15H - 19h15 </li>
-              <li> Le Vendredi : 9H - 12h30 / 14H - 19h15 </li>
-              <li> Le Samedi : 9H - 13h / 15H - 19h </li>
-            </ul>{% endcomment %}
-            <ul class="navigation">                  
-                  {% for iter_array in (0..array_title_item_acceuil_size) %}
-                {% assign title_tmp = array_title_item_acceuil[iter_array]  %}
-                {% assign link_tmp = array_link_article_item_acceuil[iter_array] %}                    
-                <li id="menu-item" {% comment %}style="margin-left: {{ forloop.index | minus: 1 | times: 2}}em;"{% endcomment %}> <a class="menu-item u-textTruncate " href="{{site.baseurl}}{{link_tmp}}"><h2>{{title_tmp}}</h2></a> </li>
-              {% endfor %}
-            </ul>
-          </li>
-
-          
+          {% endfor %}          
         </ul>
       </div>
     </li>
@@ -182,13 +186,13 @@ layout: home
 </div>
 
 <!-- carousel page d'acceuil -->
-{% include picture/slider-standard.html
+{% comment %}{% include picture/slider-standard.html
   input_slider='i-acc'
   list_image=list_car_image_acceuil
   list_description_image=list_car_description_img_acceuil
   list_link=list_car_link_acceuil
   list_description_link=list_car_description_link_acceuil
-%}
+%}{% endcomment %}
 
 <!-- list items -->
 {% for list in site.data.coll_ext.model_list-detail-items.list-detail-items %}
