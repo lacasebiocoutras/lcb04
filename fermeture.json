@@ -1,14 +1,95 @@
----
-layout: null
----
 [
-  {% for event in site.data.custom.fermeture %}
+  
     {
-      "title"       : "{{ event.titre }}",
-      "dateDebut"   : "{{ event.date-debut }}",
-      "dateFin"     : "{{ event.date-fin }}",
-      "delaiAlerte" : "{{ event.delai-alerte | remove_first: 'jours' | strip}}"
-    } {% unless forloop.last %},{% endunless %}
-  {% endfor %}
+      "title"       : "Fermeture du magasin",
+      "dateDebut"   : "01 Janvier 2016",
+      "dateFin"     : "",
+      "delaiAlerte" : "7"
+    } ,
+  
+    {
+      "title"       : "Congé d'Hiver",
+      "dateDebut"   : "16 Février 2016",
+      "dateFin"     : "20 Février 2016",
+      "delaiAlerte" : "15"
+    } ,
+  
+    {
+      "title"       : "Fermeture du magasin",
+      "dateDebut"   : "28 Mars 2016",
+      "dateFin"     : "",
+      "delaiAlerte" : "7"
+    } ,
+  
+    {
+      "title"       : "Fermeture du magasin",
+      "dateDebut"   : "01 Mai 2016",
+      "dateFin"     : "",
+      "delaiAlerte" : "7"
+    } ,
+  
+    {
+      "title"       : "Fermeture du magasin",
+      "dateDebut"   : "5 Mai 2016",
+      "dateFin"     : "",
+      "delaiAlerte" : "7"
+    } ,
+  
+    {
+      "title"       : "Fermeture du magasin",
+      "dateDebut"   : "08 Mai 2016",
+      "dateFin"     : "",
+      "delaiAlerte" : "7"
+    } ,
+  
+    {
+      "title"       : "Fermeture du magasin",
+      "dateDebut"   : "16 Mai 2016",
+      "dateFin"     : "",
+      "delaiAlerte" : "7"
+    } ,
+  
+    {
+      "title"       : "Fermeture du magasin",
+      "dateDebut"   : "14 Juillet 2016",
+      "dateFin"     : "",
+      "delaiAlerte" : "7"
+    } ,
+  
+    {
+      "title"       : "Fermeture du magasin",
+      "dateDebut"   : "15 Août 2016",
+      "dateFin"     : "",
+      "delaiAlerte" : "7"
+    } ,
+  
+    {
+      "title"       : "Fermeture du magasin",
+      "dateDebut"   : "1 Novembre 2016",
+      "dateFin"     : "",
+      "delaiAlerte" : "7"
+    } ,
+  
+    {
+      "title"       : "Fermeture du magasin",
+      "dateDebut"   : "11 Novembre 2016",
+      "dateFin"     : "",
+      "delaiAlerte" : "7"
+    } ,
+  
+    {
+      "title"       : "Fermeture du magasin",
+      "dateDebut"   : "25 Décembre 2016",
+      "dateFin"     : "",
+      "delaiAlerte" : "7"
+    } ,
+  
+    {
+      "title"       : "Fermeture du magasin",
+      "dateDebut"   : "01 Janvier 2017",
+      "dateFin"     : "",
+      "delaiAlerte" : "7"
+    } 
+  
 ]
 

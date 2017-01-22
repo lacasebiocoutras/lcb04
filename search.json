@@ -1,54 +1,334 @@
----
-layout: null
----
 [
-{% for list in site.data.coll_ext.model_search.list-model-search %}
-  {% if list.id == 'recherche-promotions' %}
-    {% assign collection_name = list.collection %}
-    {% assign section_to_comp = list.force_display_coll_ext_section | append: site.data.coll_ext.config.common.delimitator.url | prepend: site.data.coll_ext.config.common.delimitator.url %}
-    {% assign last_section_to_comp = list.force_display_coll_ext_section | append: site.collections_ext.path_extension_section | prepend: site.data.coll_ext.config.common.delimitator.url %}
-    {% for collection in site.collections %}
-      {% if collection.label == collection_name %}
-        {% assign raw_items = collection.docs %}
-        {% break %}
-      {% endif %}
-    {% endfor %}
-    {% for item in raw_items  %}
-      {% unless item.url contains site.collections_ext.path_extension_section %}
-        {% if item.url contains section_to_comp or item.url contains last_section_to_comp %}
-          {% assign url_item_tmp = item.url | remove_first: site.collections_ext.path_extension_section | remove_first: site.collections_ext.path_extension_item  %}
-          {% assign url_item_part_tmp = url_item_tmp | split: '/' %}
-          {% assign url_item_size_tmp = url_item_part_tmp.size | minus: 1  %}
-          {% assign name_id = url_item_part_tmp[url_item_size_tmp] %}
-          {% if url_item_size_tmp > 1 %}
-            {% assign size_tmp = url_item_size_tmp | minus : 1 %}
-            {% assign name_id = name_id | prepend : '-' | prepend : url_item_part_tmp[size_tmp] | strip  %}
-          {% endif %}
+
+  
+    
+    
+    
+    
+      
+    
+      
+        
+        
+    
+      
+        
+          
+          
+          
+          
+          
           {
-            "name_id" : "{{ name_id }}",
-            "title" : "{{ item.title | escape }}",
-            "category" : "{{ item.category }}",
-            "tags" : "{{ item.tags | array_to_sentence_string }}",
-            "url" : "{{ site.baseurl }}{{ item.url }}",
-            "date_debut" : "{{ item.date-debut-promotion }}",
-            "date_fin" : "{{ item.date-fin-promotion }}"
-          } {% unless forloop.last %},{% endunless %}
-        {% endif %}
-      {% endunless %}
-    {% endfor %}
-  {% endif %}
-{% endfor %}
+            "name_id" : "alimentation-asperges",
+            "title" : "Asperges de Charentes direct producteur",
+            "category" : "",
+            "tags" : "",
+            "url" : "/lcb04/nos-promotions/alimentation/asperges.html",
+            "date_debut" : "4 juillet 2016",
+            "date_fin" : ""
+          } ,
+        
+      
+    
+      
+        
+          
+          
+          
+          
+          
+          {
+            "name_id" : "alimentation-cereales-muesli",
+            "title" : "Céréales et muesli sans Gluten",
+            "category" : "",
+            "tags" : "",
+            "url" : "/lcb04/nos-promotions/alimentation/cereales-muesli.html",
+            "date_debut" : "2 juillet 2016",
+            "date_fin" : ""
+          } ,
+        
+      
+    
+      
+        
+          
+          
+          
+          
+          
+          {
+            "name_id" : "alimentation-ciflorette",
+            "title" : "Ciflorette de Gironde",
+            "category" : "",
+            "tags" : "",
+            "url" : "/lcb04/nos-promotions/alimentation/ciflorette.html",
+            "date_debut" : "4 juillet 2016",
+            "date_fin" : "23 décembre 2017"
+          } ,
+        
+      
+    
+      
+        
+          
+          
+          
+          
+          
+          {
+            "name_id" : "alimentation-fraises-d-languedoc",
+            "title" : "Fraises du Languedoc",
+            "category" : "",
+            "tags" : "",
+            "url" : "/lcb04/nos-promotions/alimentation/fraises-d-languedoc.html",
+            "date_debut" : "4 juillet 2016",
+            "date_fin" : "7 décembre 2017"
+          } ,
+        
+      
+    
+      
+        
+          
+          
+          
+          
+          
+          {
+            "name_id" : "alimentation-framboises",
+            "title" : "Framboises",
+            "category" : "",
+            "tags" : "",
+            "url" : "/lcb04/nos-promotions/alimentation/framboises.html",
+            "date_debut" : "4 juillet 2016",
+            "date_fin" : "23 décembre 2017"
+          } ,
+        
+      
+    
+      
+        
+          
+          
+          
+          
+          
+          {
+            "name_id" : "alimentation-gariguette",
+            "title" : "Gariguette",
+            "category" : "",
+            "tags" : "",
+            "url" : "/lcb04/nos-promotions/alimentation/gariguette.html",
+            "date_debut" : "4 juillet 2016",
+            "date_fin" : "23 décembre 2017"
+          } ,
+        
+      
+    
+      
+    
+      
+        
+          
+          
+          
+          
+          
+          {
+            "name_id" : "alimentation-kiwis-d-languedoc",
+            "title" : "kiwis du Languedoc",
+            "category" : "",
+            "tags" : "",
+            "url" : "/lcb04/nos-promotions/alimentation/kiwis-d-languedoc.html",
+            "date_debut" : "4 juillet 2016",
+            "date_fin" : "23 décembre 2017"
+          } ,
+        
+      
+    
+      
+        
+          
+          
+          
+          
+          
+          {
+            "name_id" : "alimentation-lentilles-origine-france",
+            "title" : "Lentilles corail, vertes d&#39;origne France",
+            "category" : "",
+            "tags" : "",
+            "url" : "/lcb04/nos-promotions/alimentation/lentilles-origine-france.html",
+            "date_debut" : "4 juillet 2016",
+            "date_fin" : "23 décembre 2017"
+          } ,
+        
+      
+    
+      
+        
+          
+          
+          
+          
+          
+          {
+            "name_id" : "alimentation-tomate-direct-producteur",
+            "title" : "Tomates direct producteur tout l&#39;été",
+            "category" : "",
+            "tags" : "",
+            "url" : "/lcb04/nos-promotions/alimentation/tomate-direct-producteur.html",
+            "date_debut" : "4 juillet 2016",
+            "date_fin" : "23 décembre 2017"
+          } ,
+        
+      
+    
+      
+        
+          
+          
+          
+          
+          
+          {
+            "name_id" : "cosmetique-hygiene-douche-bain",
+            "title" : "Les produits bio pour la douche et le bain",
+            "category" : "",
+            "tags" : "",
+            "url" : "/lcb04/nos-promotions/cosmetique-hygiene/douche-bain.html",
+            "date_debut" : "4 juillet 2016",
+            "date_fin" : "23 décembre 2017"
+          } ,
+        
+      
+    
+      
+    
+      
+        
+          
+          
+          
+          
+          
+          {
+            "name_id" : "cosmetique-hygiene-soin-bebe",
+            "title" : "Soins et changes pour bébé",
+            "category" : "",
+            "tags" : "",
+            "url" : "/lcb04/nos-promotions/cosmetique-hygiene/soin-bebe.html",
+            "date_debut" : "4 juillet 2016",
+            "date_fin" : "23 décembre 2017"
+          } ,
+        
+      
+    
+      
+        
+          
+          
+          
+          
+          
+          {
+            "name_id" : "entretien-menager-anti-insecte",
+            "title" : "Les solutions anti insectes, répulsifs et pièges écologiques",
+            "category" : "",
+            "tags" : "",
+            "url" : "/lcb04/nos-promotions/entretien-menager/anti-insecte.html",
+            "date_debut" : "4 juillet 2016",
+            "date_fin" : "23 décembre 2017"
+          } ,
+        
+      
+    
+      
+    
+      
+        
+          
+          
+          
+          
+          
+          {
+            "name_id" : "entretien-menager-lessive-ecologique",
+            "title" : "Les lessives écologiques",
+            "category" : "",
+            "tags" : "",
+            "url" : "/lcb04/nos-promotions/entretien-menager/lessive-ecologique.html",
+            "date_debut" : "4 juillet 2016",
+            "date_fin" : "23 décembre 2017"
+          } ,
+        
+      
+    
+      
+        
+          
+          
+          
+          
+          
+          {
+            "name_id" : "entretien-menager-savon-de-marseille",
+            "title" : "Le savon de Marseille, sous toutes ses formes",
+            "category" : "",
+            "tags" : "",
+            "url" : "/lcb04/nos-promotions/entretien-menager/savon-de-marseille.html",
+            "date_debut" : "4 juillet 2016",
+            "date_fin" : "23 décembre 2017"
+          } ,
+        
+      
+    
+      
+        
+          
+          
+          
+          
+          
+          {
+            "name_id" : "frais-framboises",
+            "title" : "Framboises frais",
+            "category" : "",
+            "tags" : "",
+            "url" : "/lcb04/nos-promotions/frais/framboises.html",
+            "date_debut" : "4 juillet 2016",
+            "date_fin" : "23 décembre 2017"
+          } ,
+        
+      
+    
+      
+        
+          
+          
+          
+          
+          
+          {
+            "name_id" : "frais-gariguette",
+            "title" : "Gariguette frais",
+            "category" : "",
+            "tags" : "",
+            "url" : "/lcb04/nos-promotions/frais/gariguette.html",
+            "date_debut" : "4 juillet 2016",
+            "date_fin" : "23 décembre 2017"
+          } ,
+        
+      
+    
+      
+    
+      
+    
+  
+
+  
+
 ]
 
-{% comment %}
-[{% for list in site.data.coll_ext.model_search.list-model-search %}{% if list.id == 'recherche-promotions' %}{% assign collection_name = list.collection %}{% assign section_to_comp = list.force_display_coll_ext_section | append: site.data.coll_ext.config.common.delimitator.url | prepend: site.data.coll_ext.config.common.delimitator.url %}{% assign last_section_to_comp = list.force_display_coll_ext_section | append: site.collections_ext.path_extension_section | prepend: site.data.coll_ext.config.common.delimitator.url %}{% for collection in site.collections %}{% if collection.label == collection_name %}{% assign raw_items = collection.docs %}{% break %}{% endif %}{% endfor %}{% for item in raw_items  %}{% if item.url contains section_to_comp or item.url contains last_section_to_comp %}{% assign url_item_tmp = item.url | remove_first: site.collections_ext.path_extension_section | remove_first: site.collections_ext.path_extension_item  %}{% assign url_item_part_tmp = url_item_tmp | split: '/' %}{% assign url_item_size_tmp = url_item_part_tmp.size | minus: 1  %}{% assign name_id = url_item_part_tmp[url_item_size_tmp] %}{% if url_item_size_tmp > 1 %}{% assign size_tmp = url_item_size_tmp | minus : 1 %}{% assign name_id = name_id | prepend : '-' | prepend : url_item_part_tmp[size_tmp] | strip  %}{% endif %}
-  {
-    "id"       : "{{ name_id }}",
-    "title"    : "{{ item.title | escape }}",
-    "category" : "{{ item.category }}",
-    "tags"     : "{{ item.tags | array_to_sentence_string }}",
-    "url"      : "{{ site.baseurl }}{{ item.url }}",
-    "date"     : "{{ item.date-publication }}"
-  } {% unless forloop.last %},{% endunless %}{% endif %}{% endfor %}{% endif %}{% endfor %}
-]
-{% endcomment %}
+

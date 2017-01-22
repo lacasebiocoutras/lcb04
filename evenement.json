@@ -1,14 +1,27 @@
----
-layout: null
----
 [
-  {% for event in site.data.custom.evenements %}
+  
     {
-      "title"    : "{{ event.titre | escape}}",
-      "description" : "{{ event.description-courte | escape}}",
-      "lienPost" : "{{ event.lien-post | escape}}",
-      "dateParution"     : "{{ event.date-parution | escape}}",
-      "dateExpire"      : "{{ event.date-expire | escape}}"
-    } {% unless forloop.last %},{% endunless %}
-  {% endfor %}
+      "title"    : "Fermeture 1er Mai",
+      "description" : "la prochaine AG se tiendra le 12 Avril 2016, à 20h, au siège de l&#39;association.",
+      "lienPost" : "",
+      "dateParution"     : "22 Avril 2016",
+      "dateExpire"      : "01 Mai 2016"
+    } ,
+  
+    {
+      "title"    : "WE biodiversité",
+      "description" : "Dernier week-en de Mai; un week-end d&#39;échanges avec les associations régionales sur un site naturel.",
+      "lienPost" : "",
+      "dateParution"     : "25 Avril 2016",
+      "dateExpire"      : "03 Mai 2016"
+    } ,
+  
+    {
+      "title"    : "Journée éolienne",
+      "description" : "",
+      "lienPost" : "",
+      "dateParution"     : "26 Avril 2016",
+      "dateExpire"      : "27 Avril 2016"
+    } 
+  
 ]
