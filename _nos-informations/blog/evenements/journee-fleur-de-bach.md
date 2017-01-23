@@ -6,7 +6,7 @@ date-evenement: 15 juin 2016
 date-fin-evenement:
 description: Présentation de leur bienfait pour notre équilibre.
 lire-plus: 
-miniature: les-fleurs-de-bach-logo.jpg
+miniature: blog/les-fleurs-de-bach-logo.jpg
 ---
 
 <!--fin-excerpt-->

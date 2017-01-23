@@ -6,7 +6,7 @@ date-debut-promotion: 4 juillet 2016
 date-fin-promotion: 23 décembre 2017
 description:
 lire-plus: 
-miniature: framboise.jpg
+miniature: selection-produits/framboise.jpg
 brand:
 label: 
 tags: 

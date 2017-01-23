@@ -4,7 +4,7 @@ order: 99
 date-publication: 1 janv 2016
 description: La Case Bio réouvre ses portes à Coutras.
 lire-plus: Un large choix de produits alimentaires...
-miniature: rayons.jpg
+miniature: blog/rayons.jpg
 ---
 
 <!--fin-excerpt-->

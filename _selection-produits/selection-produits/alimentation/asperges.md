@@ -6,7 +6,7 @@ date-debut-promotion: 4 juillet 2016
 date-fin-promotion:
 description: 
 lire-plus: Chaque semaine, le Vendredi, de 17h à 19h, ...
-miniature: asperges.jpg
+miniature: selection-produits/asperges.jpg
 brand:
 label: 
 tags:
