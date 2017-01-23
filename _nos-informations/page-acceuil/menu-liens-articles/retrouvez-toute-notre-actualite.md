@@ -5,7 +5,7 @@ order: 1
 description: 
 image:
 description-image:
-link: /selection-produits/index.html
+link: /blog/index.html
 description-link:
 
 lire-plus: 
