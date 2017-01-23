@@ -6,7 +6,7 @@ description: Retrouvez toute notre actualité
 lire-plus:
 miniature: lacasebio.png
 model: display-on-parent-and-no-personal-page
-sort_items : "date-publication"
+sort_items : date-publication
 ---
 
 <!-- ******************************** -->

@@ -6,7 +6,7 @@ description: Retrouvez sur cette page les évenements & rencontres organisés à
 lire-plus:
 miniature: lacasebio.png
 model: blog-list-items
-sort_items : "order"
+sort_items : order
 ---
 
 <!-- ******************************** -->
