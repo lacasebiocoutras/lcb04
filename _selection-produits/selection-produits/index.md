@@ -6,6 +6,7 @@ description:
 lire-plus:
 miniature:
 model: default-selection-produits
+sort_items : order
 ---
 
 <!-- ******************************** -->
