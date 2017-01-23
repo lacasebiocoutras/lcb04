@@ -4,7 +4,7 @@ layout: compress
 
 {% for list in site.data.coll_ext.model_search.list-model-search %}
 
-  {% if list.id == 'recherche-promotions' %}
+  {% if list.id == 'recherche-selection-produits' %}
     {% include coll_ext_utils/list-detail-items_init_step.html %}
     {% include coll_ext/main.html
       force_page_ref_input=true

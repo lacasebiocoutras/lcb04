@@ -1,5 +1,5 @@
 ---
-title: Qui sommes nous
+title: Informations utiles
 date-publication: 20 avril 2016
 order: 1
 

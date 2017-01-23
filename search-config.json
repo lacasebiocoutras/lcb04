@@ -3,8 +3,8 @@ layout: null
 ---
 
  { "list" : [
-    {"url":"promotions/index.html",
-    "name":"search-promotions.json"
+    {"url":"selection-produits/index.html",
+    "name":"search-selection-produits.json"
     }
   ],
   "config" :

@@ -248,7 +248,7 @@ define(['jquery', 'lunr', 'moment','config-module'], function($, lunr, moment, c
   //     }
   //   });
   // });
-  // var name_file_json_ref = config.json_default_promotions;
+  // var name_file_json_ref = config.json_default_selection-produits;
   // path_json=path_json.concat('.json');
   // // Download the data from the JSON file we generated
   // window.data = $.getJSON(path_json);

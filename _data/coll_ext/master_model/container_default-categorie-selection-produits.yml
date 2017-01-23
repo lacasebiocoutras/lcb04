@@ -1,4 +1,4 @@
-model: 'default-categorie-promotions'
+model: 'default-categorie-selection-produits'
 
 design_model_page: 'categorie-search-list_flex'
 design_detail_items: 'miniature-default'

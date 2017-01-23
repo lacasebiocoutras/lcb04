@@ -1,7 +1,7 @@
 ---
 layout: search
-permalink: /promotions/
-title: "Nos promotions"
+permalink: /selection-produits/
+title: "Une sélection de nos produits"
 ---
 <!--fin-excerpt-->
 
@@ -27,7 +27,7 @@ title: "Nos promotions"
       <div class="content">       
 
         {% for list in site.data.coll_ext.model_search.list-model-search %}
-          {% if list.id == 'recherche-promotions' %}
+          {% if list.id == 'recherche-selection-produits' %}
             {% include coll_ext_utils/list-detail-items_init_step.html %}
             {% include coll_ext/main.html
               force_page_ref_input=true
@@ -47,7 +47,7 @@ title: "Nos promotions"
       <input type="search" id="search_box" placeholder="Que recherchez vous?" autocomplete="off">
     </form>
     {% for list in site.data.coll_ext.model_search.list-model-search %}
-      {% if list.id == 'categorie-recherche-promotions' %}
+      {% if list.id == 'categorie-recherche-selection-produits' %}
 
         {% assign title_search = list.title  %}
         <button class="catSearchShowAll">

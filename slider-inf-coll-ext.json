@@ -3,7 +3,7 @@ layout: compress
 ---
 
 {% for list in site.data.coll_ext.model_search.list-model-search %}
-  {% if list.id == 'categorie-recherche-promotions' %}
+  {% if list.id == 'categorie-recherche-selection-produits' %}
 
    
     {% include coll_ext_utils/list-detail-items_init_step.html %}
@@ -31,8 +31,8 @@ layout: compress
 -->{% endcomment %}
 { "list" : [
     {"url":"/",
-     "class_slider": "slider-translate-nos-promotions-su-0",
-     "id_item_slider": "translate-nos-promotions-su-0-",
+     "class_slider": "slider-translate-selection-produits-su-0",
+     "id_item_slider": "translate-selection-produits-su-0-",
      "nb_items_slider": {{nb_max_slider}},
      "delay_sec": 5
     }

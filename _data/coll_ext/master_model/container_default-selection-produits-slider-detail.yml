@@ -1,4 +1,4 @@
-model: 'default-promotions-slider-detail'
+model: 'default-selection-produits-slider-detail'
 #design_model_page: 'subflex-sliderdetail-dist0'
 design_model_page: 'default-slider-dist0'
 design_detail_items: 'miniature-default'

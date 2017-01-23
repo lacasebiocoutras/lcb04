@@ -1,9 +1,9 @@
-- id: 'recherche-promotions'
-  title : 'Toutes les promotions'
-  collection: 'nos-promotions'
+- id: 'recherche-selection-produits'
+  title : 'Une sélection de produits'
+  collection: 'selection-produits'
   force_display_coll_ext: true
-  force_display_coll_ext_section: 'nos-promotions'
-  force_display_coll_ext_model: 'default-promotions'
+  force_display_coll_ext_section: 'selection-produits'
+  force_display_coll_ext_model: 'default-selection-produits'
   sort :
     # available  'date-publication' | 'order' | 'title' (| 'date-evenement')
     # defined in /_data/coll_ext/config/sort_site-documents.yml
@@ -13,12 +13,12 @@
     choose-subsections: []
     filter-subsections: []
 
-- id: 'categorie-recherche-promotions'
-  title : 'Toutes les promotions'
-  collection: 'nos-promotions'
+- id: 'categorie-recherche-selection-produits'
+  title : 'Sélection complète'
+  collection: 'selection-produits'
   force_display_coll_ext: true
-  force_display_coll_ext_section: 'nos-promotions'
-  force_display_coll_ext_model: 'default-categorie-promotions'
+  force_display_coll_ext_section: 'selection-produits'
+  force_display_coll_ext_model: 'default-categorie-selection-produits'
   sort :
     # available  'date-publication' | 'order' | 'title' (| 'date-evenement')
     # defined in /_data/coll_ext/config/sort_site-documents.yml

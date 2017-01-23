@@ -1,52 +1,28 @@
 # Masthead navigation links
 
-# home-short-nav:
-#   - title: 'Nos promotions actuelles'
-#     url: /promotions/index.html
-#   - title: 'Marché biologique de saison'
-#     url: /alimentation/marche-biologique/index.html
-#   - title: 'Compléments alimentaires'
-#     url: /sante-bien-etre/complements-alimentaires/index.html
-#   - title: 'Cosmétique - Hygiène'
-#     url: /cosmetique-hygiene/index.html
-#   - title: 'Fleurs de Bach'
-#     url: /sante-bien-etre/fleurs-de-bach/index.html
+
 
 # Primary site navigation links
 
 masthead:
     # masthead-primary
   - title: 'masthead-primary'
-  - title: 'Nos promotions actuelles'
-    url: /promotions/index.html    
+  - title: 'Une sélection de produits'
+    url: /selection-produits/index.html    
   - title: 'Nous contacter'
-    url: /qui-sommes-nous/index.html#qui-sommes-nous-nous-contacter
+    url: /informations-utiles/index.html#informations-utiles-nous-contacter
   - title: 'Nous situer'
-    url: /qui-sommes-nous/index.html#qui-sommes-nous-nous-situer
+    url: /informations-utiles/index.html#informations-utiles-nous-situer
   - title: 'Blog'
     url: /blog/index.html
 
 # masthead:
 #     # masthead-primary
 #   - title: 'masthead-primary'
-#   - title: 'Nos promotions actuelles'
-#     url: /promotions/index.html
-#   - title: 'Alimentation'
-#     url: /alimentation/index.html
-#   - title: 'Cosmétique & Hygiène'
-#     url: /cosmetique-hygiene/index.html
 #   - title: 'Santé & Bien-être'
 #     url: /sante-bien-etre/index.html
-#   - title: 'Entretien & produits ménagers'
-#     url: /entretien-menager/index.html
 #     # masthead-secondary
 #   - title: 'masthead-secondary'
-#   - title: 'Qui sommes-nous'
-#     url: /qui-sommes-nous/index.html
-#   - title: 'Nous contacter'
-#     url: /qui-sommes-nous/index.html#qui-sommes-nous-nous-contacter
-#   - title: 'Nous situer'
-#     url: /qui-sommes-nous/index.html#qui-sommes-nous-nous-situer
 #   - title: 'Blog'
 #     url: /blog/index.html
 

@@ -24,8 +24,20 @@ layout: home
 {% assign cpt_images_acceuil = 0 %}
 
 {% for item_tmp in items_tmp %}
-  {% if item_tmp.path contains '/page-acceuil/bienvenue.md' %} 
-    {% assign textBienvenue = item_tmp.content %} 
+  {% if item_tmp.path contains '/page-acceuil/messages-acceuil/bienvenue.md' %} 
+    {% if item_tmp.order < 100 %}
+      {% assign textBienvenue = item_tmp.content %} 
+    {% endif %}
+  {% endif %}
+  {% if item_tmp.path contains '/page-acceuil/messages-acceuil/horaires.md' %} 
+    {% if item_tmp.order < 100 %}
+      {% assign textHoraires = item_tmp.content %} 
+    {% endif %}
+  {% endif %}
+  {% if item_tmp.path contains '/page-acceuil/messages-acceuil/message-important.md' %} 
+    {% if item_tmp.order < 100 %}
+      {% assign textMessageImportant = item_tmp.content %} 
+    {% endif %}    
   {% endif %}
   {% if item_tmp.path contains '/page-acceuil/menu-liens-articles/' %} 
     {% unless item_tmp.path contains '/index.md'  %}
@@ -101,11 +113,7 @@ layout: home
             <ul class="Grid  Grid--gutters-m u-spaceVN">
               <li class="li-ab Grid-cell Grid-cell--center ">
                 <ul class="horaire-acceuil">
-                  <li> Nos horaires : </li>
-                  <li> Le Lundi : 15H - 19h15 </li>
-                  <li> Du Mardi au Jeudi : 9H - 12h30 / 15H - 19h15 </li>
-                  <li> Le Vendredi : 9H - 12h30 / 14H - 19h15 </li>
-                  <li> Le Samedi : 9H - 13h / 15H - 19h </li>
+                  {{textHoraires}}                 
                 </ul>                
               </li>
               <li class="li-nav Grid-cell--autoSize not-inf-sm">               

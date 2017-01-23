@@ -111,10 +111,10 @@ collections:
     output: true
     permalink: /:path.html
     title: nos-informations
-  nos-promotions:
+  selection-produits:
     output: true
     permalink: /:path.html
-    title: nos-promotions
+    title: selection-produits
   pages:
     output: true
     permalink: /:path.html
@@ -134,10 +134,10 @@ defaults:
       type: nos-informations
     values:
       layout: post
-  # nos-promotions
+  # selection-produits
   - scope:
-      path: _nos-promotions
-      type: nos-promotions
+      path: _selection-produits
+      type: selection-produits
     values:
       layout: post
   # Pages

@@ -17,7 +17,7 @@ Nos partenaires, marques
 agenda evenements
 agenda arrivage, depot pain le vend..
 agenda hebdo
- promotions
+ selection-produits
 
 informations locales
 

@@ -4,7 +4,7 @@
 {% elsif  page.url contains '/nous-rejoindre/'%}
   <script data-main="{{site.baseurl}}/assets-js/app-default-ns-rejoindre" src="{{site.baseurl}}/assets-js/vendor/require.2.2.0.min.js" async defer></script>
 
-{% elsif  page.url contains '/promotions/' %}
+{% elsif  page.url contains '/selection-produits/' %}
 
   {% assign class_invisible_no_script = site.data.coll_ext.config.display_list-items.config.class_invisible | prepend: '.' %}
   <script data-main="{{site.baseurl}}/assets-js/app-default-search" src="{{site.baseurl}}/assets-js/vendor/require.2.2.0.min.js" async defer></script>
@@ -27,7 +27,7 @@
 {% elsif  page.url contains '/nous-rejoindre/'%}
   <script data-main="{{site.baseurl}}/assets-js/app-default-ns-rejoindre" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.2.0/require.min.js" async defer></script>
 
-{% elsif  page.url contains '/recherche/' or page.url contains '/promotions/' %}
+{% elsif  page.url contains '/recherche/' or page.url contains '/selection-produits/' %}
   {% assign class_invisible_no_script = site.data.coll_ext.config.display_list-items.config.class_invisible | prepend: '.' %}
 
   <script data-main="{{site.baseurl}}/assets-js/app-default-search" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.2.0/require.min.js" async defer></script>
