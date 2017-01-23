@@ -6,7 +6,6 @@ description:
 lire-plus: visitez notre rayon
 miniature:
 model: display-on-parent-and-no-personal-page
-
 ---
 
 <!-- ******************************** -->
