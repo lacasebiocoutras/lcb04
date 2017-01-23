@@ -5,7 +5,6 @@ order: 2
 description: 
 lire-plus: 
 miniature: 
-tags: 
 ---
 
 <!--fin-excerpt-->

@@ -5,9 +5,6 @@ order: 1
 description:
 lire-plus:
 miniature:
-marque: 
-label:
-tags : 
 model: default-selection-produits
 ---
 

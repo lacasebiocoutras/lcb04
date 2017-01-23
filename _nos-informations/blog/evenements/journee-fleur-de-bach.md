@@ -7,7 +7,6 @@ date-fin-evenement:
 description: Présentation de leur bienfait pour notre équilibre.
 lire-plus: 
 miniature: les-fleurs-de-bach-logo.jpg
-tags: 
 ---
 
 <!--fin-excerpt-->

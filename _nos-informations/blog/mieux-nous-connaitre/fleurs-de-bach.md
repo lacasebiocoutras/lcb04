@@ -5,9 +5,6 @@ order: 2
 description: Les fleurs de Bach sont reconnus pour leur bienfait.
 lire-plus: Consultations possibles sur rendez-vous pour vous conseiller.
 miniature: "les-fleurs-de-bach-logo.jpg"
-marque: 
-label:
-tags : 
 ---
 <!--fin-excerpt-->
 <!-- ******************************** -->

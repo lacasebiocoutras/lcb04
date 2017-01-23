@@ -7,7 +7,6 @@ date-fin-evenement: 3 janvier 2017
 description: even A l'occasion des fêtes de fin d'année, des artisans locaux vous présentent leurs créations. Des idées de cadeaux, à découvrir...
 lire-plus: 
 miniature: 
-tags: 
 ---
 
 <!--fin-excerpt-->

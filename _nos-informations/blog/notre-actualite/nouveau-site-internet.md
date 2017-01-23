@@ -5,7 +5,6 @@ order: 99
 description: Pour suivre notre actualité, nos nouveautés,..
 lire-plus:
 miniature: lacasebio.png
-tags: 
 ---
 
 <!--fin-excerpt-->

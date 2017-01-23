@@ -6,7 +6,5 @@ description:
 image: logo-ab.png
 description-image: La Case Bio est certifié AB, Agriculture Biologique
 link: 
-description-link:
-lire-plus: 
-tags: 
+description-link: 
 ---

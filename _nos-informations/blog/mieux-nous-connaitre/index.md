@@ -5,7 +5,6 @@ order: 1
 description: 
 lire-plus:
 miniature: lacasebio.png
-tags : 
 model: display-on-parent-and-no-personal-page-detail-page
 sort_items : date-publication
 ---

@@ -6,7 +6,5 @@ description:
 image:
 description-image:
 link: /blog/mieux-nous-connaitre/fleurs-de-bach.html
-description-link:
-lire-plus: 
-tags: 
+description-link: 
 ---

@@ -7,7 +7,7 @@ date-fin-promotion: 7 décembre 2017
 description: 
 lire-plus: 
 miniature: fraise.jpg
-marque:
+brand:
 label: 
 tags:
 ---

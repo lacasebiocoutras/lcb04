@@ -7,7 +7,6 @@ date-fin-evenement: 2 apr 2016
 description: une journée  porte ouverte avec les apiculteurs de la région
 lire-plus: 
 miniature: journee-apiculteurs.jpg
-tags: 
 ---
 
 <!--fin-excerpt-->

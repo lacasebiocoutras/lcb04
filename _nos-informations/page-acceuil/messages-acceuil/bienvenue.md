@@ -6,9 +6,7 @@ description:
 image: 
 description-image:
 link: 
-description-link:
-lire-plus: 
-tags: 
+description-link:  
 ---
 
 <!--fin-excerpt-->

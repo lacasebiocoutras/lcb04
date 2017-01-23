@@ -5,7 +5,7 @@ order: 1
 description: 
 lire-plus: visitez notre rayon Cosmétique & Hygiène
 miniature: 
-marque: 
+brand: 
 label:
 tags : 
 model: display-on-parent-and-no-personal-page

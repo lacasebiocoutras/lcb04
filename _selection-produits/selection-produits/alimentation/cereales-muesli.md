@@ -7,7 +7,7 @@ date-fin-promotion
 description: Fraises en provenance du Lot-et-Garonne direct producteur
 lire-plus: 
 miniature: muesli.jpg
-marque:
+brand:
 label: 
 tags:
 ---

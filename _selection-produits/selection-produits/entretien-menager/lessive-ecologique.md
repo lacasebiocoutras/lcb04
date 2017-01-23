@@ -7,7 +7,7 @@ date-fin-promotion: 23 décembre 2017
 description: 
 lire-plus:
 miniature:
-marque:
+brand:
 label: 
 tags:
 ---

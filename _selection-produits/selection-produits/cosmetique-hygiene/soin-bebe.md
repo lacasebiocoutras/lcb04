@@ -7,7 +7,7 @@ date-fin-promotion: 23 décembre 2017
 description: Une gamme complète de produits bio adaptés à la toilette et au change du bébé
 lire-plus:
 miniature: 
-marque:
+brand:
 label: 
 tags: 
 ---

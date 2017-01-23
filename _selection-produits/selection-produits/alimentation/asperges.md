@@ -7,7 +7,7 @@ date-fin-promotion:
 description: 
 lire-plus: Chaque semaine, le Vendredi, de 17h à 19h, ...
 miniature: asperges.jpg
-marque:
+brand:
 label: 
 tags:
 ---

@@ -7,7 +7,6 @@ date-fin-evenement: 02 avr 2016
 description: Chaque jour, un plat traditionnel, préparé avec de bons aliments. De nouvelles saveurs à découvrir.
 lire-plus: 
 miniature: 
-tags: 
 ---
 
 <!--fin-excerpt-->

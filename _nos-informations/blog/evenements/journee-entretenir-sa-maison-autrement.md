@@ -7,7 +7,6 @@ date-fin-evenement : 30 juin 2016
 description : Découvrir, ou redécouvrir, des produits naturels.
 lire-plus : 
 miniature : clean-air.jpg
-tags : 
 ---
 
 <!--fin-excerpt-->
