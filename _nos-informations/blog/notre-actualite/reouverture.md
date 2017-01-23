@@ -11,7 +11,7 @@ description: La Case Bio réouvre ses portes à Coutras.
 lire-plus: Un large choix de produits alimentaires...
 
 miniature: rayons.jpg
-carousel: 
+ 
 
 tags: 
 ---

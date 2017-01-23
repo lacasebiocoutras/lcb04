@@ -13,7 +13,7 @@ description:
 lire-plus: 
 
 miniature: fraise.jpg
-carousel: 
+ 
 
 marque:
 label: 

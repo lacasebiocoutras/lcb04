@@ -10,7 +10,7 @@ description: Des produits de saison sélectionnés, en privilégiant la proximit
 lire-plus: 
 
 miniature: 
-carousel: 
+ 
 
 marque: 
 label:

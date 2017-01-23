@@ -12,7 +12,7 @@ description:
 lire-plus:
 
 miniature:
-carousel: 
+ 
 
 marque:
 label: 

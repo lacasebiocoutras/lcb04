@@ -10,7 +10,7 @@ description:
 lire-plus:
 
 miniature: 
-carousel: 
+ 
 
 tags : 
 ---

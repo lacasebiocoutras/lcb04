@@ -12,7 +12,7 @@ description: even A l'occasion des fêtes de fin d'année, des artisans locaux v
 lire-plus: 
 
 miniature: 
-carousel: 
+ 
 
 tags: 
 ---

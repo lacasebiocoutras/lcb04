@@ -11,7 +11,7 @@ description:
 lire-plus: Chaque semaine, le Vendredi, de 17h à 19h, ...
 
 miniature: rqdo.jpg
-carousel: 
+ 
 
 tags: 
 ---

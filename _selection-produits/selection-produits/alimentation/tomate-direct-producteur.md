@@ -14,7 +14,7 @@ lire-plus:
 
 
 miniature: tomate-cerise.jpg
-carousel: 
+ 
 
 marque:
 label: 

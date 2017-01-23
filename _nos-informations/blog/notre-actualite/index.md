@@ -10,7 +10,7 @@ description: Retrouvez toute notre actualité
 lire-plus:
 
 miniature: lacasebio.png
-carousel: 
+ 
 
 tags : 
 

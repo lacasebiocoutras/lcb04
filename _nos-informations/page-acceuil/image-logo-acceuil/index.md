@@ -7,7 +7,7 @@ description: logo en haut de la page d'acceuil du site.
 sort_items : "order"
 lire-plus:
 miniature: 
-carousel: 
+ 
 tags : 
 ---
 

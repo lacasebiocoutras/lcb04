@@ -7,7 +7,7 @@ description:
 sort_items : "order"
 lire-plus:
 miniature: 
-carousel: 
+ 
 tags : 
 ---
 

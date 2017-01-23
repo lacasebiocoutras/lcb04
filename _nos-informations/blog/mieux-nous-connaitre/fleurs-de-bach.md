@@ -10,7 +10,7 @@ lire-plus: Consultations possibles sur rendez-vous pour vous conseiller.
 
 
 miniature: "les-fleurs-de-bach-logo.jpg"
-carousel: 
+ 
 
 marque: 
 label:

@@ -12,7 +12,7 @@ description: Chaque jour, un plat traditionnel, préparé avec de bons aliments.
 lire-plus: 
 
 miniature: 
-carousel: 
+ 
 
 tags: 
 ---

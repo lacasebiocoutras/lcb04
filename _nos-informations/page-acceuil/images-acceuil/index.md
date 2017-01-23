@@ -9,7 +9,7 @@ description: images en début de pages d'acceuil; nombre fixé à 2.
 sort_items : "order"
 lire-plus:
 miniature: 
-carousel: 
+ 
 
 tags : 
 ---

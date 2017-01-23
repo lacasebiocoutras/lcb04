@@ -13,7 +13,7 @@ lire-plus:
 
 
 miniature: lentille-corail.jpg
-carousel: 
+ 
 
 marque:
 label: 

@@ -9,7 +9,7 @@ description:
 lire-plus: visitez notre rayon Cosmétique & Hygiène
 
 miniature: 
-carousel: 
+ 
 
 marque: 
 label:

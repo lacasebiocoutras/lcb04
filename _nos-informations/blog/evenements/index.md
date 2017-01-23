@@ -11,7 +11,7 @@ description:
 lire-plus:
 
 miniature: lacasebio.png
-carousel: 
+ 
 
 tags : 
 

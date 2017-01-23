@@ -10,7 +10,7 @@ description:
 lire-plus: visitez notre rayon
 
 miniature: 
-carousel: 
+ 
 
 marque: 
 label:

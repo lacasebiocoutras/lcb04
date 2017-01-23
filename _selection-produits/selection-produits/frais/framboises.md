@@ -14,7 +14,7 @@ lire-plus:
 
 
 miniature: framboise.jpg
-carousel: 
+ 
 
 marque:
 label: 

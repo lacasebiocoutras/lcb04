@@ -12,7 +12,7 @@ description: Fraises en provenance du Lot-et-Garonne direct producteur
 lire-plus: 
 
 miniature: fraise.jpg
-carousel: 
+ 
 
 marque:
 label: 

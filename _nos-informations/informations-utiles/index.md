@@ -10,7 +10,7 @@ description: Retrouvez sur cette page l'ensemble des informations pour mieux  no
 lire-plus:
 
 miniature: lacasebio.png
-carousel: 
+ 
 
 tags : 
 ---
