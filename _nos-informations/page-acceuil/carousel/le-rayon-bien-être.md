@@ -7,7 +7,6 @@ image: carousel-acceuil/espace-sante-bien-etre.jpg
 description-image: Découvrez notre rayon Santé & Bien-être
 link: 
 description-link:
-
 lire-plus: 
 tags: 
 ---

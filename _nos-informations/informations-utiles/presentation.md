@@ -1,17 +1,10 @@
 ---
 title: Présentation
 date-publication: 20 avril 2016
-
 order: 100
-
-
 description: 
-
 lire-plus: 
-
 miniature:
- 
-
 tags : 
 ---
 

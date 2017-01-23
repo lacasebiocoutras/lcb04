@@ -7,7 +7,6 @@ image: Bienvenue-lacasebiocoutras.jpg
 description-image: Bienvenue à La Case Bio
 link: 
 description-link:
-
 lire-plus: 
 tags: 
 ---

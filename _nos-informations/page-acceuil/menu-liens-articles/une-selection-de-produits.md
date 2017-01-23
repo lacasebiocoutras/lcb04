@@ -7,7 +7,6 @@ image:
 description-image:
 link: /selection-produits/index.html
 description-link:
-
 lire-plus: 
 tags: 
 ---

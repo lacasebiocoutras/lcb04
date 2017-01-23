@@ -1,23 +1,13 @@
 ---
 title: Mieux nous connaître
 date-publication: 17 janvier 2017
-
 order: 1
-
-
-
 description: 
-
 lire-plus:
-
 miniature: lacasebio.png
- 
-
 tags : 
-
 model: display-on-parent-and-no-personal-page-detail-page
 sort_items : date-publication
-
 ---
 
 <!-- ******************************** -->

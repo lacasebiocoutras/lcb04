@@ -7,7 +7,6 @@ image:
 description-image:
 link: /blog/index.html
 description-link:
-
 lire-plus: 
 tags: 
 ---

@@ -7,7 +7,6 @@ image:
 description-image:
 link: /blog/mieux-nous-connaitre/nos-paniers-biologique.md
 description-link:
-
 lire-plus: 
 tags: 
 ---

@@ -1,21 +1,13 @@
 ---
 title: Entretien & produits ménagers
 date-publication: 20 avril 2016
-
 order: 1
-
-
 description: 
-
 lire-plus: visitez notre rayon
-
 miniature: 
- 
-
 marque: 
 label:
 tags : 
-
 model: display-on-parent-and-no-personal-page
 
 ---
