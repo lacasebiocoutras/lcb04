@@ -5,6 +5,6 @@ order: 3
 description: 
 image:
 description-image:
-link: /blog/mieux-nous-connaitre/nos-paniers-biologique.md
+link: /blog/mieux-nous-connaitre/nos-paniers-biologique.html
 description-link: 
 ---
