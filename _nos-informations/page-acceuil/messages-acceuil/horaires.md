@@ -2,11 +2,7 @@
 title: Horaires magasin
 date-publication: 22 janv 2017
 order: 1
-description: 
-image: 
-description-image:
-link: 
-description-link:  
+description:
 ---
 <!--fin-excerpt-->
 <!-- ******************************** -->

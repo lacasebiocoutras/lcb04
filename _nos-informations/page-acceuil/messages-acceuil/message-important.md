@@ -3,10 +3,6 @@ title: Message important entête
 date-publication: 22 janv 2017
 order: 100
 description: 
-image: 
-description-image:
-link: 
-description-link:  
 ---
 <!--fin-excerpt-->
 <!-- ******************************** -->
