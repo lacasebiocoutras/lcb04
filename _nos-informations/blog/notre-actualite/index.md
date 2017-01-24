@@ -9,14 +9,6 @@ model: display-on-parent-and-no-personal-page
 sort_items : date-publication
 ---
 
-<!-- ******************************** -->
-<!-- **** intro rayon **** -->
-
-
-
-<!-- **** fin intro rayon ********* -->
-<!-- ****************************** -->
-<!--fin-excerpt-->
 
 {% include coll_ext/main.html %}
 

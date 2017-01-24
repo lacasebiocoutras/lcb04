@@ -7,14 +7,7 @@ lire-plus:
 miniature: blog/rayon-marche-bio.jpg
 ---
 
-<!--fin-excerpt-->
-<!-- ******************************** -->
-<!-- **** début contenu détaillé **** -->
 
 A votre disposition un vaste étalage de produits de saison sélectionnés avec soins, en privilégiant la proximité
 
 
-
-
-<!-- **** fin contenu détaillé **** -->
-<!-- ****************************** -->

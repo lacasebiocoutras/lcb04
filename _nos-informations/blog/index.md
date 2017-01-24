@@ -9,14 +9,5 @@ model: blog-list-items
 sort_items : order
 ---
 
-<!-- ******************************** -->
-<!-- **** intro rayon **** -->
-
-
-
-<!-- **** fin intro rayon ********* -->
-<!-- ****************************** -->
-<!--fin-excerpt-->
-
 {% include coll_ext/main.html %}
 

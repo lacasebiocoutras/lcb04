@@ -7,14 +7,6 @@ miniature:
 sort_items : order
 ---
 
-<!-- ******************************** -->
-<!-- **** intro rayon **** -->
-
-
-
-<!-- **** fin intro rayon ********* -->
-<!-- ****************************** -->
-<!--fin-excerpt-->
 
 {% comment %}
 {% include coll_ext/main.html %}

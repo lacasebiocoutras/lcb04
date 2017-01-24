@@ -8,14 +8,6 @@ lire-plus:
 miniature: lacasebio.png
 ---
 
-<!-- ******************************** -->
-<!-- **** intro rayon **** -->
-
-
-
-<!-- **** fin intro rayon ********* -->
-<!-- ****************************** -->
-<!--fin-excerpt-->
 
 {% include coll_ext/main.html %}
 

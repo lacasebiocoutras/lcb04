@@ -8,16 +8,3 @@ description: Chaque jour, un plat traditionnel, préparé avec de bons aliments.
 lire-plus: 
 miniature: blog/semaine-du-gout-inde.jpg
 ---
-
-<!--fin-excerpt-->
-<!-- ******************************** -->
-<!-- **** début contenu détaillé **** -->
-
-
-
-
-<!-- **** fin contenu détaillé **** -->
-<!-- ****************************** -->
-
-
-

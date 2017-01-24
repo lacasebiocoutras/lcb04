@@ -6,14 +6,3 @@ description: Pour suivre notre actualité, nos nouveautés,..
 lire-plus:
 miniature: blog/lacasebio.png
 ---
-
-<!--fin-excerpt-->
-<!-- ******************************** -->
-<!-- **** début contenu détaillé **** -->
-
-
-<!-- **** fin contenu détaillé **** -->
-<!-- ****************************** -->
-
-
-

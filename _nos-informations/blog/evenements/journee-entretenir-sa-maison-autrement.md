@@ -8,16 +8,3 @@ description : Découvrir, ou redécouvrir, des produits naturels.
 lire-plus : 
 miniature : blog/clean-air.jpg
 ---
-
-<!--fin-excerpt-->
-<!-- ******************************** -->
-<!-- **** début contenu détaillé **** -->
-
-
-
-
-<!-- **** fin contenu détaillé **** -->
-<!-- ****************************** -->
-
-
-

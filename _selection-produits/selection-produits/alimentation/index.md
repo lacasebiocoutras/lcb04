@@ -8,15 +8,7 @@ miniature:
 model: display-on-parent-and-no-personal-page
 ---
 
-<!-- ******************************** -->
-<!-- **** intro rayon **** -->
 
-<!-- 
-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
- -->
-<!-- **** fin intro rayon ********* -->
-<!-- ****************************** -->
-<!--fin-excerpt-->
 
 {% include coll_ext/main.html %}
 

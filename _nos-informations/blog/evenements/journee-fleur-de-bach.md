@@ -8,16 +8,3 @@ description: Présentation de leur bienfait pour notre équilibre.
 lire-plus: 
 miniature: blog/les-fleurs-de-bach-logo.jpg
 ---
-
-<!--fin-excerpt-->
-<!-- ******************************** -->
-<!-- **** début contenu détaillé **** -->
-
- 
-
-
-<!-- **** fin contenu détaillé **** -->
-<!-- ****************************** -->
-
-
-

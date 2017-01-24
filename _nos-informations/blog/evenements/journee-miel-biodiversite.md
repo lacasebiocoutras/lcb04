@@ -8,16 +8,3 @@ description: une journée  porte ouverte avec les apiculteurs de la région
 lire-plus: 
 miniature: blog/journee-apiculteurs.jpg
 ---
-
-<!--fin-excerpt-->
-<!-- ******************************** -->
-<!-- **** début contenu détaillé **** -->
-
-
-
-
-<!-- **** fin contenu détaillé **** -->
-<!-- ****************************** -->
-
-
-

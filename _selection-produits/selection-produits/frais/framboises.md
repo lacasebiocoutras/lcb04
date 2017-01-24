@@ -12,15 +12,11 @@ label:
 tags: 
 ---
 
-<!--fin-excerpt-->
-<!-- ******************************** -->
-<!-- **** début contenu détaillé **** -->
+
 
 Les propriétés nutritionnelles de la framboise sont proches de celles de la fraise. 
 (source wikipedia)
 
-<!-- **** fin contenu détaillé **** -->
-<!-- ****************************** -->
 
 
 

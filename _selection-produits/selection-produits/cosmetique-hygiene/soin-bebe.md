@@ -12,11 +12,4 @@ label:
 tags: 
 ---
 
-<!--fin-excerpt-->
-<!-- *********************************** -->
-<!-- **** début contenu détaillé **** -->
-
 Cotons, lingettes bio, créme pour le change..
-
-<!-- **** fin contenu détaillé **** -->
-<!-- ********************************* -->

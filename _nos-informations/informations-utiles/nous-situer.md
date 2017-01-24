@@ -7,14 +7,8 @@ lire-plus: Lien street-view, google-maps, ...
 miniature: informations-utiles/plan-googleearth-lacasebiocoutras.png
 ---
 
-<!--fin-excerpt-->
-<!-- ******************************** -->
-<!-- **** début contenu détaillé **** -->
 
 Nous sommes situés au 12bis rue Edouard Vaillant, à Coutras, 33230
 
 
 Lien street-view, google-maps, ...
-
-<!-- **** fin contenu détaillé **** -->
-<!-- ****************************** -->

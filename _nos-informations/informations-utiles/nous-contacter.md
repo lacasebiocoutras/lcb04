@@ -7,19 +7,8 @@ lire-plus:
 miniature: 
 ---
 
-<!--fin-excerpt-->
-<!-- ******************************** -->
-<!-- **** début contenu détaillé **** -->
 
 <a href="tel:0557690365"><i class="fa fa-phone" aria-hidden="true"></i>
  05 57 69 03 65</a>
 
 <a href="mailto:lacasebiocoutras@gmail.com"><i class="fa fa-envelope-o" aria-hidden="true"></i> lacasebiocoutras@gmail.com</a>
-
-
-
-<!-- **** fin contenu détaillé **** -->
-<!-- ****************************** -->
-
-
-

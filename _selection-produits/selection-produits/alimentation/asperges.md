@@ -11,13 +11,8 @@ brand:
 label: 
 tags:
 ---
-<!--fin-excerpt-->
-<!-- ******************************** -->
-<!-- **** début contenu détaillé **** -->
+
 
 De la même famille que l'ail et l'oignon, l'asperge a des composantes communes avec ces deux plantes : richesse en vitamines A, B9 et PP, phosphore et manganèse.
 Les asperges sont depuis longtemps utilisées comme légumes et plantes médicinales, en raison de leur saveur délicate et leurs propriétés diurétiques. 
 (Source wikipedia)
-
-<!-- **** fin contenu détaillé **** -->
-<!-- ****************************** -->

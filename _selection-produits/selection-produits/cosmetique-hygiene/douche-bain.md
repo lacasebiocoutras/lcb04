@@ -11,12 +11,6 @@ brand:
 label: 
 tags:
 ---
-<!--fin-excerpt-->
-<!-- *********************************** -->
-<!-- **** début contenu détaillé **** -->
 
 Un large choix de produits anti-allergiques, anti peaux sèches,...
 add..
-
-<!-- **** fin contenu détaillé **** -->
-<!-- ********************************* -->

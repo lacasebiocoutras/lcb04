@@ -7,20 +7,10 @@ lire-plus: Chaque semaine, le Vendredi, de 17h à 19h, ...
 miniature: blog/rqdo.jpg
 ---
 
-<!--fin-excerpt-->
-<!-- ******************************** -->
-<!-- **** début contenu détaillé **** -->
 
 ### La Case Bio, s'associe à [La Ruche qui dit Oui!](https://laruchequiditoui.fr/fr)
 
 **Chaque semaine, le Vendredi, de 17h à 19h**, retrouvez ici de bons aliments, issus d'une agriculture fermière de qualité. 
 Légumes, fruits, viandes, œufs, produits laitiers, pain, miel et confiture, on peut tout trouver dans une Ruche. 
 Venez rencontrer les producteurs et profitez de cette nouvelle façon de mieux manger tout en soutenant l'agriculture locale.
-
-
-
-<!-- **** fin contenu détaillé **** -->
-<!-- ****************************** -->
-
-
 
