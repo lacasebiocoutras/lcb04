@@ -1,10 +1,10 @@
 ---
 title : Entretenir sa maison autrement.
 date-publication : 10 mai 2016
-description : Découvrir, ou redécouvrir, des produits naturels
+description : Découvrir, ou redécouvrir, des produits naturels.
 lire-plus : 
 order : 99
-last_modified : 24 Janvier 2017 22-36-03
+last_modified : 25 Janvier 2017 20-02-29
 type_editor : ["SimpleMd"]
 miniature : blog/clean-air.jpg
 date-evenement : 30 juin 2016
