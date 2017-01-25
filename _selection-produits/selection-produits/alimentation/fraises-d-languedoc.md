@@ -11,6 +11,3 @@ brand:
 label: 
 tags:
 ---
-
-
-ad
