@@ -102,6 +102,7 @@ layout: home
             <div class="presentation-text">
               {{textBienvenue}}              
             </div>
+
           </li> <!--fin .li-presentation -->
           {% endif %}
 
@@ -175,13 +176,21 @@ layout: home
               {% break %}
             {% endif %}
 
+            {% assign url_image = item_image_acceuil.link %}
+            {% assign add_target = '_blank' %}
+            {% unless url_image contains 'http' %}
+              {% assign url_image = url_image | prepend: site.baseurl %}
+              {% assign add_target = '' %}              
+            {% endunless %}
+
+
             {% comment %}<li class="li-img-primdark Grid-cell u-1of2-m u-ssmall-1of2-m u-small-1of2-m u-med-full ">{% endcomment %}
             <li class="li-img-primdark Grid-cell u-full u-small-1of2-m u-med-full ">
               {% if item_image_acceuil.link != null and item_image_acceuil.link != '' %}
-                <a href="{{site.baseurl}}{{item_image_acceuil.link}}" title="{{item_image_acceuil.description-link}}">
+                <a href="{{url_image}}" target="{{add_target}}" title="{{item_image_acceuil.description-link}}">
               {% endif %}
               {% picture welcome-home {{item_image_acceuil.image}} alt="{{item_image_acceuil.description-image}}" %}
-              <div class="u-textCenter">{{item_image_acceuil.descriptif}}</div>
+              <div class="u-textCenter">{{item_image_acceuil.description}}</div>
               {% if item_image_acceuil.link != null and item_image_acceuil.link != '' %}</a>{% endif %}
             </li>
           {% endfor %}          

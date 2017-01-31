@@ -10,6 +10,8 @@ requirejs.config({
       // 'headroom': 'vendor/headroom.0.8.0.min',
       'moment': 'vendor/moment-with-fr.2.12.0.min',
       'picturefill': 'vendor/picturefill.min',
+      'responsive-nav': 'vendor/responsive-nav.min',
+      'slidebars': 'vendor/slidebars',
       'lunr': 'vendor/lunr.min',
       'sticky': 'plugin/jquery.sticky.min',
       'throttle-debounce': 'plugin/jquery.ba-throttle-debounce.min'

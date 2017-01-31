@@ -2,21 +2,65 @@
 layout: compress
 ---
 
+
+{% include coll_ext/config/common-param.html %}
+
+{% assign list_title_item_acceuil = delim %}
+{% assign list_link_article_item_acceuil = delim %}
+
+{% for collection in site.collections %}
+  {% if collection.label == 'nos-informations' %}
+    {% assign raw_items_navig_acceuil = collection.docs %}
+    {% break %}
+  {% endif %}
+{% endfor %}
+{% assign items_tmp = raw_items_navig_acceuil | sort: 'order' %}
+
+
+{% for item_tmp in items_tmp %}  
+ 
+  {% if item_tmp.path contains '/page-acceuil/menu-liens-articles/' %} 
+    {% unless item_tmp.path contains '/index.md'  %}
+      {% assign list_title_item_acceuil = list_title_item_acceuil | append : item_tmp.title | append: delim %}
+      {% assign list_link_article_item_acceuil = list_link_article_item_acceuil | append : item_tmp.link | append: delim %}
+    {% endunless %}
+  {% endif %} 
+
+{% endfor %}
+
+{% assign array_title_item_acceuil = list_title_item_acceuil | remove_first: delim | split: delim  %}
+{% assign array_title_item_acceuil_size = array_title_item_acceuil.size | minus: 1 %}
+{% assign array_link_article_item_acceuil = list_link_article_item_acceuil | remove_first: delim | split: delim  %}
+
+
 <!DOCTYPE html>
 <html lang="fr">
 
   {% include head.html %}
 
   <body class="Site-body container-body">
-{% comment %}
-    <header id='header-default' class="Site-header header--fixed">
-        {% include header-default.html %}
-    </header>{% endcomment %}
+  <div canvas="container">
 
     <div class="Site-header-home">
-        {% include header-home.html %}
+        {% include header-home.html %}        
     </div>
-
+    {% comment %}<nav class="nav-1 nav-collapse">           {% endcomment %}
+    <ul class="navigation">                  
+      {% for iter_array in (0..array_title_item_acceuil_size) %}
+        {% assign title_tmp = array_title_item_acceuil[iter_array]  %}
+        {% assign link_tmp = array_link_article_item_acceuil[iter_array] %}                    
+        <li id="menu-item"> <a class="menu-item u-textTruncate " href="{{site.baseurl}}{{link_tmp}}"><h2>{{title_tmp}}</h2></a> </li>
+      {% endfor %}
+    </ul>
+  {% comment %}</nav>{% endcomment %}
+  {% comment %}<button id="toggle-nav1" class="closed">Toggle Menu</button>{% endcomment %}
+  {% comment %}<a id="toggle-nav1" href="#" class="header-nav-menu u-textLeft" title="Menu">
+    <span>Menu&nbsp;</span>
+    <svg viewBox="0 0 16 16" >
+      <path class="path1" d="M1 3h14v3h-14zM1 7h14v3h-14zM1 11h14v3h-14z"></path>
+    </svg>
+  </a>{% endcomment %}
+    <span class="button js-toggle-main-menu"><i class="fa fa-bars"></i> <span class="text">Menu</span></span>
     <main class="Site-main " id="main" role="main">
 
       <!-- <aside class="Site-left-aside u-textCenter ">
@@ -41,35 +85,7 @@ layout: compress
                 <li class="on-md-only">:</li>
                 <li>15H - 19h15 </li>                
               </ul>
-            </div>
-            <div class="Message Ouverture">
-              <ul class='message-list-aside-right'>
-                <li><h4>Du Mardi au Jeudi</h4> </li>
-                <li class="on-md-only">:</li>
-                <li>9H - 12h30 </li>
-                <li class="on-md-only">/</li>
-                <li>15H - 19h15</li>
-              </ul>
-            </div>
-            <div class="Message Ouverture">
-              <ul class='message-list-aside-right'>
-                <li><h4>Le Vendredi</h4> </li>
-                <li class="on-md-only">:</li>
-                <li>9H - 12h30 </li>
-                <li class="on-md-only">/</li>
-                <li>14H - 19h15</li>                
-              </ul>
-            </div>
-            <div class="Message Ouverture">
-              <ul class='message-list-aside-right'>
-                <li><h4>Le Samedi</h4> </li>
-                <li class="on-md-only">:</li>
-                <li>9H - 13h </li>
-                <li class="on-md-only">/</li>
-                <li>15H - 19h</li>                
-              </ul>
-            </div> -->
-
+            </div>           
             <!-- </div> -->
             <!-- <div class="Message Warning invisible">
               <ul id="aside-fermeture" class='message-list-aside-right ' ></ul>
@@ -93,6 +109,12 @@ layout: compress
       </div>
     </footer>
     {% include scripts.html %}
+
+    </div>
+
+
+    <div off-canvas="id-1 left reveal">
+    </div>
 
   </body>
 </html>

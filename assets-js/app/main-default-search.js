@@ -61,7 +61,7 @@ define(['jquery', 'lunr', 'moment','config-module'], function($, lunr, moment, c
     // /&amp;|&amp;|&amp;/gi
   }
 
-   function validePeriodDate(_date_deb, _date_fin,_format) {
+  function validePeriodDate(_date_deb, _date_fin,_format) {
 
     var dateDebut;
     if (_date_deb.length > 0) {

@@ -12,6 +12,8 @@ requirejs.config({
       'topojson': '//cdnjs.cloudflare.com/ajax/libs/topojson/1.6.20/topojson.min',
       'datamaps': 'vendor/datamaps.fra.0.5.1.min',
       'picturefill': 'vendor/picturefill.min',
+      'responsive-nav': 'vendor/responsive-nav.min',
+      'slidebars': 'vendor/slidebars',
       'throttle-debounce': 'plugin/jquery.ba-throttle-debounce.min',
       'modernizr': 'vendor/modernizr-custom.3.3.1'
       },

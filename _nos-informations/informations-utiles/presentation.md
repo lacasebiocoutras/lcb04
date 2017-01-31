@@ -5,6 +5,7 @@ order: 100
 description: 
 lire-plus: 
 miniature:
+type-miniature: red-left
 ---
 
 

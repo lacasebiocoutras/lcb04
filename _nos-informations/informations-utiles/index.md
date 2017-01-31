@@ -6,6 +6,7 @@ sort_items : order
 description: Retrouvez sur cette page l'ensemble des informations pour mieux  nous connaître, nous contacter, nous situer.
 lire-plus:
 miniature: lacasebio.png
+type-miniature: red-left
 ---
 
 

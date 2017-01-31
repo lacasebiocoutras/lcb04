@@ -108,7 +108,8 @@
 
 
 {% comment %}
-  <!-- assign current detail model : info type + custom, from design/list-model_detail_items -->
+  <!-- assign current detail model : info type + custom, from design/list-model_detail_items 
+  TODO : custom part -->
 {% endcomment %}
 {% assign current_detail_model = null  %}
 {% include UI/miniature/utils/assign-detail-model.html
@@ -201,19 +202,43 @@
   <a  href="{{site.baseurl}}{{url_add_to_container}}">
 {% endif %}
 
-
-<ul class="{{styling_model_container.container}} Grid ">
-  <li class=" Grid-cell Grid-cell--autoSize">
-    {% if item_raw.miniature %}
-      {% picture miniature {{item_raw.miniature}} alt="image {{item_raw.title}}"  %}
-    {% endif %}
-  </li>
-
-
-  <li class="{{styling_model_container.article}} Grid-cell">
+{% comment %}add border-color if defined in meta style{% endcomment %}
+{% assign style_custom = '' %}
+{% if item_raw.border-color %}
+  {% assign style_custom = style_custom | append: 'border-color: #' | append: item_raw.border-color | append: ';'  %}
+{% endif %}
+{% if item_raw.background-color %}
+  {% assign style_custom = style_custom | append: 'background-color: #' | append: item_raw.background-color | append: ';'  %}
+{% endif %}
 
 
+<ul class="{{styling_model_container.container}} Grid " style="{{style_custom}}">
 
+
+  {% comment %}<!-- Miniature part -->{% endcomment %}
+  {% if item_raw.type-miniature == 'red-left' %}  
+    {% comment %}<li class=" Grid-cell Grid-cell--autoSize">{% endcomment %}
+    <li class=" Grid-cell u-full u-ssmall-1of3">
+      {% if item_raw.miniature %}
+        {% comment %}{% picture miniature {{item_raw.miniature}} alt="image {{item_raw.title}}"  %}{% endcomment %}
+        {% picture slider-home {{item_raw.miniature}} alt="image {{item_raw.title}}"  %}
+      {% endif %}
+    </li>
+  {% endif %}
+  {% if item_raw.type-miniature == 'full-with-title' or item_raw.type-miniature == 'full-only' %}  
+    <li class=" Grid-cell u-full">
+      {% if item_raw.miniature %}
+        {% picture slider-home {{item_raw.miniature}} alt="image {{item_raw.title}}"  %}
+      {% endif %}
+    </li>
+  {% endif %}
+  {% comment %}<!-- end Miniature part -->{% endcomment %}
+
+
+  {% comment %}<!-- Description part -->{% endcomment %}
+  {% unless item_raw.type-miniature == 'full-only' %}
+  <li class="{{styling_model_container.article}} Grid-cell u-full u-ssmall-2of3">
+    
     {% if item_raw.date-evenement %}
       {% include coll_ext_utils/date/display-date-fr.html
         date=item_raw.date-evenement
@@ -222,37 +247,41 @@
       <p class="title" itemprop="date">{{date_text_out}}</p>
     {% endif %}
 
-    {% if item_raw.date-debut-promotion %}
+    {% comment %}{% if item_raw.date-debut-promotion %}
        <p class="title" itemprop="date">debut promo : {{item_raw.date-debut-promotion}}</p>
-    {% endif %}
+    {% endif %}{% endcomment %}
 
-    <h4 class="title" itemprop="headline">{{item_raw.title}}-{{index_raw}}</h4>
+    <h4 class="title" itemprop="headline">{{item_raw.title}}</h4>
 
     {%comment%}<!-- short content -->{%endcomment%}
-    {% assign presentation = null %}
-    {% if add_url_with_id_to_container  == true %}
+    {% if add_url_with_id_to_container  == true or url_add_to_container != null %}
       {% if  item_raw.description %}
-        {% assign presentation = item_raw.description %}
+        <p class="excerpt" itemprop="text">{{item_raw.description}}</p>       
       {% endif %}
-    {% else %}
-      {% if  item_raw.description %}
-        {% assign presentation = item_raw.description %}
-      {% elsif item_raw.excerpt %}
-        {% assign presentation = item_raw.excerpt | markdownify | strip_html | strip_newlines | escape_once %}
+      {% if item_raw.lire-plus %}        
+        <p class="excerpt" itemprop="text">{{item_raw.lire-plus}}</p>
       {% endif %}
-    {% endif %}
-    {% if presentation %}
-      <p class="excerpt" itemprop="text">{{presentation}}</p>
-    {% endif %}
-    {% if item_raw.lire-plus %}
-      <p class="excerpt" itemprop="text">{{item_raw.lire-plus}}</p>
-    {% endif %}
 
-    {% comment %}temp
-    {% if item_raw.date-publication %}
-      <p class="excerpt" itemprop="text">{{ item_raw.date-publication}}-{{ item_raw.order}}</p>
+    {% else %}
+     
+      {% assign test_content = item_raw.content | strip | strip_html %}
+
+      {% if test_content != '' %}
+        {% if current_detail_model.type == site.data.coll_ext.design.config.param.type_miniature %}
+          {{ item_raw.content | markdownify}}          
+        {% endif %}
+      {% else %}
+        {% if  item_raw.description %}
+          <p class="excerpt" itemprop="text">{{item_raw.description}}</p>       
+        {% endif %}
+        {% if item_raw.lire-plus %}          
+          <p class="excerpt" itemprop="text">{{item_raw.lire-plus}}</p>
+        {% endif %}
+      {% endif %}
+
     {% endif %}
-    {% endcomment %}
+    {%comment%}<!-- end short content -->{%endcomment%}
+  
 
     {% if add_url_section_in_container == true %}
       {% assign add_text_section_in_container = empty_string  %}
@@ -266,15 +295,13 @@
 
     {% if add_url_with_id_to_container  != true %}
 
+      {%comment%}<!-- detail content, todo, show in specific windows, on hover -->{%endcomment%}
+      {% comment %}{% if current_detail_model.type == site.data.coll_ext.design.config.param.type_miniature %}
+        <p class="excerpt" itemprop="text">{{ item_raw.content}}</p> 
+      {% endif %}{% endcomment %}
 
-      {% if current_detail_model.type == site.data.coll_ext.design.config.param.type_miniature %}
-        {%comment%}<!-- detail content, todo, show in specific windows, on hover -->{%endcomment%}
-        <p class="excerpt" itemprop="text">{{ item_raw.content}}</p>        
-
-      {% endif %}
 
       {% if current_detail_model.type == site.data.coll_ext.design.config.param.type_modal %}
-
 
         {% comment %}
           <!-- assign custom container model -->
@@ -305,6 +332,22 @@
 
 
   </li>
+  {% endunless %}
+  {% comment %}<!-- end Description part -->{% endcomment %}
+
+
+  {% comment %}<!-- Miniature part -->{% endcomment %}
+  {% if item_raw.type-miniature == 'red-right' %}  
+    {% comment %}<li class=" Grid-cell Grid-cell--autoSize">{% endcomment %}
+    <li class=" Grid-cell u-full u-ssmall-1of3">
+    {% comment %}<li class=" Grid-cell u-full">{% endcomment %}
+      {% if item_raw.miniature %}
+        {% comment %}{% picture miniature {{item_raw.miniature}} alt="image {{item_raw.title}}"  %}{% endcomment %}
+        {% picture slider-home {{item_raw.miniature}} alt="image {{item_raw.title}}"  %}
+      {% endif %}
+    </li>
+  {% endif %}
+  {% comment %}<!-- end Miniature part -->{% endcomment %}
 </ul>
 
 {% if url_add_to_container != null %}

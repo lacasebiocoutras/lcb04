@@ -9,6 +9,8 @@ requirejs.config({
       'jquery': 'vendor/jquery.2.2.0.min',
       'headroom': 'vendor/headroom.0.8.0.min',
       'picturefill': 'vendor/picturefill.min',
+      'responsive-nav': 'vendor/responsive-nav.min',
+      'slidebars': 'vendor/slidebars',
       'easing': 'plugin/jquery.easing.1.3.2'
     },
     shim: {

@@ -9,6 +9,17 @@
     #add class case-list-unresize
     box_unresize: true
 
+- model: 'selection_produits-all'
+  config_flex:
+    grid_styling: 'Grid--gutters-m'
+    responsive: 'u-full u-small-1of2-m'
+  styling:
+    container: 'list-items-no-bg'
+    container_color: 'li-unresize-no-color'
+    article: 'item_list'
+    #add class case-list-unresize
+    box_unresize: true
+
 - model: 'list-details-items-custom2'
   config_flex:
     grid_styling: 'Grid--gutters-m'
@@ -104,7 +115,7 @@
 - model: 'categorie-search'
   config_flex:
     grid_styling:
-    responsive: 'u-full'
+    responsive: 'u-full u-small-1of3 u-med-1of5 u-large-full Grid--center'
   styling:
     container: 'list-cat '
     container_color: 'color-cat'

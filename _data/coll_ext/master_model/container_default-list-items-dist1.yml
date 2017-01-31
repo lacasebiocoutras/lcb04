@@ -2,7 +2,7 @@ model: 'default-list-items-dist1'
 design_model_page: 'default-list_flex'
 design_detail_items: 'miniature-default'
 config_container_detail:
-  force_url_with_id: false
+  force_url_with_id: true
 config_container_list:
   force_header_dist_0: true
 # param to allow the content items to be displayed in the parent

@@ -1,6 +1,6 @@
 model: 'default-selection-produits'
-design_model_page: 'default-list_flex'
-design_detail_items: 'miniature-modal-promo'
+design_model_page: 'selection_produits-all-list-flex'
+design_detail_items: 'miniature-selection_produits'
 
 config_container_detail:
   force_url_with_id: false

@@ -5,6 +5,7 @@ order: 1
 description: Retrouvez sur cette page les évenements & rencontres organisés à la Case Bio, son actualité, ...
 lire-plus:
 miniature: lacasebio.png
+type-miniature: red-left
 model: blog-list-items
 sort_items : order
 ---

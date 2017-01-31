@@ -20,7 +20,6 @@ param out :
 {% if include.date_end == null or include.date_end == include.date %}
 
   {% assign diff_date_event = 0 %}
-  data.coll_ext.config.date.text_date_event_fr
   {%comment%}<!-- config text -->{%endcomment%}
   {% assign textOut = site.data.coll_ext.config.date.text_date_event_fr.one_day %}
   {% assign separator = ' ' %}

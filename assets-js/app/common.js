@@ -1,4 +1,4 @@
-define(['jquery','picturefill'], function($) {
+define(['jquery','picturefill','responsive-nav','slidebars'], function($) {
 
 
 
@@ -55,6 +55,40 @@ define(['jquery','picturefill'], function($) {
     'use strict';
 
     document.createElement('picture');
+
+    // Initialize Slidebars
+    var controller = new slidebars();
+    controller.init();
+
+    // Toggle Slidebars
+    // $( '.toggle-id-1' ).on( 'click', function ( event ) {
+    $( '.js-toggle-main-menu' ).on( 'click', function ( event ) {
+        
+      // Stop default action and bubbling
+      event.stopPropagation();
+      event.preventDefault();
+
+      // Toggle the Slidebar with id 'id-1'
+      controller.toggle( 'id-1' );
+    } );
+
+    // var navigation1 = responsiveNav(".nav-1");
+    // var navigation1 = responsiveNav(".nav-1", {
+    //     animate: true,                    // Boolean: Use CSS3 transitions, true or false
+    //     transition: 284,                  // Integer: Speed of the transition, in milliseconds
+    //     label: "Menu",                    // String: Label for the navigation toggle
+    //     insert: "after",                  // String: Insert the toggle before or after the navigation
+    //     customToggle: "",                 // Selector: Specify the ID of a custom toggle
+    //     closeOnNavClick: false,           // Boolean: Close the navigation when one of the links are clicked
+    //     openPos: "relative",              // String: Position of the opened nav, relative or static
+    //     navClass: "nav-collapse",         // String: Default CSS class. If changed, you need to edit the CSS too!
+    //     navActiveClass: "js-nav-active",  // String: Class that is added to <html> element when nav is active
+    //     jsClass: "js",                    // String: 'JS enabled' class which is added to <html> element
+    //     init: function(){},               // Function: Init callback
+    //     open: function(){},               // Function: Open callback
+    //     close: function(){}               // Function: Close callback
+    // });
+    //customToggle: "#toggle-nav1", 
 
     /* Flexbox supported ?*/
     var supports = {};

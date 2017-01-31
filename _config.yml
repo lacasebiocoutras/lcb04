@@ -216,6 +216,12 @@ picture:
         width: "350"
       source_default:
         width: "100"
+    logo-header-image:
+      attr:
+        class: "logo-header-image"
+        itemprop: "image"
+      source_default:
+        width: "825"
     logo-intergrid-home:
       attr:
         class: "logo-intergrid-home-image"

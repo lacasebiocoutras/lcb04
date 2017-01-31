@@ -4,7 +4,8 @@ date-publication: 20 avril 2016
 order: 2
 description: 
 lire-plus: 
-miniature: 
+miniature:
+type-miniature: red-left
 ---
 
 

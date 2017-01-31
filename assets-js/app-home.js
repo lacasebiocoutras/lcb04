@@ -12,6 +12,8 @@ requirejs.config({
       'sticky': 'plugin/jquery.sticky.min',
       // 'slick': '//cdn.jsdelivr.net/jquery.slick/1.5.9/slick.min',
       'picturefill': 'vendor/picturefill.min',
+      'responsive-nav': 'vendor/responsive-nav.min',
+      'slidebars': 'vendor/slidebars',
       'throttle-debounce': 'plugin/jquery.ba-throttle-debounce.min'
     },
     shim: {
