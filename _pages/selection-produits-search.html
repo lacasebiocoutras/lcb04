@@ -1,0 +1,50 @@
+---
+layout: page
+permalink: /selection-produits/index.html
+title: "Une sélection de nos produits"
+---
+<!--fin-excerpt-->
+
+
+{% comment %}
+  {% include coll_ext_search/display.html %}
+  integrated here with design page, specific layout search
+{% endcomment %}
+
+  
+
+         
+
+      {% comment %}<div class="content">   {% endcomment %}
+
+        <form action="" id="site_search">
+          <input type="search" id="search_box" placeholder="Que recherchez vous?" autocomplete="off">
+        </form>
+        {% for list in site.data.coll_ext.model_search.list-model-search %}
+          {% if list.id == 'categorie-recherche-selection-produits' %}
+
+            {% assign title_search = list.title  %}
+            <button class="catSearchShowAll">
+              <h3 class="termSearch">{{title_search}}</h3>
+            </button>
+
+            {% include coll_ext_utils/list-detail-items_init_step.html %}
+            {% include coll_ext/main.html
+              force_page_ref_input=true
+              force_display_no_details=true
+            %}
+          {% endif %}
+        {% endfor %}         
+
+        {% for list in site.data.coll_ext.model_search.list-model-search %}
+          {% if list.id == 'recherche-selection-produits' %}
+            {% include coll_ext_utils/list-detail-items_init_step.html %}
+            {% include coll_ext/main.html
+              force_page_ref_input=true
+            %}
+          {% endif %}
+        {% endfor %}
+      {% comment %}</div>{% endcomment %}
+      {% comment %}<!-- fin content -->{% endcomment %}
+
+   

@@ -1,8 +1,9 @@
 html {
-    background-attachment: fixed;
-    background-color: $secondary-color-light;
-    background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.1) 25%, rgba(0, 0, 0, 0) 25%, rgba(0, 0, 0, 0) 50%, rgba(255, 255, 255, 0.1) 50%, rgba(255, 255, 255, 0.1) 75%, rgba(0, 0, 0, 0) 75%, rgba(0, 0, 0, 0));
-    background-size: 50px 50px;
+    // background-attachment: fixed;
+    // background-color: $secondary-color-light;
+    // background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.1) 25%, rgba(0, 0, 0, 0) 25%, rgba(0, 0, 0, 0) 50%, rgba(255, 255, 255, 0.1) 50%, rgba(255, 255, 255, 0.1) 75%, rgba(0, 0, 0, 0) 75%, rgba(0, 0, 0, 0));
+    // background-size: 50px 50px;
+  // report lib/slidebars.scss
 
   // http://www.alsacreations.com/astuce/lire/1216-arriere-plan-background-extensible.html
   // margin:0;
@@ -20,7 +21,7 @@ html {
 }*/
 
 body {
-  font-size: 0.7em;
+  font-size: 0.9em;
   //ajust responsive
   @include breakpoint($break-ssm-max){font-size: 0.7em;}
 
@@ -218,8 +219,8 @@ a {
 //   transition: all 0.2s ease-in-out;
 // }
 
-.modernizr {
+// .modernizr {
 
-ul{-webkit-column-count: 3;-moz-column-count: 3;column-count: 3;}
-li{color:green}.no-borderimage li.borderimage{ color: red; }.no-canvastext li.canvastext{ color: red; }.no-canvaswinding li.canvaswinding{ color: red; }.no-csspositionsticky li.csspositionsticky{ color: red; }.no-flexbox li.flexbox{ color: red; }.no-flexboxlegacy li.flexboxlegacy{ color: red; }.no-flexboxtweener li.flexboxtweener{ color: red; }.no-inlinesvg li.inlinesvg{ color: red; }.no-json li.json{ color: red; }.no-mediaqueries li.mediaqueries{ color: red; }.no-serviceworker li.serviceworker{ color: red; }.no-smil li.smil{ color: red; }.no-srcset li.srcset{ color: red; }.no-svg li.svg{ color: red; }.no-svgasimg li.svgasimg{ color: red; }.no-svgclippaths li.svgclippaths{ color: red; }.no-svgfilters li.svgfilters{ color: red; }.no-svgforeignobject li.svgforeignobject{ color: red; }.no-setclasses li.setclasses{ color: red; }
-}
+// ul{-webkit-column-count: 3;-moz-column-count: 3;column-count: 3;}
+// li{color:green}.no-borderimage li.borderimage{ color: red; }.no-canvastext li.canvastext{ color: red; }.no-canvaswinding li.canvaswinding{ color: red; }.no-csspositionsticky li.csspositionsticky{ color: red; }.no-flexbox li.flexbox{ color: red; }.no-flexboxlegacy li.flexboxlegacy{ color: red; }.no-flexboxtweener li.flexboxtweener{ color: red; }.no-inlinesvg li.inlinesvg{ color: red; }.no-json li.json{ color: red; }.no-mediaqueries li.mediaqueries{ color: red; }.no-serviceworker li.serviceworker{ color: red; }.no-smil li.smil{ color: red; }.no-srcset li.srcset{ color: red; }.no-svg li.svg{ color: red; }.no-svgasimg li.svgasimg{ color: red; }.no-svgclippaths li.svgclippaths{ color: red; }.no-svgfilters li.svgfilters{ color: red; }.no-svgforeignobject li.svgforeignobject{ color: red; }.no-setclasses li.setclasses{ color: red; }
+// }

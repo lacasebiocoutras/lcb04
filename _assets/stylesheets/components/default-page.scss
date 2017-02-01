@@ -17,16 +17,16 @@
   //   background: $white;
   // }
 
-  .Site-header-home {
-    // margin-top: 5em;
-    background-color: $secondary-color-light;
+  // .Site-header-home {
+  //   // margin-top: 5em;
+  //   background-color: $secondary-color-light;
 
-    @include breakpoint($break-sm-max) {
-        .img-logo-extra {
-          display: none;
-        }
-      }
-  }
+  //   @include breakpoint($break-sm-max) {
+  //       .img-logo-extra {
+  //         display: none;
+  //       }
+  //     }
+  // }
 
 .default-page {
 

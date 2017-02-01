@@ -11,7 +11,11 @@
 /**
  * Box Model, Html & Body
  */
-
+html, body {
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
 // html, body, 
 [canvas=container], [off-canvas] {
 	margin: 0;
@@ -21,11 +25,7 @@
 	        box-sizing: border-box;
 }
 
-// html, body {
-// 	width: 100%;
-// 	height: 100%;
-// 	overflow: hidden;
-// }
+
 
 /**
  * Canvas
@@ -38,10 +38,20 @@
 [canvas=container] {
 	width: 100%;
 	height: 100%;
-	overflow-y: auto;
-	position: relative;
-	background-color: white; /* Basic background color, overwrite this in your own css. */
+	overflow-y: scroll; //auto; //scroll
+	// position: relative;
+	// background-color: white; /* Basic background color, overwrite this in your own css. */
+	// report background from base/base.scss
+	background-attachment: fixed;
+    background-color: $secondary-color-light;
+    background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.1) 25%, rgba(0, 0, 0, 0) 25%, rgba(0, 0, 0, 0) 50%, rgba(255, 255, 255, 0.1) 50%, rgba(255, 255, 255, 0.1) 75%, rgba(0, 0, 0, 0) 75%, rgba(0, 0, 0, 0));
+    background-size: 50px 50px;
 	-webkit-overflow-scrolling: touch; /* Enables momentum scrolling on iOS devices, may be removed by setting to 'auto' in your own CSS. */
+
+	&.overflow--hidden {
+	    /* when primary navigation is visible, the content in the background won't scroll */
+	    overflow: hidden;
+	  }
 }
 
 [canvas=container]:before, [canvas=container]:after {
@@ -59,7 +69,7 @@
 	position: fixed;
 	overflow: hidden;
 	overflow-y: auto;
-	background-color: black; /* Basic background color, overwrite this in your own css. */
+	background-color: $primary-color-light; /* Basic background color, overwrite this in your own css. */
 	color: white; /* Basic colors, overwrite this in your own css. */
 	-webkit-overflow-scrolling: touch; /* Enables momentum scrolling on iOS devices, may be removed by setting to 'auto' in your own CSS. */
 }
@@ -84,7 +94,7 @@
 }
 
 [off-canvas*=left] {
-	width: 255px;
+	width: 155px;
 	height: 100%;
 	top: 0;
 	left: 0;

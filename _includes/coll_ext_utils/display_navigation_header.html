@@ -1,0 +1,28 @@
+
+
+{% comment %}<nav class="nav-1 nav-collapse">{% endcomment %}
+<ul class="navigation-ban">                  
+  {% for iter_array in (0..array_title_item_acceuil_size) %}
+    {% assign title_tmp = array_title_item_acceuil[iter_array]  %}
+    {% assign link_tmp = array_link_article_item_acceuil[iter_array] %}   
+
+    {% assign add_class = 'menu-item u-textTruncate ' %}
+    
+    {% if page.url ==  link_tmp%}
+    	{% assign add_class = add_class | append: "nav-active" %}
+    	{% assign detect_url_page = true %}
+    {% else %}
+    	{% assign add_class = add_class | append: "nav-not-active" %}
+    {% endif %}
+
+    <li> <a class="{{add_class}}" href="{{site.baseurl}}{{link_tmp}}"><h2>{{title_tmp}}</h2></a> </li>
+  {% endfor %}
+</ul>
+{% comment %}</nav>{% endcomment %}
+{% comment %}<button id="toggle-nav1" class="closed">Toggle Menu</button>{% endcomment %}
+{% comment %}<a id="toggle-nav1" href="#" class="header-nav-menu u-textLeft" title="Menu">
+<span>Menu&nbsp;</span>
+<svg viewBox="0 0 16 16" >
+  <path class="path1" d="M1 3h14v3h-14zM1 7h14v3h-14zM1 11h14v3h-14z"></path>
+</svg>
+</a>{% endcomment %}

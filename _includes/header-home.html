@@ -1,11 +1,56 @@
-<div class=" Header-home" role="banner">
+{% comment %}{% include coll_ext/config/common-param.html %}
+
+{% assign list_title_item_acceuil = delim %}
+{% assign list_link_article_item_acceuil = delim %}
+
+{% for collection in site.collections %}
+  {% if collection.label == 'nos-informations' %}
+    {% assign raw_items_navig_acceuil = collection.docs %}
+    {% break %}
+  {% endif %}
+{% endfor %}
+{% assign items_tmp = raw_items_navig_acceuil | sort: 'order' %}
+
+
+{% for item_tmp in items_tmp %}  
+ 
+  {% if item_tmp.path contains '/page-acceuil/menu-liens-articles/' %} 
+    {% unless item_tmp.path contains '/index.md'  %}
+      {% assign list_title_item_acceuil = list_title_item_acceuil | append : item_tmp.title | append: delim %}
+      {% assign list_link_article_item_acceuil = list_link_article_item_acceuil | append : item_tmp.link | append: delim %}
+    {% endunless %}
+  {% endif %} 
+
+{% endfor %}
+
+{% assign array_title_item_acceuil = list_title_item_acceuil | remove_first: delim | split: delim  %}
+{% assign array_title_item_acceuil_size = array_title_item_acceuil.size | minus: 1 %}
+{% assign array_link_article_item_acceuil = list_link_article_item_acceuil | remove_first: delim | split: delim  %}
+{% assign detect_url = false %}{% endcomment %}
+
+
+<div class="Header-home" role="banner">
  <ul class="Grid Grid--flexCells ">
-    <li class="Grid-cell .Grid-cell--autoSize  ">
-      {% comment %}{% picture logo-home logo-header.jpg alt=" Logo La Case Bio, mangez bio!" %}{% endcomment %}
-      {% picture logo-home logoheader-lcb.jpg alt=" Logo La Case Bio, mangez bio!" %}      
-    </li>
-    <li class="Grid-cell img-logo-extra">      
-      {% picture logo-header-image facade-magasin.jpg alt=" Devanture La Case Bio, Coutras" %}      
-    </li>
+    {% comment %}<li class="Grid-cell Grid-cell--autoSize img-header-normal ">{% endcomment %}
+    {% comment %}<li class="Grid-cell img-header-normal ">
+      {% picture logo-home logoheader-lcb.jpg alt=" Logo La Case Bio, mangez bio!" %}
+    </li>{% endcomment %}
+    {% comment %}<li class="Grid-cell Grid-cell--autoSize img-header-xl ">{% endcomment %}
+    <li class="Grid-cell  img-header-xl ">
+      {% picture logo-home logoheader-lcb-extra2.jpg alt=" Logo La Case Bio, mangez bio!" %}
+    </li>     
   </ul>
 </div>
+  
+{% include coll_ext_utils/display_navigation_header.html %}
+
+<span class="menu-item nav-not-active js-toggle-main-menu"><i class="fa fa-bars"></i> <span class="text">Menu</span></span>
+
+{% if detect_url_page == false %}
+	{% assign home_title = site.title | prepend: "Acceuil&nbsp;" %}
+		{% include coll_ext_utils/path-navig-title.html title=home_title class_logo="logo-back"%}
+{% endif %}
+
+
+    
+

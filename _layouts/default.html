@@ -6,8 +6,9 @@ layout: compress
 <html lang="fr">
 
   {% include head.html %}
-
-  <body class="Site-body container-body default-page">
+<!-- default-page -->
+  <body class="Site-body container-body "> 
+  <div canvas="container">
     <div id="haut-page" class="u-hiddenVisually"></div>
 
     <!-- <header id='header-default' class="Site-header header--fixed">
@@ -28,7 +29,7 @@ layout: compress
             {{ content }}
         </div>
 
-        {% if page.showContent %}
+        {% comment %}{% if page.showContent %}
           <aside class="Site-right-aside u-textCenter ">
             <!-- <div class="toc--sidebar"></div> -->
             <strong>Right Aside</strong>
@@ -37,7 +38,7 @@ layout: compress
           <aside class="Site-right-aside u-textCenter ">
 
           </aside>
-        {% endif %}
+        {% endif %}{% endcomment %}
       </div> <!-- fin Site-content-right-aside -->
 
     </main>
@@ -54,6 +55,7 @@ layout: compress
 
 
     {% include scripts.html %}
-
+  </div>
+  <div off-canvas="id-1 left reveal">  </div>
   </body>
 </html>

@@ -1,10 +1,10 @@
 ---
-title: Retrouvez toute notre actualité
+title: Acceuil
 date-publication: 17 janv 2017
 order: 1
 description: 
 image:
 description-image:
-link: /blog/index.html
+link: /
 description-link: 
 ---

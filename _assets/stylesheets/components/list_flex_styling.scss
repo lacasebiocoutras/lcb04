@@ -70,6 +70,16 @@
   // box-shadow: 0 0 $border-shadow rgba($shadow-color, 0.5);
   // background: $secondary-color; //$warning-color;
 
+  .custom-grid {
+    flex-flow: row wrap; // column wrap;
+
+    @include breakpoint($break-sm-max) {
+      flex-flow: column wrap; // column wrap;
+    }
+  }
+
+  
+
   .heading {
     width: 100%;
     margin-left: $spacing-h/2; //0.5em;
@@ -90,12 +100,13 @@
 
     .catSearch {
       width: 100%;
-      background: none;      
+      background: none;    
+      border: none;  
 
       .termSearch {
 
         // color: $white;
-        font-size: 1.5em;
+        font-size: 1em;
         font-weight: 600;
 
         h3 {

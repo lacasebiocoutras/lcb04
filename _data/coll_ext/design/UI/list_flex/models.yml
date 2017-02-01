@@ -114,8 +114,8 @@
 
 - model: 'categorie-search'
   config_flex:
-    grid_styling:
-    responsive: 'u-full u-small-1of3 u-med-1of5 u-large-full Grid--center'
+    grid_styling: 'Grid custom-grid'
+    responsive: ''
   styling:
     container: 'list-cat '
     container_color: 'color-cat'

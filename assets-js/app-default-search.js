@@ -33,7 +33,7 @@ requirejs.config({
 
 
 requirejs(['app/common'], function () {
-  requirejs(['app/common-sticky'], function () {
+  // requirejs(['app/common-sticky'], function () {
       requirejs(['app/main-default-search']);
-  });
+  // });
 });

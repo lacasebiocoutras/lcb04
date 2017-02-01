@@ -1,5 +1,5 @@
 ---
-title: Nos paniers biologique
+title: Marché biologique
 date-publication: 16 janvier 2017
 order: 1
 description: Des produits de saison sélectionnés, en privilégiant la proximité

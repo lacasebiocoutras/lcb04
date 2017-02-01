@@ -1,5 +1,5 @@
 ---
-title: Les fleurs de Bach
+title: Fleurs de Bach
 date-publication: 3 janvier 2017
 order: 2
 description: Les fleurs de Bach sont reconnus pour leur bienfait.

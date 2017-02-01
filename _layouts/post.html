@@ -1,14 +1,14 @@
 ---
-layout: default
+layout: master
 ---
 
 
 
 <div class="post default-page-content" itemscope itemtype="http://schema.org/BlogPosting">
 
-  {% assign home_title = site.title | prepend: "Acceuil&nbsp;" %}
+  {% comment %}{% assign home_title = site.title | prepend: "Acceuil&nbsp;" %}
   {% include coll_ext_utils/path-navig-title.html title=home_title class_logo="logo-back"%}
-
+{% endcomment %}
   <div class="post-content" itemprop="articleBody">
     {{ content }} 
   </div>

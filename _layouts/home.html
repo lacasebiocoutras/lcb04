@@ -2,7 +2,7 @@
 layout: compress
 ---
 
-
+{% comment %}
 {% include coll_ext/config/common-param.html %}
 
 {% assign list_title_item_acceuil = delim %}
@@ -31,7 +31,7 @@ layout: compress
 {% assign array_title_item_acceuil = list_title_item_acceuil | remove_first: delim | split: delim  %}
 {% assign array_title_item_acceuil_size = array_title_item_acceuil.size | minus: 1 %}
 {% assign array_link_article_item_acceuil = list_link_article_item_acceuil | remove_first: delim | split: delim  %}
-
+{% endcomment %}
 
 <!DOCTYPE html>
 <html lang="fr">
@@ -45,13 +45,13 @@ layout: compress
         {% include header-home.html %}        
     </div>
     {% comment %}<nav class="nav-1 nav-collapse">           {% endcomment %}
-    <ul class="navigation">                  
+   {% comment %} <ul class="navigation">                  
       {% for iter_array in (0..array_title_item_acceuil_size) %}
         {% assign title_tmp = array_title_item_acceuil[iter_array]  %}
         {% assign link_tmp = array_link_article_item_acceuil[iter_array] %}                    
         <li id="menu-item"> <a class="menu-item u-textTruncate " href="{{site.baseurl}}{{link_tmp}}"><h2>{{title_tmp}}</h2></a> </li>
       {% endfor %}
-    </ul>
+    </ul>{% endcomment %}
   {% comment %}</nav>{% endcomment %}
   {% comment %}<button id="toggle-nav1" class="closed">Toggle Menu</button>{% endcomment %}
   {% comment %}<a id="toggle-nav1" href="#" class="header-nav-menu u-textLeft" title="Menu">
@@ -60,7 +60,8 @@ layout: compress
       <path class="path1" d="M1 3h14v3h-14zM1 7h14v3h-14zM1 11h14v3h-14z"></path>
     </svg>
   </a>{% endcomment %}
-    <span class="button js-toggle-main-menu"><i class="fa fa-bars"></i> <span class="text">Menu</span></span>
+    {% comment %}<span class="button js-toggle-main-menu"><i class="fa fa-bars"></i> <span class="text">Menu</span></span>{% endcomment %}
+
     <main class="Site-main " id="main" role="main">
 
       <!-- <aside class="Site-left-aside u-textCenter ">
@@ -113,8 +114,7 @@ layout: compress
     </div>
 
 
-    <div off-canvas="id-1 left reveal">
-    </div>
+    <div off-canvas="id-1 left reveal">  </div>
 
   </body>
 </html>
