@@ -5,6 +5,6 @@ order: 2
 description:
 image: page-acceuil/decouvrez-notre-marche-bio.jpg
 description-image: Découvrez notre marché biologique
-link: /blog/mieux-nous-connaitre/marche-biologique.html
+link: /notre-actualite/mieux-nous-connaitre/marche-biologique.html
 description-link: Découvrez notre marché biologique 
 ---

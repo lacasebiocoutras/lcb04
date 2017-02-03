@@ -117,13 +117,13 @@ layout: master
                 </ul>                
               </li>
               <li class="li-nav Grid-cell--autoSize not-inf-sm">               
-                <ul class="navigation">                  
+                {% comment %}<ul class="navigation">                  
                   {% for iter_array in (0..array_title_item_acceuil_size) %}
                     {% assign title_tmp = array_title_item_acceuil[iter_array]  %}
                     {% assign link_tmp = array_link_article_item_acceuil[iter_array] %}                    
-                    <li id="menu-item" {% comment %}style="margin-left: {{ forloop.index | minus: 1 | times: 2}}em;"{% endcomment %}> <a class="menu-item u-textTruncate " href="{{site.baseurl}}{{link_tmp}}"><h2>{{title_tmp}}</h2></a> </li>
+                    <li id="menu-item" > <a class="menu-item u-textTruncate " href="{{site.baseurl}}{{link_tmp}}"><h2>{{title_tmp}}</h2></a> </li>
                   {% endfor %}
-                </ul>
+                </ul>{% endcomment %}
               </li>
             </ul>
           </li> <!-- fin .li-nav-ab-->
@@ -154,13 +154,13 @@ layout: master
         <ul class="Grid Grid--gutters-m u-spaceVN">
 
            <li class="li-nav Grid-cell Grid-cell--center  u-full  on-sm-only" >           
-            <ul class="navigation">                  
+            {% comment %}<ul class="navigation">                  
                   {% for iter_array in (0..array_title_item_acceuil_size) %}
                 {% assign title_tmp = array_title_item_acceuil[iter_array]  %}
                 {% assign link_tmp = array_link_article_item_acceuil[iter_array] %}                    
-                <li id="menu-item" {% comment %}style="margin-left: {{ forloop.index | minus: 1 | times: 2}}em;"{% endcomment %}> <a class="menu-item u-textTruncate " href="{{site.baseurl}}{{link_tmp}}"><h2>{{title_tmp}}</h2></a> </li>
+                <li id="menu-item" > <a class="menu-item u-textTruncate " href="{{site.baseurl}}{{link_tmp}}"><h2>{{title_tmp}}</h2></a> </li>
               {% endfor %}
-            </ul>
+            </ul>{% endcomment %}
           </li>
 
           {% assign cpt_images_acceuil = cpt_images_acceuil | minus: 1 %}

@@ -12,7 +12,7 @@ list-model-dist:
           # type: 'list_flex'
           # custom: 'subsections-default'
           type: 'slider'
-          custom: 'default-black'
+          custom: 'acceuil-selection_produits-subsections-dist0'
 
 
   - dist: 1

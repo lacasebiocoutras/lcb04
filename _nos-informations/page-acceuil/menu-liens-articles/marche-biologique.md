@@ -5,6 +5,6 @@ order: 5
 description: 
 image:
 description-image:
-link: /blog/mieux-nous-connaitre/marche-biologique.html
+link: /notre-actualite/mieux-nous-connaitre/marche-biologique.html
 description-link: 
 ---

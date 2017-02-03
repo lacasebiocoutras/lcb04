@@ -56,7 +56,7 @@
   }
 }
 
-@mixin slider_default_custom_design_coll_ext($container, $container_ref, $type, $type_ref, $id, $heading_color, $slides_background ) {
+@mixin slider_default_custom_design_coll_ext($container, $container_ref, $type, $type_ref, $id, $heading_color, $slides_background, $hide_heading_dist1 ) {
 
   .#{$containerSlider_gl}-#{$container}-#{$type} {
 
@@ -76,7 +76,9 @@
     .#{$slider_gl}-#{$type}-#{$id} {
 
       .heading {
-
+        @if $hide_heading_dist1 == true {
+          display: none;
+        }
         color : $heading_color;
       }
 

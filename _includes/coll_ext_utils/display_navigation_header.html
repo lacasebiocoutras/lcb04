@@ -1,6 +1,5 @@
 
 
-{% comment %}<nav class="nav-1 nav-collapse">{% endcomment %}
 <ul class="navigation-ban">                  
   {% for iter_array in (0..array_title_item_acceuil_size) %}
     {% assign title_tmp = array_title_item_acceuil[iter_array]  %}
@@ -18,6 +17,11 @@
     <li> <a class="{{add_class}}" href="{{site.baseurl}}{{link_tmp}}"><h2>{{title_tmp}}</h2></a> </li>
   {% endfor %}
 </ul>
+
+
+{% comment %}<nav class="nav-1 nav-collapse">{% endcomment %}
+
+
 {% comment %}</nav>{% endcomment %}
 {% comment %}<button id="toggle-nav1" class="closed">Toggle Menu</button>{% endcomment %}
 {% comment %}<a id="toggle-nav1" href="#" class="header-nav-menu u-textLeft" title="Menu">

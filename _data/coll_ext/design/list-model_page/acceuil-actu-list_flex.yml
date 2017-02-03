@@ -1,4 +1,4 @@
-model: 'default-list_flex'
+model: 'acceuil-actu-list_flex'
 list-model-dist:
   - dist: 0
     list-model-type:
@@ -10,19 +10,20 @@ list-model-dist:
       - type: ["subsections"]
         design_model:
           type: 'list_flex'
-          custom: 'subsections-default'
+          custom: 'acceuil-actu-subsections-dist0'
 
   - dist: 1
     list-model-type:
       - type: ["detail_items", "subsection_items", "mix_items"]
         design_model:
           type: 'list_flex'
-          custom: 'items-default-dist1'
+          custom: 'acceuil-actu-items-dist1'
+          # custom: 'items-default-dist1'
 
       - type: ["subsections"]
         design_model:
           type: 'list_flex'
-          custom: 'subsections-default-dist1'
+          custom: 'subsections-default'
 
   # - dist: 2
   #   list-model-type:

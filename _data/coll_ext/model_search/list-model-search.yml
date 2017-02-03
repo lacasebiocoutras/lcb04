@@ -3,7 +3,7 @@
   collection: 'selection-produits'
   force_display_coll_ext: true
   force_display_coll_ext_section: 'selection-produits'
-  force_display_coll_ext_model: 'default-selection-produits'
+  force_display_coll_ext_model: 'selection-produits_search-list'
   sort :
     # available  'date-publication' | 'order' | 'title' (| 'date-evenement')
     # defined in /_data/coll_ext/config/sort_site-documents.yml
@@ -18,7 +18,7 @@
   collection: 'selection-produits'
   force_display_coll_ext: true
   force_display_coll_ext_section: 'selection-produits'
-  force_display_coll_ext_model: 'default-categorie-selection-produits'
+  force_display_coll_ext_model: 'selection-produits_search-categories'
   sort :
     # available  'date-publication' | 'order' | 'title' (| 'date-evenement')
     # defined in /_data/coll_ext/config/sort_site-documents.yml

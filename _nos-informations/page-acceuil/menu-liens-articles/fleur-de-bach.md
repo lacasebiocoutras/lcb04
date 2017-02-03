@@ -5,6 +5,6 @@ order: 6
 description: 
 image:
 description-image:
-link: /blog/mieux-nous-connaitre/fleurs-de-bach.html
+link: /notre-actualite/mieux-nous-connaitre/fleurs-de-bach.html
 description-link: 
 ---

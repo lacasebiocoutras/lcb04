@@ -123,7 +123,12 @@
     %}
     {% assign slides_background  = assign_color %}
 
-    @include  slider_default_custom_design_coll_ext({{include.container_display}},  {{include.container_ref}}, {{include.type_slider_display}}, {{include.type_slider_ref}}, {{id_slider}}, {{heading_color}}, {{slides_background}});
+    {% assign hide_heading_dist1 = false %}
+    {% if styling_model.hide_heading_dist1 %}
+      {% assign hide_heading_dist1 = true %}
+    {% endif %}
+
+    @include  slider_default_custom_design_coll_ext({{include.container_display}},  {{include.container_ref}}, {{include.type_slider_display}}, {{include.type_slider_ref}}, {{id_slider}}, {{heading_color}}, {{slides_background}}, {{hide_heading_dist1}});
 
   {% endif %}
 

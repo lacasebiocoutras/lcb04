@@ -4,7 +4,7 @@ date-publication: 15 mars 2016
 description : 
 lire-plus : Chaque semaine, le Vendredi, de 17h à 19h, ...
 order : 99
-miniature : blog/rqdo.jpg
+miniature : notre-actualite/rqdo.jpg
 type-miniature: red-left
 ---
 

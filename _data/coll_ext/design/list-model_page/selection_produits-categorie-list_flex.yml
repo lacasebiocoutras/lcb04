@@ -1,4 +1,4 @@
-model: 'categorie-search-list_flex'
+model: 'selection_produits-categorie-list_flex'
 list-model-dist:
   - dist: 0
     list-model-type:

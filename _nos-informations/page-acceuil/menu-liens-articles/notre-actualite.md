@@ -5,6 +5,6 @@ order: 3
 description: 
 image:
 description-image:
-link: /blog/index.html
+link: /notre-actualite/index.html
 description-link: 
 ---

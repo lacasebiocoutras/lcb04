@@ -13,8 +13,8 @@ masthead:
     url: /informations-utiles/index.html#informations-utiles-nous-contacter
   - title: 'Nous situer'
     url: /informations-utiles/index.html#informations-utiles-nous-situer
-  - title: 'Blog'
-    url: /blog/index.html
+  - title: 'Notre actualité'
+    url: /notre-actualite/index.html
 
 # masthead:
 #     # masthead-primary
