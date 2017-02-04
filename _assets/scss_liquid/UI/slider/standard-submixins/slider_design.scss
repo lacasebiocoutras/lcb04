@@ -1,6 +1,7 @@
+@import "base/variables";
 
 
-@mixin slider_design_standard($container, $container_ref, $type, $type_ref) {
+@mixin slider_design_standard($container, $container_ref, $type, $type_ref, $bg_define, $bg_color) {
 
   .#{$containerSlider_gl}-#{$container}-#{$type} {
 
@@ -36,13 +37,14 @@
       }
 
       .#{$slides_gl} {
-        margin: 45px 0 0;
-        border-radius: 5px;
-        box-shadow: 1px 1px 4px #666;
+        margin: $spacing-v 0 0;
+        
         padding: 1%;
 
-        @if $container_ref != 'coll_ext' {
-          background: yellow; // #fff;
+        @if $container_ref != 'coll_ext' and $bg_define == true {
+          background: $bg_color; // #fff;
+          border-radius: 0.5em;
+          box-shadow: 1px 1px 4px #666;
         }
       }
 

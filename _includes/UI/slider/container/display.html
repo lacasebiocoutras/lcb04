@@ -68,7 +68,7 @@
 
 
 
-  <div class="{{class_container}}">
+  <div class="{{class_container}} xx">
 
 
     {% if include.display_header == true %}
@@ -84,6 +84,9 @@
       {% endif %}
 
     {% endif %}
+
+
+    
 
     <div class="{{class_slider}} {{class_extra_slider}} ">
 
@@ -114,8 +117,16 @@
                 {% assign index_item_sub =  array_items_sub[forloop.index0] | plus: 0 %}
                 {% assign item_sub = raw_items[index_item_sub] %}
 
-                <div class="miniature">
-                  <p>{{forloop.index0}}, {{index_item_sub}} : {{item_sub.title}}; {{item_sub.border-color}} border-colorxx</p>
+                {% comment %}add background-color if defined in meta style, border-color{% endcomment %}
+                {% assign style_custom = '' %}               
+                {% if item_sub.border-color %}
+                  {% assign style_custom = style_custom | append: 'background-color: #' | append: item_sub.border-color | append: ';'  %}
+                {% endif %}
+
+
+
+                <div class="miniature" style="{{style_custom}}">
+                  <p>{{item_sub.title}}x5</p>
                 </div>
 
               {% else %}

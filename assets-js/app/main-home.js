@@ -1,6 +1,6 @@
 // define(['jquery','lunr','moment', 'content-expirator', 'jquery.alpha', 'jquery.beta'], function($,lunr,moment) {
 // define(['jquery','slick', 'sticky', 'content-expirator', 'throttle-debounce'], function($) {
-define(['jquery', 'lib/content-expirator', 'config-module'], function($) {
+define(['jquery', 'lib/content-expirator','config-module'], function($) {
 
   // Sticking on asides
   // var statePrecRight;
@@ -95,15 +95,17 @@ define(['jquery', 'lib/content-expirator', 'config-module'], function($) {
   // Ready event
   $(document).ready(function(){
 
+
+
     //load evenements on left aside
     // var path_json = require('config-module').base_url;
     // path_json=path_json.concat('evenement.json');
     // $('.Site-left-aside').loadEvenements(path_json);
 
     //gestion date fermeture on right aside
-    var path_json = require('config-module').base_url;
-    path_json=path_json.concat('fermeture.json');
-    $('.Site-right-aside').loadFermetures(path_json);
+    // var path_json = require('config-module').base_url;
+    // path_json=path_json.concat('fermeture.json');
+    // $('.Site-right-aside').loadFermetures(path_json);
 
     //init sticky asides
     // stickyAsidesInit();

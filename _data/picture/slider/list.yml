@@ -239,12 +239,33 @@
 #       description-link:
 
 
-- id: 'i-acc'
+# - id: 'i-acc'
+#   container: 'picture'
+#   type: 'infinite'  
+#   # img_source : original (picture tag pluggin), baselink, direct
+#   img_source: 'original'
+#   slides_max_witdh: '800px'
+#   list_from_collection: 'nos-informations'
+#   list_from_path_collection: '/page-acceuil/carousel/'
+#   list_img:
+#     - image: "carousel-acceuil/reouverture.jpg"
+#       description-image: "Réouverture de la Case Bio!"
+#       link:
+#       description-link:
+#     # - image: "carousel-acceuil/decouvrez-notre-marche-bio.jpg"
+#     #   description-image: "Le rayon marché biologique"
+#     #   link: "/notre-actualite/mieux-nous-connaitre/marche-biologique.html"
+#     #   description-link: "Découvrez notre marché biologique"
+#     # - image: "carousel-acceuil/espace-sante-bien-etre.jpg"
+#     #   description-image: "Le rayon bien-être"
+#     #   link: 
+   
+
+- id: 't-acc'
   container: 'picture'
-  type: 'infinite'  
+  type: 'translate'
   # img_source : original (picture tag pluggin), baselink, direct
   img_source: 'original'
-  slides_max_witdh: '800px'
   list_from_collection: 'nos-informations'
   list_from_path_collection: '/page-acceuil/carousel/'
   list_img:
@@ -252,11 +273,4 @@
       description-image: "Réouverture de la Case Bio!"
       link:
       description-link:
-    # - image: "carousel-acceuil/decouvrez-notre-marche-bio.jpg"
-    #   description-image: "Le rayon marché biologique"
-    #   link: "/notre-actualite/mieux-nous-connaitre/marche-biologique.html"
-    #   description-link: "Découvrez notre marché biologique"
-    # - image: "carousel-acceuil/espace-sante-bien-etre.jpg"
-    #   description-image: "Le rayon bien-être"
-    #   link: 
-   
+

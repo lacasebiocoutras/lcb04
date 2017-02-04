@@ -128,16 +128,14 @@ layout: master
             </ul>
           </li> <!-- fin .li-nav-ab-->
 
-          <li class="li-slider Grid-cell  u-full u-spaceBN ">
-            <div class="">
+          <li class="li-slider Grid-cell  u-full u-spaceBN ">            
               {% include picture/slider-standard.html
-                input_slider='i-acc'
+                input_slider='t-acc'
                 list_image=list_car_image_acceuil
                 list_description_image=list_car_description_img_acceuil
                 list_link=list_car_link_acceuil
                 list_description_link=list_car_description_link_acceuil
-              %}
-            </div>
+              %}            
           </li> <!--fin .li-presentation -->
 
         <!-- fin navigation list + AB logo -->
@@ -154,13 +152,13 @@ layout: master
         <ul class="Grid Grid--gutters-m u-spaceVN">
 
            <li class="li-nav Grid-cell Grid-cell--center  u-full  on-sm-only" >           
-            {% comment %}<ul class="navigation">                  
+            <ul class="navigation">                  
                   {% for iter_array in (0..array_title_item_acceuil_size) %}
                 {% assign title_tmp = array_title_item_acceuil[iter_array]  %}
                 {% assign link_tmp = array_link_article_item_acceuil[iter_array] %}                    
                 <li id="menu-item" > <a class="menu-item u-textTruncate " href="{{site.baseurl}}{{link_tmp}}"><h2>{{title_tmp}}</h2></a> </li>
               {% endfor %}
-            </ul>{% endcomment %}
+            </ul>
           </li>
 
           {% assign cpt_images_acceuil = cpt_images_acceuil | minus: 1 %}

@@ -1,7 +1,16 @@
+@import "base/variables";
 
 @mixin slider_info_box_standard($container, $type, $type_ref) {
 
   .#{$containerSlider_gl}-#{$container}-#{$type} {
+    //margin needed for controls prev/next, slider_controls.scss, slider_active.scss
+    margin-left: 50px;
+    margin-right: 50px;    
+    // @include breakpoint($break-sm-max){
+    @media screen and (max-width: $break-sm)
+    {
+      margin: 0;
+    }
 
     .#{$info_gl} {
       line-height: 20px;

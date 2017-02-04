@@ -141,14 +141,16 @@
 {% endfor %}
 
 
-
+{% comment %}custom{% endcomment %}
+{% assign bg_define = false %}
+{% assign bg_color  = 'white' %} 
 
 {% if max_items_slider > 0 %}
 
 
 
 
-  @include slider_design_standard({{include.container_display}}, {{include.container_ref}}, {{include.type_slider_display}}, {{include.type_slider_ref}});
+  @include slider_design_standard({{include.container_display}}, {{include.container_ref}}, {{include.type_slider_display}}, {{include.type_slider_ref}}, {{bg_define}}, {{bg_color}});
 
 
 

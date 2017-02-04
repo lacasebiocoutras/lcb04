@@ -1,3 +1,4 @@
+@import "base/variables";
 
 
 // ++++++++++++++++++++++
@@ -15,11 +16,26 @@
     .#{$active_gl} {
       margin: 30% 0 0;
       text-align: center;
+      //adapt display , see slider_info_box.scss
+      @media screen and (max-width: $break-sm)
+      {
+        margin: 25% 0 0;
+      }
+      @media screen and (max-width: $break-ssm)
+      {
+        margin: 20% 0 0;
+      }
     }
 
     .#{$active_gl} label {
       border-radius: 5px;
-      display: inline-block;
+      // display: inline-block;
+      //adapt display , see slider_info_box.scss
+      display: none;
+      @media screen and (max-width: $break-sm)
+      {
+        display: inline-block;
+      }
       width: 10px;
       height: 10px;
       background: #bbb;
@@ -35,9 +51,14 @@
 
 
 %animation-active-coll-ext {
-  .radius, .miniature {
+  .radius {
     background: #333;
     border-color: #333 !important;
+  }
+  .miniature {
+    // background: #333;
+    // border-color: #333 !important;
+    color: black;
   }
 }
 
@@ -65,6 +86,9 @@
         .miniature {
           display: inline-block;
           background: #bbb;
+          color:white;
+          font-size:1em;
+          font-weight: bold;
         }
       }
 
@@ -76,7 +100,8 @@
 
         .miniature {
           background: #ccc;
-          border-color: #777 !important;
+          // border-color: #777 !important;
+          color: black;
         }
       }
     }

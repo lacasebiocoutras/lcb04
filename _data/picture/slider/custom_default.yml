@@ -1,0 +1,3 @@
+config:
+  define-background: false
+  background-color: 'secondary-color-light'

@@ -64,9 +64,23 @@
 {% endfor %}
 
 
+{% comment %}custom{% endcomment %}
+{% assign bg_define = false %}
+{% assign bg_color  = 'white' %} 
+{% if site.data.picture.slider.custom_default.config.define-background == true %}
+  {% include scss-liquid/palette_color/assign_color.html
+    palette_color=site.data.custom.design.palette_color
+    name_color_search=site.data.picture.slider.custom_default.config.background-color
+  %}
+  {% assign bg_define = true %}
+  {% assign bg_color  = assign_color %}  
+{% endif %}
+
+
+
 {% if max_items_slider > 0 %}
 
-  @include slider_design_standard({{include.container_display}}, {{include.container_ref}}, {{include.type_slider_display}}, {{include.type_slider_ref}});
+  @include slider_design_standard({{include.container_display}}, {{include.container_ref}}, {{include.type_slider_display}}, {{include.type_slider_ref}}, {{bg_define}}, {{bg_color}});
 
   @include slider_article_standard({{include.container_display}}, {{include.type_slider_display}}, {{include.type_slider_ref}});
 
