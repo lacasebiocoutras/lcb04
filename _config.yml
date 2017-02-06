@@ -187,35 +187,46 @@ picture:
         width: "400"
       source_default:
         width: "320"
-    welcome-home:
+    img-right-home:
       attr:
-        class: "welcome-home-image"
+        class: "img-right-home-image"
         itemprop: "image"
       ppi: [1]
       source_default:
         width: "400"
-    logo-home:
-      attr:
-        class: "logo-home-image"
-        itemprop: "image"
-      ppi: [1]
-      source_1600:
-        media: "(min-width: 1024px)"
-        width: "1600"
-      source_1024:
-        media: "(min-width: 768px)"
-        width: "1024"
-      source_768:
-        media: "(min-width: 600px)"
-        width: "768"
-      source_600:
-        media: "(min-width: 300px)"
-        width: "600"
-      source_350:
-        media: "(min-width: 100px)"
-        width: "350"
-      source_default:
-        width: "100"    
+    # logo-home:
+    #   attr:
+    #     class: "logo-home-image"
+    #     itemprop: "image"
+    #   ppi: [1]
+    #   source_2300:
+    #     media: "(min-width: 1680px)"
+    #     width: "2300"
+    #     height: "230"
+    #   source_1680:
+    #     media: "(min-width: 920px)"
+    #     width: "1680"
+    #     height: "230"       
+    #   source_default:
+    #     width: "920"
+    #     height: "230"   
+      # source_1600:
+      #   media: "(min-width: 1024px)"
+      #   width: "1600"
+      # source_1024:
+      #   media: "(min-width: 768px)"
+      #   width: "1024"
+      # source_768:
+      #   media: "(min-width: 600px)"
+      #   width: "768"
+      # source_600:
+      #   media: "(min-width: 300px)"
+      #   width: "600"
+      # source_350:
+      #   media: "(min-width: 100px)"
+      #   width: "350"
+      # source_default:
+      #   width: "100"    
     logo-intergrid-home:
       attr:
         class: "logo-intergrid-home-image"

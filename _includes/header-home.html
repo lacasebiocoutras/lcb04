@@ -7,8 +7,18 @@
     </li>{% endcomment %}
     {% comment %}<li class="Grid-cell Grid-cell--autoSize img-header-xl ">{% endcomment %}
     <li class="Grid-cell  img-header-xl ">
-      {% picture logo-home logoheader-lcb-extra2.jpg alt=" Logo La Case Bio, mangez bio!" %}
-    </li>     
+      {% comment %}{% picture logo-home logoheader-lcb-extra2h230.jpg alt=" Logo La Case Bio, mangez bio!" %}{% endcomment %}
+      
+      <picture>
+        <source srcset="/lcb04/images/logoheader-lcb-extra2h230-2300by230-b50e04.jpg" media="(min-width: 1680px)">
+        <source srcset="/lcb04/images/logoheader-lcb-extra2h230-1680by230-b50e04.jpg" media="(min-width: 920px)">
+        <source srcset="/lcb04/images/logoheader-lcb-extra2h230-920by230-b50e04.jpg">
+        <img src="/lcb04/images/logoheader-lcb-extra2h230-920by230-b50e04.jpg" class="logo-home-image" itemprop="image" alt=" Logo La Case Bio, mangez bio!">
+      </picture>
+    </li>  
+   {% comment %} <li class="Grid-cell  img-header-med ">
+      {% picture logo-home logoheader-lcb-extra1.jpg alt=" Logo La Case Bio, mangez bio!" %}
+    </li>     {% endcomment %}
   </ul>
 </div>
   

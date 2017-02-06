@@ -2,6 +2,8 @@
 layout: master
 ---
 
+
+{% comment %} recup content from collection nos_informations/page-acceuil{% endcomment %}
 {% include coll_ext/config/common-param.html %}
 
 {% comment %}{% assign list_title_item_acceuil = delim %}
@@ -23,16 +25,36 @@ layout: master
 {% assign cpt_images_acceuil = 0 %}
 
 {% for item_tmp in items_tmp %}
+
   {% if item_tmp.path contains '/page-acceuil/messages-acceuil/bienvenue.md' %} 
     {% if item_tmp.order < 100 %}
       {% assign textBienvenue = item_tmp.content %} 
     {% endif %}
   {% endif %}
+
   {% if item_tmp.path contains '/page-acceuil/messages-acceuil/horaires.md' %} 
     {% if item_tmp.order < 100 %}
       {% assign textHoraires = item_tmp.content %} 
     {% endif %}
   {% endif %}
+
+  {% if item_tmp.path contains '/page-acceuil/messages-acceuil/contact.md' %} 
+    {% if item_tmp.order < 100 %}
+      {% assign textContact = item_tmp.content %}
+      {% comment %}add baseurl to url beginning with /, local{% endcomment %}
+      {% assign href_text = 'href="' %}      
+      {% assign href_replace = href_text | append: site.baseurl | append: '/' %}      
+      {% comment %}append: '/' : filter url with http {% endcomment %}
+      {% assign href_text = href_text | append: '/' %} 
+      {% assign textContact = textContact | replace: href_text, href_replace  %}
+      
+      {% comment %}add target="blank" to url beginning with http {% endcomment %}
+      {% assign href_text = 'href="http' %}
+      {% assign href_replace = 'target="blank" ' | append: href_text %}
+      {% assign textContact = textContact | replace: href_text, href_replace %}
+    {% endif %}
+  {% endif %}
+
   {% if item_tmp.path contains '/page-acceuil/messages-acceuil/message-important.md' %} 
     {% if item_tmp.order < 100 %}
       {% assign textMessageImportant = item_tmp.content %} 
@@ -45,31 +67,41 @@ layout: master
     {% endunless %}
   {% endif %}{% endcomment %}
   {% if item_tmp.path contains '/page-acceuil/carousel/' %} 
-    {% unless item_tmp.path contains '/index.md'  %}
-      {% assign list_car_image_acceuil = list_car_image_acceuil | append : item_tmp.image | append: delim %}
-      {% assign list_car_description_img_acceuil = list_car_description_img_acceuil | append : item_tmp.description-image | append: delim %}
-      {% assign list_car_link_acceuil = list_car_link_acceuil | append : item_tmp.link | append: delim %}
-      {% assign list_car_description_link_acceuil = list_car_description_link_acceuil | append : item_tmp.description-link | append: delim %}
-    {% endunless %}
+    {% if item_tmp.path contains '/index.md'  %}
+      {% if item_tmp.description %}
+        {% assign heading_description = item_tmp.description %}        
+      {% endif %}
+    {% else %}
+      {% if item_tmp.order < 100 %}
+        {% assign list_car_image_acceuil = list_car_image_acceuil | append : item_tmp.image | append: delim %}
+        {% assign list_car_description_img_acceuil = list_car_description_img_acceuil | append : item_tmp.description-image | append: delim %}
+        {% assign list_car_link_acceuil = list_car_link_acceuil | append : item_tmp.link | append: delim %}
+        {% assign list_car_description_link_acceuil = list_car_description_link_acceuil | append : item_tmp.description-link | append: delim %}
+      {% endif %}
+    {% endif %}
   {% endif %}
+
   {% if item_tmp.path contains '/page-acceuil/image-logo-acceuil/' %} 
     {% unless item_tmp.path contains '/index.md'  %}
       {% comment %} une seule image attendue ! {% endcomment %}
       {% assign item_logo_acceuil = item_tmp %}     
     {% endunless %}
   {% endif %}
+
   {% if item_tmp.path contains '/page-acceuil/images-acceuil/' %} 
     {% unless item_tmp.path contains '/index.md'  %}
-      {% comment %} 2 images attendues ! {% endcomment %}
-      {% if cpt_images_acceuil == 0 %}
-        {% assign item_image_acceuil1 = item_tmp %}
-        {% assign cpt_images_acceuil = cpt_images_acceuil | plus: 1 %}
-      {% elsif cpt_images_acceuil == 1 %}
-        {% assign item_image_acceuil2 = item_tmp %}
-        {% assign cpt_images_acceuil = cpt_images_acceuil | plus: 1 %}
-      {% comment %}{% elsif cpt_images_acceuil == 2 %}
-        {% assign item_image_acceuil3 = item_tmp %}
-        {% assign cpt_images_acceuil = cpt_images_acceuil | plus: 1 %}{% endcomment %}
+      {% if item_tmp.order < 100 %}
+        {% comment %} 2 images attendues ! {% endcomment %}
+        {% if cpt_images_acceuil == 0 %}
+          {% assign item_image_acceuil1 = item_tmp %}
+          {% assign cpt_images_acceuil = cpt_images_acceuil | plus: 1 %}
+        {% elsif cpt_images_acceuil == 1 %}
+          {% assign item_image_acceuil2 = item_tmp %}
+          {% assign cpt_images_acceuil = cpt_images_acceuil | plus: 1 %}
+        {% comment %}{% elsif cpt_images_acceuil == 2 %}
+          {% assign item_image_acceuil3 = item_tmp %}
+          {% assign cpt_images_acceuil = cpt_images_acceuil | plus: 1 %}{% endcomment %}
+        {% endif %}
       {% endif %}
           
     {% endunless %}
@@ -87,89 +119,59 @@ layout: master
 
 
 <div class="main-presentation">
- <!--  Presentation (text, navigation, ..) first left
-  Images, last right  -->
+
   <ul class="Grid Grid--gutters-m u-spaceVN">
 
-  <!-- .presentation Presentation part -->
     <li class=" Grid-cell u-full u-med-2of3-m u-spaceBN">
       <div class="presentation">
         <ul class="Grid Grid--gutters-m u-spaceVN">
-
-          <!-- .li-presentation & .presentation-text (gestion padding responsive), part left on lg screen, first on small -->
+         
           {% if textBienvenue != null and textBienvenue != '' %}          
           <li class="li-presentation Grid-cell u-full ">
             <div class="presentation-text">
               {{textBienvenue}}              
             </div>
-
-          </li> <!--fin .li-presentation -->
+          </li>
           {% endif %}
 
-          <!-- .li-nav-ab , navigation list + AB logo -->
-          <li class="li-nav-ab Grid-cell u-full  " >
+          <li class="li-nav-info-utils Grid-cell u-full u-spaceVN  " >
             <!-- add one level imbrication -->
-            <!-- <ul class="Grid Grid--center Grid--flexCells Grid--gutters-m u-spaceVN"> -->
             <ul class="Grid  Grid--gutters-m u-spaceVN">
-              <li class="li-ab Grid-cell Grid-cell--center ">
-                <ul class="horaire-acceuil">
+              <li class="li-horaire Grid-cell Grid-cell--center ">
                   {{textHoraires}}                 
-                </ul>                
               </li>
-              <li class="li-nav Grid-cell--autoSize not-inf-sm">               
-                {% comment %}<ul class="navigation">                  
-                  {% for iter_array in (0..array_title_item_acceuil_size) %}
-                    {% assign title_tmp = array_title_item_acceuil[iter_array]  %}
-                    {% assign link_tmp = array_link_article_item_acceuil[iter_array] %}                    
-                    <li id="menu-item" > <a class="menu-item u-textTruncate " href="{{site.baseurl}}{{link_tmp}}"><h2>{{title_tmp}}</h2></a> </li>
-                  {% endfor %}
-                </ul>{% endcomment %}
+              <li class="li-contact Grid-cell--autoSize not-inf-sm">
+                  {{textContact}}                 
               </li>
             </ul>
-          </li> <!-- fin .li-nav-ab-->
-
-          <li class="li-slider Grid-cell  u-full u-spaceBN ">            
-              {% include picture/slider-standard.html
-                input_slider='t-acc'
-                list_image=list_car_image_acceuil
-                list_description_image=list_car_description_img_acceuil
-                list_link=list_car_link_acceuil
-                list_description_link=list_car_description_link_acceuil
-              %}            
-          </li> <!--fin .li-presentation -->
-
-        <!-- fin navigation list + AB logo -->
+          </li> <!-- fin .li-nav-info-utils-->         
         </ul>
-
       </div>
     </li>
-  <!--fin .presentation Presentation part -->
 
 
-  <!-- image-acceuil, part right on lg screen -->
-    <li class="Grid-cell u-full u-med-1of3-m ">
+    <!-- image-acceuil, part right on lg screen -->
+    <li class="Grid-cell u-full u-med-1of3-m u-spaceVN">
       <div class="part-welcome-img">
         <ul class="Grid Grid--gutters-m u-spaceVN">
 
-           <li class="li-nav Grid-cell Grid-cell--center  u-full  on-sm-only" >           
-            <ul class="navigation">                  
-                  {% for iter_array in (0..array_title_item_acceuil_size) %}
-                {% assign title_tmp = array_title_item_acceuil[iter_array]  %}
-                {% assign link_tmp = array_link_article_item_acceuil[iter_array] %}                    
-                <li id="menu-item" > <a class="menu-item u-textTruncate " href="{{site.baseurl}}{{link_tmp}}"><h2>{{title_tmp}}</h2></a> </li>
-              {% endfor %}
-            </ul>
+          <li class="li-contact Grid-cell Grid-cell--center  u-full  on-sm-only" >           
+            {{textContact}}                 
           </li>
 
           {% assign cpt_images_acceuil = cpt_images_acceuil | minus: 1 %}
           {% for iter_array in (0..cpt_images_acceuil) %}
             {% comment %}limit 2 images !{% endcomment %}
+
             {% if iter_array == 0 %}
               {% assign item_image_acceuil = item_image_acceuil1 %}
+              {% assign class_resp = 'li-img-primdark Grid-cell u-full u-small-1of2-m u-med-full' %}
             {% elsif iter_array == 1 %}
               {% assign item_image_acceuil = item_image_acceuil2 %}
+              {% assign class_resp = 'li-img-primdark Grid-cell u-full u-small-1of2-m on-md-only' %}
             {% comment %}{% elsif iter_array == 2 %}
-              {% assign item_image_acceuil = item_image_acceuil3 %}{% endcomment %}
+              {% assign item_image_acceuil = item_image_acceuil3 %}
+              class_resp = 'li-img-primdark Grid-cell u-full u-small-1of2-m u-med-full' %}{% endcomment %}
             {% else %}
               {% break %}
             {% endif %}
@@ -183,41 +185,75 @@ layout: master
 
 
             {% comment %}<li class="li-img-primdark Grid-cell u-1of2-m u-ssmall-1of2-m u-small-1of2-m u-med-full ">{% endcomment %}
-            <li class="li-img-primdark Grid-cell u-full u-small-1of2-m u-med-full ">
-              {% if item_image_acceuil.link != null and item_image_acceuil.link != '' %}
+            {% comment %}<li class="li-img-primdark Grid-cell u-full u-small-1of2-m u-med-full ">{% endcomment %}
+            <li class="{{class_resp}}">
+              {% if item_image_acceuil.link %}
                 <a href="{{url_image}}" target="{{add_target}}" title="{{item_image_acceuil.description-link}}">
               {% endif %}
-              {% picture welcome-home {{item_image_acceuil.image}} alt="{{item_image_acceuil.description-image}}" %}
-              <div class="u-textCenter">{{item_image_acceuil.description}}</div>
-              {% if item_image_acceuil.link != null and item_image_acceuil.link != '' %}</a>{% endif %}
+              {% picture img-right-home {{item_image_acceuil.image}} alt="{{item_image_acceuil.description-image}}" %}
+              {% if item_image_acceuil.description %}
+                <div class="u-textCenter description">{{item_image_acceuil.description}}</div>
+              {% endif %}
+              {% if item_image_acceuil.link %}</a>{% endif %}
             </li>
-          {% endfor %}          
+          {% endfor %}  
+
+           
         </ul>
       </div>
     </li>
-  <!-- fin image-acceuil, part right on lg screen -->
+    <!-- fin image-acceuil, part right on lg screen -->
+
+
+    <li class="Grid-cell u-full">
+      <div class="part-welcome-img">
+        <ul class="Grid Grid--gutters-m ">
+          <li class="li-slider Grid-cell  u-full  u-med-2of3-m "> 
+            {% if heading_description %}
+              <h3 class="heading">{{heading_description}}--</h3>
+            {% endif %}           
+            {% include picture/slider-standard.html
+              input_slider='t-acc'
+              list_image=list_car_image_acceuil
+              list_description_image=list_car_description_img_acceuil
+              list_link=list_car_link_acceuil
+              list_description_link=list_car_description_link_acceuil
+            %}            
+          </li>
+          <li class="Grid-cell u-full u-med-1of3-m ">
+            <!-- list actu recentes -->
+            {% for list in site.data.coll_ext.model_list-detail-items.list-detail-items %}
+
+              {% if list.force_display_coll_ext == true %}
+                {% if list.force_display_coll_ext_model == 'acceuil_list_actu-recentes' %}    
+                  {% include coll_ext_utils/list-detail-items_init_step.html %}
+                  {% include coll_ext/main.html
+                    force_page_ref_input=true
+                  %}
+                {% endif %}
+              {% endif %}
+            {% endfor %}                  
+          </li>
+        </ul>
+      </div>  
+    </li>
+
   </ul>
 </div>
 
-<!-- carousel page d'acceuil -->
-{% comment %}{% include picture/slider-standard.html
-  input_slider='i-acc'
-  list_image=list_car_image_acceuil
-  list_description_image=list_car_description_img_acceuil
-  list_link=list_car_link_acceuil
-  list_description_link=list_car_description_link_acceuil
-%}{% endcomment %}
+
 
 <!-- list items -->
 {% for list in site.data.coll_ext.model_list-detail-items.list-detail-items %}
 
+  {% if list.force_display_coll_ext_model != 'acceuil_list_actu-recentes' %} 
+    {% if list.force_display_coll_ext == true %}
+      {% include coll_ext_utils/list-detail-items_init_step.html %}
+      {% include coll_ext/main.html
+        force_page_ref_input=true
+      %}
 
-  {% if list.force_display_coll_ext == true %}
-    {% include coll_ext_utils/list-detail-items_init_step.html %}
-    {% include coll_ext/main.html
-      force_page_ref_input=true
-    %}
-
+    {% endif %}
   {% endif %}
 
 {% endfor %}

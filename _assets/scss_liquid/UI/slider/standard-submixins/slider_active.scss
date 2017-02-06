@@ -67,7 +67,8 @@
   .#{$containerSlider_gl}-#{$container}-#{$type} {
 
     .#{$active_gl} {
-      margin: 5% 0 0;
+      // margin: 5% 0 0;
+      margin: 0;
       text-align: center;
     }
 

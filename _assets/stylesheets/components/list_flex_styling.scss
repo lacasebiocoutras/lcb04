@@ -7,7 +7,8 @@
   .heading {
     width: 100%;
     margin-left: $spacing-h/2; //0.5em;
-    padding-top: $spacing-v/2; //1em;
+    margin-top: 0;
+    // padding-top: $spacing-v/2; //1em;
     font-size: 1.7em;
     font-weight: 600;
     // color : $white;
@@ -40,7 +41,7 @@
   .heading {
     width: 100%;
     margin-left: $spacing-h/2; //0.5em;
-    padding-top: $spacing-v/2; //1em;
+    // padding-top: $spacing-v/2; //1em;
     font-size: 1.7em;
     font-weight: 600;
     // color : $white;
@@ -139,6 +140,32 @@
 }
 
 
+.li-unresize-secondary-color01 {
+  background: none;
+  box-shadow: none;
+
+  .heading {color : $secondary-color;}
+  .item_list {
+    background: $secondary-color;
+    box-shadow: 0 0 $border-shadow rgba($shadow-color, 0.5);
+    color: $primary-color-dark;
+  } 
+}
+
+.li-unresize-secondary-color02 {
+  // background: none;
+  // box-shadow: none;
+  box-shadow: 0 0 $border-shadow rgba($shadow-color, 0.5);
+  background: $primary-color-light; //$warning-color;
+
+  .heading {color : $primary-color-dark;}
+  .item_list {
+    background: $secondary-color;
+    box-shadow: 0 0 $border-shadow rgba($shadow-color, 0.5);
+    color: $primary-color-dark;
+  } 
+}
+
 
 
 .li-resize-color01 {
@@ -158,12 +185,12 @@
 
   background: none;
   .heading {
-    color :$secondary-color-dark;
+    color :$primary-color-dark;
   }
   .item_list {
     box-shadow: 0 0 $border-shadow rgba($shadow-color, 0.5);
-    background: $secondary-color-dark;
-    color: $secondary-color-light;
+    background: $primary-color-light;
+    color: $primary-color-dark;
   }
 }
 

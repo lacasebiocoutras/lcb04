@@ -19,11 +19,58 @@
     #add class case-list-unresize
     box_unresize: true
 
-
-- model: 'acceuil-actu-subsections-dist0'
+- model: 'acceuil-actu-recentes-items-dist0'
   config_flex:
     grid_styling: 'Grid--gutters-m'
-    responsive: 'u-full u-med-1of2-m'
+    responsive: 'u-full u-small-1of2-m u-med-full'
+  styling:
+    container: 'list-items'
+    container_color: 'li-unresize-secondary-color01'
+    article: 'item_list'
+    #add class case-list-unresize
+    box_unresize: true
+
+- model: 'acceuil-avenir-items-dist0'
+  config_flex:
+    grid_styling: 'Grid--gutters-m'
+    responsive: 'u-full u-small-1of2-m '
+  styling:
+    container: 'list-items'    
+    container_color: 'li-unresize-secondary-color02'
+    article: 'item_list'
+    #add class case-list-unresize
+    box_unresize: true
+
+# - model: 'acceuil-actu-recentes-subsections-dist0'
+#   config_flex:
+#     grid_styling: 'Grid--gutters-m'
+#     responsive: 'u-full'
+#   styling:
+#     container: 'list-items-no-bg'
+#     container_color: 'li-unresize-no-color' container_color: 'li-resize-color02'
+#     article: 'item_list'
+#     #add class case-list-unresize
+#     box_unresize: true
+#     # container: 'list-items '
+#     # container_color: 'li-unresize-color02 li-extra-subsections'
+#     # article: 'item_list'
+#     # #add class case-list-unresize
+#     # box_unresize: true
+# - model: 'acceuil-actu-recentes-items-dist1'
+#   config_flex:
+#     grid_styling: 'Grid--gutters-m'
+#     responsive: 'u-full u-med-1of2-m u-large-full'
+#   styling:
+#     container: 'list-items-no-bg'
+#     container_color: 'li-unresize-no-color'
+#     article: 'item_list'
+#     #add class case-list-unresize
+#     box_unresize: true
+
+- model: 'acceuil-avenir-subsections-dist0'
+  config_flex:
+    grid_styling: 'Grid--gutters-m'
+    responsive: 'u-full'
   styling:
     container: 'list-items-no-bg'
     container_color: 'li-unresize-no-color'
@@ -35,10 +82,10 @@
     # article: 'item_list'
     # #add class case-list-unresize
     # box_unresize: true
-- model: 'acceuil-actu-items-dist1'
+- model: 'acceuil-avenir-items-dist1'
   config_flex:
     grid_styling: 'Grid--gutters-m'
-    responsive: 'u-full'
+    responsive: 'u-full u-med-1of2-m'
   styling:
     container: 'list-items-no-bg'
     container_color: 'li-unresize-no-color'
@@ -63,7 +110,7 @@
 - model: 'selection_produits-all'
   config_flex:
     grid_styling: 'Grid--gutters-m'
-    responsive: 'u-full u-small-1of2-m'
+    responsive: 'u-full u-small-1of2-m u-large-1of3-m'
   styling:
     container: 'list-items-no-bg'
     container_color: 'li-unresize-no-color'
