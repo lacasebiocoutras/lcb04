@@ -128,24 +128,24 @@
   }
 
   .li-slider {
-    .heading {
-      color: $secondary-color;
-      width: 100%;
-      // margin-left: $spacing-h/2; //0.5em;
-      // margin-top: 0;
-      margin: 0 50px $spacing-h/2; 
-      padding-right: 5em;
-      // margin-left: 50px;
-      @include breakpoint($break-sm-max)
-      {
-        padding-right: 0;
-        margin: 0 $spacing-h/2; 
-      }
-      // padding-top: $spacing-v/2; //1em;
-      font-size: 1.7em;
-      font-weight: 600;
-      // color : $white;
-    }
+    // .heading {
+    //   color: $secondary-color;
+    //   width: 100%;
+    //   // margin-left: $spacing-h/2; //0.5em;
+    //   // margin-top: 0;
+    //   margin: 0 50px $spacing-h/2; 
+    //   padding-right: 5em;
+    //   // margin-left: 50px;
+    //   @include breakpoint($break-sm-max)
+    //   {
+    //     padding-right: 0;
+    //     margin: 0 $spacing-h/2; 
+    //   }
+    //   // padding-top: $spacing-v/2; //1em;
+    //   font-size: 1.7em;
+    //   font-weight: 600;
+    //   // color : $white;
+    // }
   }
 
   // .horaire-acceuil{

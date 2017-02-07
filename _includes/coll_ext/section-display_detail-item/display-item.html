@@ -211,9 +211,39 @@
   {% assign style_custom = style_custom | append: 'background-color: #' | append: item_raw.background-color | append: ';'  %}
 {% endif %}
 
+ {% comment %}<!-- container styling -->{% endcomment %}
+{% assign container_style = empty_string %}
 
-<ul class="{{styling_model_container.container}} Grid " style="{{style_custom}}">
+{% include UI/utils/update_class-model.html
+  current_class=container_style
+  add_to_class=styling_model_container.container
+  empty_string=empty_string
+  one_space=space_string
+%}
+{% assign container_style = updating_class  %}  
 
+{% include UI/utils/update_class-model.html
+  current_class=container_style
+  add_to_class=styling_model_container.container_color
+  empty_string=empty_string
+  one_space=space_string
+%}
+{% assign container_style = updating_class  %}
+
+{% comment %}<ul class="{{styling_model_container.container}} Grid " style="{{style_custom}}">{% endcomment %}
+<ul class="{{container_style}} Grid " style="{{style_custom}}">
+
+
+    
+  {% if item_raw.date-evenement %}
+    <li class="Grid-cell u-full">
+      {% include coll_ext_utils/date/display-date-fr.html
+        date=item_raw.date-evenement
+        date_end=item_raw.date-fin-evenement
+      %}
+      <p class="event-date" itemprop="date">{{date_text_out}}</p>
+    </li>
+  {% endif %}
 
   {% comment %}<!-- Miniature part -->{% endcomment %}
   {% if item_raw.type-miniature == 'red-left' %}  
@@ -239,13 +269,13 @@
   {% unless item_raw.type-miniature == 'full-only' %}
   <li class="{{styling_model_container.article}} Grid-cell u-full u-ssmall-2of3">
     
-    {% if item_raw.date-evenement %}
+    {% comment %}{% if item_raw.date-evenement %}
       {% include coll_ext_utils/date/display-date-fr.html
         date=item_raw.date-evenement
         date_end=item_raw.date-fin-evenement
       %}
       <p class="title" itemprop="date">{{date_text_out}}</p>
-    {% endif %}
+    {% endif %}{% endcomment %}
 
     {% comment %}{% if item_raw.date-debut-promotion %}
        <p class="title" itemprop="date">debut promo : {{item_raw.date-debut-promotion}}</p>

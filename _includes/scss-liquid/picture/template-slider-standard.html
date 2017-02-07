@@ -76,11 +76,22 @@
   {% assign bg_color  = assign_color %}  
 {% endif %}
 
+{% assign header_color_define = false %}
+{% assign header_color  = 'white' %} 
+{% if site.data.picture.slider.custom_default.config.define-color-header == true %}
+  {% include scss-liquid/palette_color/assign_color.html
+    palette_color=site.data.custom.design.palette_color
+    name_color_search=site.data.picture.slider.custom_default.config.header-color
+  %}
+  {% assign header_color_define = true %}
+  {% assign header_color = assign_color %}  
+{% endif %}
+{% comment %}end custom{% endcomment %}
 
 
 {% if max_items_slider > 0 %}
 
-  @include slider_design_standard({{include.container_display}}, {{include.container_ref}}, {{include.type_slider_display}}, {{include.type_slider_ref}}, {{bg_define}}, {{bg_color}});
+  @include slider_design_standard({{include.container_display}}, {{include.container_ref}}, {{include.type_slider_display}}, {{include.type_slider_ref}}, {{bg_define}}, {{bg_color}}, {{header_color_define}},{{header_color}});
 
   @include slider_article_standard({{include.container_display}}, {{include.type_slider_display}}, {{include.type_slider_ref}});
 

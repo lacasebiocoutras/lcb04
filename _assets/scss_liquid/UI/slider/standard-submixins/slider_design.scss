@@ -1,9 +1,34 @@
 @import "base/variables";
 
 
-@mixin slider_design_standard($container, $container_ref, $type, $type_ref, $bg_define, $bg_color) {
+@mixin slider_design_standard($container, $container_ref, $type, $type_ref, $bg_define, $bg_color, $header_define, $header_color) {
 
   .#{$containerSlider_gl}-#{$container}-#{$type} {
+
+    .heading {
+      width: 100%;
+      margin: 0;
+
+      h3 {
+        margin-left: $spacing-h/2;
+        margin-top: 0;
+        font-size: 1.7em;
+        font-weight: 600;
+      }
+
+      .slider-loop {
+        display: none;       
+      }
+      
+      @if $header_define == true {
+        color : $header_color;
+
+        .slider-loop input:checked + .slider {
+          background-color: $header_color;
+        }
+      }     
+    }
+    
 
     label, a {
       color: teal;
@@ -18,7 +43,8 @@
 
     .#{$slider_gl} {
 
-      margin:0 auto;
+      // margin:0 auto;
+      margin:0;
       text-align: center;
       // add responsive
       max-width: 960px;
@@ -63,18 +89,14 @@
 
   .#{$containerSlider_gl}-#{$container}-#{$type} {
 
-    .heading {
-      width: 100%;
-      font-size: 1.7em;
-      font-weight: 600;
-      margin-left: 0.5em; //$spacing-h/2; //0.5em;
-      padding-top: 1em; //$spacing-v/2; //1em;
-
+    .heading {   
       color : $heading_color;
-     
-
     }
-
+    .slider-loop {      
+      input:checked + .slider {
+        background-color: $heading_color;
+      }
+    }
 
     .#{$slider_gl}-#{$type}-#{$id} {
 
@@ -89,9 +111,6 @@
         background: $slides_background;
       }
     }
-
-
-
 
   }
 }

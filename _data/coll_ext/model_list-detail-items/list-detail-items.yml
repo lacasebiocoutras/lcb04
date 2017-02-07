@@ -1,4 +1,4 @@
-- title : 'Actualités récentes :'
+- title : 'Actualités récentes'
   collection: 'nos-informations'
   force_display_coll_ext: true
   force_display_coll_ext_section: 'notre-actualite'
@@ -15,7 +15,7 @@
     choose-subsections: []
     filter-subsections: ['mieux-nous-connaitre','evenements']
 
-- title : 'Prochainement :'
+- title : 'Evenements à venir'
   collection: 'nos-informations'
   force_display_coll_ext: true
   force_display_coll_ext_section: 'notre-actualite'
@@ -32,7 +32,7 @@
     filter-subsections: []
 
 
-- title : 'Derniers ajouts à notre sélection de produits :'
+- title : 'Derniers ajouts à notre sélection de produits'
   collection: 'selection-produits'
   force_display_coll_ext: true
   force_display_coll_ext_section: 'selection-produits'

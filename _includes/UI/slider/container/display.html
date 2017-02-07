@@ -66,29 +66,38 @@
   {% endif %}
 
 
+  {% assign add_class_loop = "toogle-switch slider-loop loop-" | append: include.id_slider %}
 
+  <div class="{{class_container}}">   
 
-  <div class="{{class_container}} xx">
+    <div class="heading">
+      {% if include.display_header == true %}        
 
+        <h3>
+          {% if include.add_url_to_header == true %}
+            <a  href="{{site.baseurl}}{{include.page_ref_url}}">
+              {{include.header}} 
+            </a>
+          {% else %}
+            {{include.header}} 
+          {% endif %} 
 
-    {% if include.display_header == true %}
-
-      {% if include.add_url_to_header == true %}
-        <a  href="{{site.baseurl}}{{include.page_ref_url}}">
-      {% endif %}
-
-        <h3 class="heading">{{include.header}}</h3>
-
-      {% if include.add_url_to_header == true %}
-        </a>
-      {% endif %}
-
-    {% endif %}
-
-
+          <label class="{{add_class_loop}}">
+            <input type="checkbox">
+            <div class="slider round"></div>
+          </label>
+        </h3>
+        
+      {% else %}
+        <label class="{{add_class_loop}}">
+          <input type="checkbox">
+          <div class="slider round"></div>
+        </label>
+      {% endif %}  
+    </div> <!-- end class "heading" -->
     
 
-    <div class="{{class_slider}} {{class_extra_slider}} ">
+    <div class="{{class_slider}} {{class_extra_slider}}">
 
 
       {% for num_slider in (1..nb_items)  %}

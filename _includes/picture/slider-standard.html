@@ -6,6 +6,7 @@ param in :
   include.list_description_image
   include.list_link
   include.list_description_link
+  include.header
 
 variable globale
 
@@ -111,7 +112,10 @@ param out:
 %}
 {% assign type_slider_display = extra_compress %}
 
-
+{% assign display_header_container = null %}
+{% if include.header %}
+  {% assign display_header_container = true %}
+{% endif %}
 
 
 {% include UI/slider/container/display.html
@@ -125,9 +129,9 @@ param out:
   style_prev_next=config_slide.style_prev_next
   delim_id=delim_id
   page_ref_url=null
-  display_header=null
+  display_header=display_header_container
   add_url_to_header=null
-  header=null
+  header=include.header
   list_items_sub=null
 %}
 

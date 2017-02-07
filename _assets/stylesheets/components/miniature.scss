@@ -17,8 +17,23 @@ a .min_container {
 
 .min_container {
 
+  .event-date {
+    margin: 0 ;//!important; // override
+    padding: 0;
+    padding-bottom: $spacing-v/3;
+    // font-family: $sans-serif-narrow;
+    // font-size: 1.25rem;
+    font-size: 1.25em;
+    line-height: 1.1em;
+    // display: inline;
+    font-weight: bold;
+    color: $primary-color-light;
+  }
+
   .min_body {
     padding-left: 1em;
+
+    
 
     .title {
       margin: 0 !important; // override

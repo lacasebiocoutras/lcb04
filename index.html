@@ -6,9 +6,6 @@ layout: master
 {% comment %} recup content from collection nos_informations/page-acceuil{% endcomment %}
 {% include coll_ext/config/common-param.html %}
 
-{% comment %}{% assign list_title_item_acceuil = delim %}
-{% assign list_link_article_item_acceuil = delim %}
-{% endcomment %}
 {% assign list_car_image_acceuil = delim %}
 {% assign list_car_description_img_acceuil = delim %}
 {% assign list_car_link_acceuil = delim %}
@@ -59,13 +56,7 @@ layout: master
     {% if item_tmp.order < 100 %}
       {% assign textMessageImportant = item_tmp.content %} 
     {% endif %}    
-  {% endif %}
-  {% comment %}{% if item_tmp.path contains '/page-acceuil/menu-liens-articles/' %} 
-    {% unless item_tmp.path contains '/index.md'  %}
-      {% assign list_title_item_acceuil = list_title_item_acceuil | append : item_tmp.title | append: delim %}
-      {% assign list_link_article_item_acceuil = list_link_article_item_acceuil | append : item_tmp.link | append: delim %}
-    {% endunless %}
-  {% endif %}{% endcomment %}
+  {% endif %} 
   {% if item_tmp.path contains '/page-acceuil/carousel/' %} 
     {% if item_tmp.path contains '/index.md'  %}
       {% if item_tmp.description %}
@@ -108,14 +99,7 @@ layout: master
   {% endif %}
 
 {% endfor %}
-{% comment %}
-{% assign array_title_item_acceuil = list_title_item_acceuil | remove_first: delim | split: delim  %}
-{% assign array_title_item_acceuil_size = array_title_item_acceuil.size | minus: 1 %}
-{% assign array_link_article_item_acceuil = list_link_article_item_acceuil | remove_first: delim | split: delim  %}
-{% endcomment %}
 
-
-      
 
 
 <div class="main-presentation">
@@ -183,9 +167,6 @@ layout: master
               {% assign add_target = '' %}              
             {% endunless %}
 
-
-            {% comment %}<li class="li-img-primdark Grid-cell u-1of2-m u-ssmall-1of2-m u-small-1of2-m u-med-full ">{% endcomment %}
-            {% comment %}<li class="li-img-primdark Grid-cell u-full u-small-1of2-m u-med-full ">{% endcomment %}
             <li class="{{class_resp}}">
               {% if item_image_acceuil.link %}
                 <a href="{{url_image}}" target="{{add_target}}" title="{{item_image_acceuil.description-link}}">
@@ -209,15 +190,16 @@ layout: master
       <div class="part-welcome-img">
         <ul class="Grid Grid--gutters-m ">
           <li class="li-slider Grid-cell  u-full  u-med-2of3-m "> 
-            {% if heading_description %}
+            {% comment %}{% if heading_description %}
               <h3 class="heading">{{heading_description}}--</h3>
-            {% endif %}           
+            {% endif %}   {% endcomment %}        
             {% include picture/slider-standard.html
               input_slider='t-acc'
               list_image=list_car_image_acceuil
               list_description_image=list_car_description_img_acceuil
               list_link=list_car_link_acceuil
               list_description_link=list_car_description_link_acceuil
+              header = heading_description
             %}            
           </li>
           <li class="Grid-cell u-full u-med-1of3-m ">

@@ -49,7 +49,7 @@ requirejs.config({
 
 requirejs(['app/common'], function () {
   // requirejs(['app/common-sticky'], function () {
-    requirejs(['app/common-slider-inf-coll-ext'], function () {
+    requirejs(['app/home-slider-inf-coll-ext'], function () {
       requirejs(['app/main-home']);
     });
   // });

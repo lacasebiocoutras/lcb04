@@ -33,7 +33,7 @@
 - model: 'acceuil-avenir-items-dist0'
   config_flex:
     grid_styling: 'Grid--gutters-m'
-    responsive: 'u-full u-small-1of2-m '
+    responsive: 'u-full u-small-1of2-m u-med-1of3-m'
   styling:
     container: 'list-items'    
     container_color: 'li-unresize-secondary-color02'
