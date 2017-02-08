@@ -62,7 +62,7 @@ define(['jquery', 'config-module'], function($, config) {
     var url_page = window.location.href;
     //specific home-page!
     // var path_config=config.base_url.concat(config.json_slider_inf_coll_ext);
-    var path_config=window.location.pathname.concat(config.json_slider_inf_coll_ext);
+    var path_config=window.location.pathname.concat(config.json_home_slider_inf_coll_ext);
     var request_config = $.getJSON(path_config);
     var index_class=0;
     var extract_config = request_config.then(function(loaded_config){

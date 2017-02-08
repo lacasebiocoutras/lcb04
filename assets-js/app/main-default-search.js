@@ -49,7 +49,7 @@ define(['jquery', 'lunr', 'moment','config-module'], function($, lunr, moment, c
 
 
   //global def display
-   moment.locale('fr');
+  moment.locale('fr');
   var space = ' ';
   var emptychar='';
   var category=emptychar;
@@ -206,7 +206,12 @@ define(['jquery', 'lunr', 'moment','config-module'], function($, lunr, moment, c
 
   // get json config then json with data, depending current url, then update display first
   var url_page = window.location.href;
-  var path_config=config.base_url.concat(config.json_search_config);
+  var base_url = '/';
+  if ( window.location.pathname.indexOf(config.base_url)>-1) {
+    base_url=config.base_url;
+  }
+
+  var path_config=base_url.concat(config.json_search_config);  
   var request_config = $.getJSON(path_config);
   var extract_config = request_config.then(function(loaded_config){
     window.config=loaded_config.config;
@@ -219,7 +224,7 @@ define(['jquery', 'lunr', 'moment','config-module'], function($, lunr, moment, c
     return name_current_search;
   });
   var form_path_json = extract_config.then(function(name_search) {
-    return config.base_url.concat(name_search);
+    return base_url.concat(name_search);
   });
   var accessJson = form_path_json.then(function(path_ref) {
     window.data = $.getJSON(path_ref);

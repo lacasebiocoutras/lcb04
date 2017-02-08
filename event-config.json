@@ -1,0 +1,17 @@
+---
+layout: null
+---
+
+ { "list" : [
+    {"url":"/",
+    "name":"home-event-coll-ext.json"
+    }
+  ],
+  "config" :
+  {
+    "class_invisible_search": "{{site.data.coll_ext.config.display_list-items.config.class_invisible }}"
+   }
+
+}
+
+

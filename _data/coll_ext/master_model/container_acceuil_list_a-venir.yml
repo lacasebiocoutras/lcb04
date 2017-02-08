@@ -1,10 +1,13 @@
 model: 'acceuil_list_a-venir'
 design_model_page: 'acceuil-avenir-list_flex'
 design_detail_items: 'miniature-default'
+
 config_container_detail:
   force_url_with_id: true
 config_container_list:
   force_header_dist_0: true
+config_article_list:
+  add_class_invisible: true
 # param to allow the content items to be displayed in the parent
 display_items_on_parent: false
 # how many children to display if display_items_on_parent: true on direct child sections

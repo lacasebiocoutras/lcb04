@@ -27,3 +27,18 @@
     nb-max-item-per-section: 50
     choose-subsections: []
     filter-subsections: []
+
+- id: 'home-event'
+  title : 'Evenement a venir'
+  collection: 'nos-informations'
+  force_display_coll_ext: true
+  force_display_coll_ext_section: 'notre-actualite'
+  force_display_coll_ext_model: 'acceuil_list_a-venir'
+  sort :
+    # available  'date-publication' | 'order' | 'title' (| 'date-evenement')
+    # defined in /_data/coll_ext/config/sort_site-documents.yml
+    # default : 'order'
+    filter: 'date-evenement'
+    nb-max-item-per-section: 50
+    choose-subsections: ['evenements']
+    filter-subsections: []

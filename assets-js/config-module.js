@@ -1,7 +1,9 @@
 define({
     base_url: '/lcb04/',
     json_search_config: 'search-config.json',
-    json_slider_inf_coll_ext: 'slider-inf-coll-ext.json'
+    json_event_coll_ext: 'event-config.json',
+    json_home_slider_inf_coll_ext: 'home-slider-inf-coll-ext.json'
+    
 
     // json_default_recherche: 'search',
     // json_default_selection-produits: 'search-selection-produits',

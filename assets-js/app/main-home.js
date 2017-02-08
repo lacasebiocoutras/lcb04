@@ -1,6 +1,8 @@
 // define(['jquery','lunr','moment', 'content-expirator', 'jquery.alpha', 'jquery.beta'], function($,lunr,moment) {
 // define(['jquery','slick', 'sticky', 'content-expirator', 'throttle-debounce'], function($) {
-define(['jquery', 'lib/content-expirator','config-module'], function($) {
+// define(['jquery', 'lib/content-expirator','config-module'], function($) {
+define(['jquery'], function($) {
+
 
   // Sticking on asides
   // var statePrecRight;
