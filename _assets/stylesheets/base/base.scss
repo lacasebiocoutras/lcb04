@@ -57,7 +57,7 @@ h1, h2, h3, h4, h5, h6 {
   text-align: left;
   font-weight: normal;
   line-height: 1em;
-  margin-bottom: .5em;
+  // margin-bottom: .5em;
 }
 
 h1 {
@@ -72,7 +72,7 @@ h1 {
 h2 {
   font-size: 1.3em;
   line-height: 1.7em;
-  margin-top: .6em;
+  // margin-top: .6em;
   // margin-bottom: .6em;
   // font-weight: 600;
   // font-family: KievitWebPro-Bold;
@@ -83,7 +83,7 @@ h3 {
   font-size: 1em;
   line-height: 1.45em;
   // line-height: 1em;
-  margin-top: 1em;
+  // margin-top: 1em;
   // margin-bottom: .4em;
   // text-align: left;
   // font-weight: 600;
@@ -156,8 +156,12 @@ a {
   display:none;
 }
 
-.invSearch {
+.invItem {
   display:none;
+}
+
+.warningItem {
+  border: $spacing-h/2 solid $warning-color;
 }
 
 

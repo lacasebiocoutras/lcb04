@@ -56,9 +56,10 @@
     border-color: #333 !important;
   }
   .miniature {
-    // background: #333;
-    // border-color: #333 !important;
-    color: black;
+    // recopy :hover state
+    border-color: white !important;
+    // border-radius: $border-radius-site;
+    box-shadow: 0 0 $border-shadow rgba(60, 8, 12, 0.9);
   }
 }
 
@@ -74,7 +75,7 @@
 
     .#{$active_gl} {
 
-      label {
+      label {        
 
         .radius {
           border-radius: 5px;
@@ -83,28 +84,40 @@
           height: 10px;
           background: #bbb;
         }
-
-        .miniature {
-          display: inline-block;
-          background: #bbb;
-          color:white;
-          font-size:1em;
-          font-weight: bold;
-        }
-      }
-
-      label:hover {
-        .radius {
+        &:hover .radius {
           background: #ccc;
           border-color: #777 !important;
         }
 
         .miniature {
-          background: #ccc;
-          // border-color: #777 !important;
-          color: black;
+          display: inline-block;
+          // margin-right: $spacing-h/2;
+          margin: $spacing-v/4 0 $spacing-v/4 $spacing-h/2 ;
+          // margin-bottom: $spacing-v/4;
+          border-radius: $border-radius-site;
+          box-shadow: 0 0 $border-shadow rgba(60, 8, 12, 0.5); // primary-color-dark convert rgb !
+          border: 2px solid #bbb;
+          padding: 0.2em;
+          background: #bbb;
+          color:white;
+
+          p {
+            font-size:1.2em;
+            font-weight: bold;
+            line-height: 1.5em;
+          }          
         }
-      }
+
+        // .miniature:first-of-type {
+        //   margin-left: $spacing-h/2; 
+        // }
+
+        &:hover .miniature {          
+          // border-radius: $border-radius-site;
+          box-shadow: 0 0 $border-shadow rgba(60, 8, 12, 0.9);
+          // border-color: white !important;         
+        }        
+      }     
     }
 
   }

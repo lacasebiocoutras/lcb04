@@ -26,6 +26,37 @@ define(['jquery', 'moment','config-module'], function($, moment, config) {
     }
   }
 
+  function isBetweenPeriodDate(_date_deb, _date_fin,_format) {
+
+    var dateDebut;
+    if (_date_deb.length > 0) {
+      dateDebut = moment(_date_deb, _format);
+    }
+    else {
+      dateDebut = moment();
+    }
+    var dateFin;
+    if (_date_fin.length > 0) {
+      dateFin = moment(_date_fin, _format);
+    }
+    else {
+      dateFin = dateDebut;
+    }
+    var compDeb = moment(dateDebut).subtract(1,'days');
+    var compFin = moment(dateFin).hour(19);
+
+    if(moment().isBetween(compDeb.format(), compFin.format())) {
+          return true;
+    }
+    else {
+      return false;
+    }
+
+
+  }
+
+
+
    /*functions display*/
   
   var displayAnId = function(item) {
@@ -35,6 +66,10 @@ define(['jquery', 'moment','config-module'], function($, moment, config) {
     //add moment filter
     if(validePeriodDate(item.date_debut,item.date_fin,format)) {
       $(name_id).removeClass(window.config.class_invisible_search);
+
+      if (isBetweenPeriodDate(item.date_debut,item.date_fin,format)) {
+        $(name_id).addClass(window.config.class_event_today);
+      }
     }
     else {
       $(name_id).addClass(window.config.class_invisible_search);

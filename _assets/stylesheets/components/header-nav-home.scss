@@ -18,7 +18,7 @@
   .main-menu {
     list-style: none;
     margin: 0; //2em;
-    padding: 0.5em; // $spacing-h/2;
+    padding: $spacing-h/2;
     display: flex;
     flex-flow: row wrap; // column wrap;
     // text-align: center;

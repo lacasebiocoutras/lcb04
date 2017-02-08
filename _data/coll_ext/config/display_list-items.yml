@@ -21,8 +21,8 @@ config:
   index_main_section: 0
 
   nb_max_items_per_section: 999
-  class_invisible: 'invSearch'
+  class_invisible: 'invItem'
+  class_event_today: 'warningItem'
 
   dist_force_del_empty_section_default : 0
-
 

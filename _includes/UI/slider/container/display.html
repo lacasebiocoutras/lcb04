@@ -130,12 +130,29 @@
                 {% assign style_custom = '' %}               
                 {% if item_sub.border-color %}
                   {% assign style_custom = style_custom | append: 'background-color: #' | append: item_sub.border-color | append: ';'  %}
+                  {% assign style_custom = style_custom | append: 'border-color: #' | append: item_sub.border-color | append: ';'  %}
+                  {% comment %}add background-image gradient{% endcomment %}
+                  {% assign lighten_color_hex = ''%}
+                  {% include coll_ext_utils/color/lighten.html
+                    color_hex=item_sub.border-color 
+                    pourcent=50
+                  %}
+                  {% comment %}
+                  {% assign darken_color_hex = ''%}
+                  {% include coll_ext_utils/color/darken.html
+                    color_hex=item_sub.border-color 
+                    pourcent=50
+                  %}
+                  {% endcomment %}
+                  {% assign style_custom = style_custom | append: 'background-image: linear-gradient(to bottom,#' | append: item_sub.border-color | append: ',#' | append: lighten_color_hex | append: ');'  %}
                 {% endif %}
-
-
+               
+                {% comment %}<button class="miniature" ">
+                  <p>{{item_sub.title}}x5</p>
+                </button>{% endcomment %}               
 
                 <div class="miniature" style="{{style_custom}}">
-                  <p>{{item_sub.title}}x5</p>
+                  <p>{{item_sub.title}}</p>
                 </div>
 
               {% else %}

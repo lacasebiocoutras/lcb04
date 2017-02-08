@@ -5,7 +5,7 @@ define(['jquery', 'config-module'], function($, config) {
 
     var class_slider=[];    
     var inputs=[];
-    var flag_break=[];
+    // var flag_break=[];
     var nb_inputs=[];
     var delay = [];
     var timeoutSlider=[];
@@ -17,36 +17,36 @@ define(['jquery', 'config-module'], function($, config) {
       var $inputs = $(inputs[_current_index]);
       $inputs.each(function(index) {
         if ($(this).is( ':checked')) {
-          if (!flag_break[_current_index]) {
+          // if (!flag_break[_current_index]) {
             if (index === nb_inputs[_current_index]) {
               $inputs.eq(0).prop( 'checked', true );
             } else {
               $inputs.eq(index + 1).prop( 'checked', true );
             }
             $(this).prop( 'checked', false );
-          }
+          // }
           timeoutSlider[_current_index]= setTimeout(moveSlider, delay[_current_index], _current_index);
           return false;
         }
       });
     };
 
-    var enterSlider = function(_current_slider) 
-    {
-      flag_break[_current_slider]=true;
-    };
+    // var enterSlider = function(_current_slider) 
+    // {
+    //   flag_break[_current_slider]=true;
+    // };
 
-    var leaveSlider = function(_current_slider) 
-    {
-      flag_break[_current_slider]=false;
-      clearTimeout(timeoutSlider[_current_slider]);
-      timeoutSlider[_current_slider]= setTimeout(moveSlider, delay[_current_slider], _current_slider); 
-    }
+    // var leaveSlider = function(_current_slider) 
+    // {
+    //   flag_break[_current_slider]=false;
+    //   clearTimeout(timeoutSlider[_current_slider]);
+    //   timeoutSlider[_current_slider]= setTimeout(moveSlider, delay[_current_slider], _current_slider); 
+    // }
 
     var changeLoop = function(_current_slider) 
     {
       if ( $( btn_loop[_current_slider]).is(":checked") ) {
-        timeoutSlider[_current_slider]= setTimeout(moveSlider, delay[_current_slider], _current_slider);
+        timeoutSlider[_current_slider]= setTimeout(moveSlider, 0, _current_slider);
         // $(class_slider[_current_slider]).on( "mouseleave", leaveSlider.bind(null,_current_slider));
         // $(class_slider[_current_slider]).on( "mouseenter", enterSlider.bind(null,_current_slider));
       } else {
@@ -73,7 +73,7 @@ define(['jquery', 'config-module'], function($, config) {
             class_slider[index_class]='.'.concat(item.class_slider);
             delay[index_class]=item.delay_sec*1000;
             nb_inputs[index_class]=item.nb_items_slider-1;
-            flag_break[index_class]=false;
+            // flag_break[index_class]=false;
 
             //write selector css form X > Y
             inputs[index_class]=class_slider[index].concat(' > input');
