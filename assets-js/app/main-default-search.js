@@ -39,7 +39,8 @@ define(['jquery', 'lunr', 'moment','config-module'], function($, lunr, moment, c
     // then, the normal lunr index initialization
     this.field('id');
     this.field('title', { boost: 10 });
-    this.field('author');
+    this.field('description');
+    this.field('content');
     this.field('category');
     this.field('tags');
   });

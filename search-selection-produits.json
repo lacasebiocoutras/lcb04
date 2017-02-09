@@ -55,6 +55,8 @@ layout: compress
     "name_id" : "{{ current_name_id }}",
     "title" : "{{ current_raw_item.title | escape }}",
     "category" : "{{ current_cat }}",
+    "description" : "{{ current_raw_item.description | strip_html | strip }}",
+    "content" : "{{ current_raw_item.content | strip_html | strip }}",
     "tags" : "{{ current_raw_item.tags | array_to_sentence_string }}",
     "url" : "{{ site.baseurl }}{{ current_raw_item.url }}",
     "date_debut" : "{{current_raw_item.date-debut-promotion }}",

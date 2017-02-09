@@ -14,7 +14,7 @@
     filter-subsections: []
 
 - id: 'categorie-recherche-selection-produits'
-  title : 'Sélection complète'
+  title : '<i class="fa fa-refresh" aria-hidden="true"></i> Sélection complète'
   collection: 'selection-produits'
   force_display_coll_ext: true
   force_display_coll_ext_section: 'selection-produits'
