@@ -4,7 +4,7 @@ define(['jquery', 'moment','config-module'], function($, moment, config) {
   //global def display
   moment.locale('fr'); 
   var format=['DDMMMMY'];
-  
+  var hour_close = 19;
 
   function validePeriodDate(_date_deb, _date_fin,_format) {
     
@@ -15,8 +15,7 @@ define(['jquery', 'moment','config-module'], function($, moment, config) {
     else if (_date_deb.length > 0) {
       dateCompare = moment(_date_deb, _format);
     }
-    // var compFin = moment(dateCompare).add(1,'days');
-    var compFin = moment(dateCompare).hour(21);
+    var compFin = moment(dateCompare).hour(hour_close);
 
     if(moment().isBefore(compFin.format()) ) {
       return true;
@@ -43,7 +42,7 @@ define(['jquery', 'moment','config-module'], function($, moment, config) {
       dateFin = dateDebut;
     }
     var compDeb = moment(dateDebut).subtract(1,'days');
-    var compFin = moment(dateFin).hour(19);
+    var compFin = moment(dateFin).hour(hour_close);
 
     if(moment().isBetween(compDeb.format(), compFin.format())) {
           return true;
