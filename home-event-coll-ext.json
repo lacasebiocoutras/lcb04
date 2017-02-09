@@ -2,7 +2,7 @@
 layout: compress
 ---
 
-{% for list in site.data.coll_ext.model_search.list-model-search %}
+{% for list in site.data.coll_ext.model_json.list-model-json %}
   {% if list.id == 'home-event' %}   
     {% include coll_ext_utils/list-detail-items_init_step.html %}
     {% include coll_ext/main.html

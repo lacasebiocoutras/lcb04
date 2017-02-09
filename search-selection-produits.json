@@ -2,7 +2,7 @@
 layout: compress
 ---
 
-{% for list in site.data.coll_ext.model_search.list-model-search %}
+{% for list in site.data.coll_ext.model_json.list-model-json %}
 
   {% if list.id == 'recherche-selection-produits' %}
     {% include coll_ext_utils/list-detail-items_init_step.html %}
@@ -32,7 +32,7 @@ layout: compress
 
 
 {% comment %}<!-- add delim to disciminate categories with partial name similar -->{% endcomment %}
-{% assign add_delim_categorie = site.data.coll_ext.model_search.config.add_delim_categorie %}
+{% assign add_delim_categorie = site.data.coll_ext.model_json.config.add_delim_categorie %}
 
 [
 {% for iter in (0..iter_max)  %}

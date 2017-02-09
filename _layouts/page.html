@@ -3,17 +3,22 @@ layout: master
 ---
 <div class="default-page-content">
 
-  {% comment %}{% assign home_title = site.title | prepend: "Acceuil&nbsp;" %}
+  {% comment %}
+  {% assign home_title = site.title | prepend: "Acceuil&nbsp;" %}
   {% include coll_ext_utils/path-navig-title.html title=home_title class_logo="logo-back"%}
-{% endcomment %}
+
   {% assign size = page.excerpt.size | plus: 0 %}
   {% if size > 1 %}
-    <h4>{{page.excerpt}}</h4>
+    <h4>{{page.excerpt}}- page.excerpt.size : {{page.excerpt.size}}</h4>
   {% else %}
     {% if  page.description %}
-      <h4>{{ page.description }}</h4>
+      <h4>{{ page.description }} </h4>
     {% endif %}
-  {%  endif %}
+  {%  endif %}{% endcomment %}
+  {% if  page.description %}
+    <h4>{{ page.description }} </h4>
+  {% endif %}
+ 
 
   <div class="content">
     {{ page.content }}

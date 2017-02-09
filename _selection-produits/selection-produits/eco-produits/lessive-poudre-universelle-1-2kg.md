@@ -7,7 +7,7 @@ date-fin-promotion: 23 décembre 2017
 description: Une lessive poudre concentrée qui respecte votre linge et l'environnement. Totalement biodégradable. Efficace même à 30°C
 lire-plus:
 miniature: selection-produits/lessive-poudre.jpg
-type-miniature: full-with-title
+type-miniature: red-left
 brand:
 label: 
 tags:

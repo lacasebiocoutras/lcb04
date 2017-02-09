@@ -9,8 +9,8 @@ layout: null
   ],
   "config" :
   {
-    "class_invisible_search": "{{site.data.coll_ext.config.display_list-items.config.class_invisible }}",
-    "add_delim_categorie_search": "{{site.data.coll_ext.model_search.config.add_delim_categorie}}"
+    "class_invisible_item": "{{site.data.coll_ext.config.display_list-items.config.class_invisible }}",
+    "add_delim_categorie_search": "{{site.data.coll_ext.model_json.config.add_delim_categorie}}"
    }
 
 }

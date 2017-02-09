@@ -65,14 +65,14 @@ define(['jquery', 'moment','config-module'], function($, moment, config) {
     name_id=name_id.concat(item.name_id);
     //add moment filter
     if(validePeriodDate(item.date_debut,item.date_fin,format)) {
-      $(name_id).removeClass(window.config.class_invisible_search);
+      $(name_id).removeClass(window.config.class_invisible_item);
 
       if (isBetweenPeriodDate(item.date_debut,item.date_fin,format)) {
         $(name_id).addClass(window.config.class_event_today);
       }
     }
     else {
-      $(name_id).addClass(window.config.class_invisible_search);
+      $(name_id).addClass(window.config.class_invisible_item);
     }
     return;
   };

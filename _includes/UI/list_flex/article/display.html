@@ -89,8 +89,19 @@
 
 
   {% assign style_custom = '' %}
+  {% assign style_custom_button = '' %}
   {% if include.header_background_color and include.header_background_color != '' %}
     {% assign style_custom = style_custom | append: 'background-color: #' | append: include.header_background_color | append: ';'  %}
+    
+    {% comment %}add background-image gradient{% endcomment %}
+    {% assign lighten_color_hex = ''%}
+    {% include coll_ext_utils/color/lighten.html
+      color_hex=include.header_background_color 
+      pourcent=50
+    %}  
+    {% assign style_custom_button = 'border-color: #' | append: include.header_background_color | append: ';' %}
+    {% comment %}{% assign style_custom = style_custom | append: style_custom_button %}{% endcomment %}
+    {% assign style_custom = style_custom | append: 'background-image: linear-gradient(to bottom,#' | append: include.header_background_color | append: ',#' | append: lighten_color_hex | append: ');'  %}
   {% endif %}
 
 
@@ -98,7 +109,7 @@
 
   {% if include.extra_force_header_with_button == true %}
 
-    <button class="{{include.extra_button_class_button}}"  >
+    <button class="{{include.extra_button_class_button}}" style="{{style_custom_button}}" >
       <h3 class="{{include.extra_button_class_heading}}">{{include.header}}</h3>
     </button>
   {% else %}

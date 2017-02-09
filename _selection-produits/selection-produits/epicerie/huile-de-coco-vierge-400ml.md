@@ -7,7 +7,7 @@ date-fin-promotion:
 description: 
 lire-plus:
 miniature: selection-produits/huiledecoco.jpg
-type-miniature: full-with-title
+type-miniature: red-left
 brand:
 label: 
 tags:

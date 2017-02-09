@@ -3,7 +3,7 @@ layout: compress
 ---
 
 {% comment %} information "slider-translate-selection-produits-su-0" {% endcomment %}
-{% for list in site.data.coll_ext.model_search.list-model-search %}
+{% for list in site.data.coll_ext.model_json.list-model-json %}
   {% if list.id == 'categorie-recherche-selection-produits' %}   
     {% include coll_ext_utils/list-detail-items_init_step.html %}
     {% include coll_ext/main.html

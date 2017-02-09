@@ -101,8 +101,10 @@ define(['jquery', 'lunr', 'moment','config-module'], function($, lunr, moment, c
       $.each(loaded_data, function(index,value){
         var name_id='#';
         name_id=name_id.concat(value.name_id);
-        $(name_id).addClass(window.config.class_invisible_search);
+        $(name_id).addClass(window.config.class_invisible_item);
       });
+    }).then(function() {
+      // console.log('end emptyDisplayAllId');     
     });
     return;
   };
@@ -116,12 +118,14 @@ define(['jquery', 'lunr', 'moment','config-module'], function($, lunr, moment, c
         name_id=name_id.concat(value.name_id);
         //add moment filter
         if(validePeriodDate(value.date_debut,value.date_fin,format)) {
-          $(name_id).removeClass(window.config.class_invisible_search);
+          $(name_id).removeClass(window.config.class_invisible_item);
         }
         else {
-          $(name_id).addClass(window.config.class_invisible_search);
+          $(name_id).addClass(window.config.class_invisible_item);
         }
       });
+    }).then(function() {
+      // console.log('end displayAllId');     
     });
     return;
   };
@@ -132,10 +136,10 @@ define(['jquery', 'lunr', 'moment','config-module'], function($, lunr, moment, c
     name_id=name_id.concat(item.name_id);
     //add moment filter
     if(validePeriodDate(item.date_debut,item.date_fin,format)) {
-      $(name_id).removeClass(window.config.class_invisible_search);
+      $(name_id).removeClass(window.config.class_invisible_item);
     }
     else {
-      $(name_id).addClass(window.config.class_invisible_search);
+      $(name_id).addClass(window.config.class_invisible_item);
     }
     return;
   };
@@ -173,13 +177,15 @@ define(['jquery', 'lunr', 'moment','config-module'], function($, lunr, moment, c
           filter_item=true;
         }
         if (filter_item === true) {
-          $(name_id).addClass(window.config.class_invisible_search);
+          $(name_id).addClass(window.config.class_invisible_item);
         }
         else {
-          $(name_id).removeClass(window.config.class_invisible_search);
+          $(name_id).removeClass(window.config.class_invisible_item);
           flag_display=true;
         }
       });
+    }).then(function() {
+      // console.log('end updateDisplayAllId');  
     });
 
     if (flag_display === false) {
@@ -240,9 +246,22 @@ define(['jquery', 'lunr', 'moment','config-module'], function($, lunr, moment, c
 
   });
 
-  // extract_config.done( function(data) {
-  //   console.log("data: " +data);
-  // });
+  accessJson.done( function(data) {
+    
+    setTimeout(extractSizeRef, 50, 'input');
+    
+  });
+
+  var height_full_list = null;
+  var extractSizeRef = function(data) 
+  {
+    var list = document.getElementsByClassName('list-items-no-bg');
+    height_full_list=list[0].offsetHeight;    
+    height_px = height_full_list.toString().concat('px');
+    list[0].style.minHeight = height_px;
+  }
+
+ 
 
   // window.config.then(function(loaded_config){
 
@@ -275,13 +294,28 @@ define(['jquery', 'lunr', 'moment','config-module'], function($, lunr, moment, c
   $('.catSearchShowAll').bind('click', function () {
     $('#search_box').val('');
     category=emptychar;
-    $(this).parents().find('.termSearch').css('color','black');
+    // $(this).parents().find('.termSearch').css('color','black');
+    $(this).parents().find('.catSearch').removeClass( 'active' )
     displayAllId();
   });
 
   $('.catSearch').bind('click', function () {
+
     // event.preventDefault();
     var select= $(this).parent().find('.termSearch');
+    var parent_select = $(select).parent();
+
+    if(parent_select.hasClass( 'active' ))
+    {
+      // select.css('color','black');
+      // parent_select.removeClass( 'active' );
+    }
+    else {
+      // $(select).addClass( 'active' );
+      // $(select).parent().css('border-color','black');
+      // parent_select.addClass( 'active' );
+      // select.css('color','white');
+    }
     /* update category search */
     var category_html=select.html();
     // console.log(category);
@@ -294,8 +328,10 @@ define(['jquery', 'lunr', 'moment','config-module'], function($, lunr, moment, c
     // test :  E*n/t()re-ti^e$n?.; &amp; pr+o!du%it@°=|~&amp;s_, mé"n[]a gers
     // return  E*n/t()re-ti^e$n?.;     & pr+o!du%it@°=|~    &s_, mé"n[]a gers
     /*update selected element style*/
-    $(this).parents().find('.termSearch').css('color','black');
-    select.css('color','red');
+    //$(this).parents().find('.termSearch').css('color','black');
+    $(this).parents().find('.catSearch').removeClass( 'active' )
+    // select.css('color','red');
+    parent_select.addClass( 'active' );
     /*update search box*/
     $('#search_box').val('');
     /*display result*/
@@ -350,8 +386,6 @@ define(['jquery', 'lunr', 'moment','config-module'], function($, lunr, moment, c
       display_search_results(results);
     }
   }));
-
-
-
+ 
 
 });
