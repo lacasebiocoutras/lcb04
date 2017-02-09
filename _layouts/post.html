@@ -9,6 +9,10 @@ layout: master
   {% comment %}{% assign home_title = site.title | prepend: "Acceuil&nbsp;" %}
   {% include coll_ext_utils/path-navig-title.html title=home_title class_logo="logo-back"%}
 {% endcomment %}
+{% unless page.model %}
+	<p style="color:red">cas detail item</p>    	
+{% endunless %}
+	
   <div class="post-content" itemprop="articleBody">
     {{ content }} 
   </div>

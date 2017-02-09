@@ -3,7 +3,6 @@
 // Configure loading modules from the lib directory,
 // except 'app' ones,
 requirejs.config({
-    // 'baseUrl': '/lcb01/assets-js/',
     'paths': {
       // 'jquery': '//ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min',
       'jquery': 'vendor/jquery.2.2.0.min',

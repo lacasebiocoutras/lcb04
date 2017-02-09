@@ -16,7 +16,7 @@ define(['jquery', 'moment','config-module'], function($, moment, config) {
       dateCompare = moment(_date_deb, _format);
     }
     // var compFin = moment(dateCompare).add(1,'days');
-    var compFin = moment(dateCompare).hour(19);
+    var compFin = moment(dateCompare).hour(21);
 
     if(moment().isBefore(compFin.format()) ) {
       return true;
