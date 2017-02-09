@@ -14,7 +14,7 @@
     responsive: 'u-full'
   styling:
     container: 'list-items '
-    container_color: 'li-unresize-color02 li-extra-subsections'
+    container_color: 'li-unresize-color02b li-extra-subsections2b'
     article: 'item_list'
     #add class case-list-unresize
     box_unresize: true
@@ -118,6 +118,44 @@
     #add class case-list-unresize
     box_unresize: true
 
+- model: 'categorie-search'
+  config_flex:
+    grid_styling: 'Grid custom-grid'
+    responsive: ''
+  styling:
+    container: 'list-cat '
+    container_color: 'color-cat'
+    article: 'item_list'
+    #add class case-list-unresize
+    box_unresize: false
+
+
+- model: 'notre-actu-subsections-dist0'
+  config_flex:
+    grid_styling: 'Grid--gutters-m'
+    responsive: 'u-full'
+  styling:
+    container: 'list-items '
+    container_color: 'li-unresize-color02b li-extra-subsections2b'
+    article: 'item_list'
+    #add class case-list-unresize
+    box_unresize: true
+- model: 'notre-actu-items-dist1'
+  config_flex:
+    grid_styling: 'Grid--gutters-m'
+    responsive: 'u-full u-small-1of2-m'
+  styling:
+    container: 'list-items'
+    container_color: 'li-resize-color01'
+    article: 'item_list'
+    #add class case-list-unresize
+    box_unresize: false
+
+
+
+
+
+
 
 
 - model: 'list-details-items-custom2'
@@ -205,13 +243,3 @@
     #add class case-list-unresize
     box_unresize: true
 
-- model: 'categorie-search'
-  config_flex:
-    grid_styling: 'Grid custom-grid'
-    responsive: ''
-  styling:
-    container: 'list-cat '
-    container_color: 'color-cat'
-    article: 'item_list'
-    #add class case-list-unresize
-    box_unresize: false

@@ -1,5 +1,5 @@
 model: 'notre-actualite_list-items'
-design_model_page: 'default-list_flex'
+design_model_page: 'notre-actualite-sections-list_flex'
 design_detail_items: 'miniature-default'
 config_container_detail:
   force_url_with_id: false
@@ -9,8 +9,8 @@ display_items_on_parent: false
 dist_display_children: 20
 # force details items in child at a given dist,
 # hide subsections with a dist sup
-activate_force_details: false
-dist_force_details: 0
+activate_force_details: true
+dist_force_details: 1
 # flag to update design model on a child, for detail items,
 # if false, design model detail child = design model detail parent,
 # if true, and on child meta,  force_current_model_detail_on_parent = true,

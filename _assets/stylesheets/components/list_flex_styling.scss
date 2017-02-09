@@ -101,17 +101,11 @@
   }
 
   .item_list {
-    // width: 100%;
     padding: auto; //$spacing-h;
-    // padding: $spacing-v/2 $spacing-h 0 $spacing-h;
-    // border-radius: $border-radius-site;
+    margin: 0.2em;
     box-shadow: 0 0 $border-shadow rgba($shadow-color, 0.5);
-    // background: $secondary-color-light;
-    // color: $secondary-text-color;
-    // border: 2px solid #bbb;
     border:none;
     
-    // .catSearch {
     button {
       height: 100%;
       width: 100%;
@@ -122,11 +116,14 @@
 
       h3 {
         margin: 0.2em;
-        // color: $white;
         font-size: 1.2em;
         font-weight: 600;
       }
 
+    }
+
+    button:hover {
+      box-shadow: 0 0 $border-shadow rgba($shadow-color, 0.9);
     }
 
     button:focus {outline:0;}
@@ -137,20 +134,17 @@
       border-color: $white !important;
       color: $white;
     }
-  }
 
-  @include breakpoint($break-md-max) {
+    @include breakpoint($break-sm-max) {
 
-    button {
-      border: none;
-      border-left: 5px solid $primary-color-light;
+      button {
+        border: none;
+        border-left: 5px solid $primary-color-light;
+      }     
     }
-    // background: none;
-    // box-shadow: none;
-
-    // .heading {color : $secondary-color-dark;}
-    // .item_list {background: $secondary-color;}
   }
+
+  
 }
 
 .color-cat {
@@ -160,9 +154,7 @@
     color :$accent-color;
   }
   .item_list {
-    // box-shadow: 0 0 $border-shadow rgba($shadow-color, 0.5);
     background: none;
-    // color: $secondary-color-light;
   }
 }
 
@@ -205,9 +197,24 @@
   }
   .item_list {
     box-shadow: 0 0 $border-shadow rgba($shadow-color, 0.5);
-    background: $accent-color;
-    color: $secondary-color-light;
+    background: $secondary-color !important;
+    color: $primary-color-dark;
   }
+}
+
+.li-unresize-color02b {
+  box-shadow: 0 0 $border-shadow rgba($shadow-color, 0.5);
+  background: $secondary-color;
+  .heading {
+    // color : $white;
+    color : $primary-color-dark;
+  }
+  .item_list {
+    background: $primary-color-light;
+    box-shadow: 0 0 $border-shadow rgba($shadow-color, 0.5);
+  
+  }
+
 }
 
 .li-resize-color02 {
@@ -266,26 +273,33 @@
 
 .li-unresize-color02 {
   box-shadow: 0 0 $border-shadow rgba($shadow-color, 0.5);
-  background: $secondary-color; //$warning-color;
+  background: $secondary-color;
   .heading {
-    color : $white;
+    // color : $white;
+    color : $primary-color-dark;
   }
   .item_list {
-    box-shadow : none;
-    background: $accent-color;
-    color: $secondary-text-color;
+    background: $primary-color-light;
+    box-shadow: 0 0 $border-shadow rgba($shadow-color, 0.5);
+    // background: $primary-color-light;
+    // box-shadow : none;
+    // // background: $accent-color;
+    // background: $primary-color-light;
+    // color: $secondary-text-color;
   }
-  @include breakpoint($break-md-max) {
-    background: none;
-    box-shadow: none;
+  // @include breakpoint($break-md-max) {
+  //   background: none;
+  //   box-shadow: none;
 
-    .heading {color : $secondary-color-dark;}
-    .item_list {
-      background: $secondary-color;
-      box-shadow: 0 0 $border-shadow rgba($shadow-color, 0.5);
-    }
-  }
+  //   .heading {color : $secondary-color-dark;}
+  //   .item_list {
+  //     background: $secondary-color;
+  //     box-shadow: 0 0 $border-shadow rgba($shadow-color, 0.5);
+  //   }
+  // }
 }
+
+
 
 .li-unresize-no-color {
   box-shadow: none; //0 0 $border-shadow rgba($shadow-color, 0.5);
@@ -334,20 +348,21 @@
 }
 
 
-.li-extra-subsections {
-  background: darken($secondary-color, 20%); //$warning-color;
+// .li-extra-subsections {
+//   // background: darken($secondary-color, 20%); //$warning-color;
 
-  .item_list {
-    box-shadow : none;
-    background: darken($secondary-color-light, 20%);
-  }
-  @include breakpoint($break-md-max) {
-    background:  darken($secondary-color, 20%);
-    box-shadow: none;
-    .item_list {
-      background: darken($secondary-color, 20%);
-      box-shadow: 0 0 $border-shadow rgba($shadow-color, 0.5);
-    }
-  }
+//   .item_list {
+//     box-shadow : none;
+//     // background: darken($secondary-color-light, 20%);
+//     background: $primary-color-light;
+//   }
+//   @include breakpoint($break-md-max) {
+//     // background:  darken($secondary-color, 20%);
+//     box-shadow: none;
+//     .item_list {
+//       // background: darken($secondary-color, 20%);
+//       box-shadow: 0 0 $border-shadow rgba($shadow-color, 0.5);
+//     }
+//   }
 
-}
+// }

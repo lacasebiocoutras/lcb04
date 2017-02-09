@@ -1,8 +1,8 @@
 ---
-title: Mieux nous connaître
-date-publication: 17 janvier 2017
-order: 3
-description: La Case Bio vous propose une large gamme de produits spécialisés , et de services
+title: Actu-page perso
+date-publication: 20 avril 2016
+order: 1
+description: 
 lire-plus:
 miniature: lacasebio.png
 type-miniature: red-left

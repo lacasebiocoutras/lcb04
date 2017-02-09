@@ -1,7 +1,7 @@
 ---
 title: Notre actualité
 date-publication: 20 avril 2016
-order: 2
+order: 1
 description: Retrouvez toute notre actualité
 lire-plus:
 miniature: lacasebio.png
